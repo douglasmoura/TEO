@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{94DBAC09-F5FD-F94A-7271-1B2E6C789B63}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_2;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="assets\Scripts\Apresentacao\Apresenta.js" />
+     <Compile Include="assets\Scripts\Coletor\Coletor.js" />
+     <Compile Include="assets\Scripts\Fader.js" />
+     <Compile Include="assets\Scripts\Jogos\Cores\Cores.js" />
+     <Compile Include="assets\Scripts\Jogos\Cores\Cubo.js" />
+     <Compile Include="assets\Scripts\Jogos\Cores\MainCores.js" />
+     <Compile Include="assets\Scripts\Jogos\Cores\MudarCor.js" />
+     <Compile Include="assets\Scripts\Jogos\Onde Esta\MainOE.js" />
+     <Compile Include="assets\Scripts\Jogos\Onde Esta\Musica.js" />
+     <Compile Include="assets\Scripts\Jogos\Quanto E\Frutas.js" />
+     <Compile Include="assets\Scripts\Jogos\Quanto E\MainQE.js" />
+     <Compile Include="assets\Scripts\Jogos\Quebra-cabeca\Elementos.js" />
+     <Compile Include="assets\Scripts\Jogos\Quebra-cabeca\MainQC.js" />
+     <Compile Include="assets\Scripts\Jogos\Quebra-cabeca\Peca.js" />
+     <Compile Include="assets\Scripts\Jogos\SimboNumero\Lapis.js" />
+     <Compile Include="assets\Scripts\Jogos\SimboNumero\Numero.js" />
+     <Compile Include="assets\Scripts\Jogos\SimboNumero\SimboNumero.js" />
+     <Compile Include="assets\Scripts\Menu\Botoes Superiores.js" />
+     <Compile Include="assets\Scripts\Menu\JanelaColetor.js" />
+     <Compile Include="assets\Scripts\Menu\Menu Superior.js" />
+     <Compile Include="assets\Scripts\Menu\Menu.js" />
+     <Compile Include="assets\Scripts\Menu\Nuvem.js" />
+     <Compile Include="assets\Scripts\Menu\Popup.js" />
+     <Compile Include="assets\Scripts\Menu\Selecao de Jogos\Lista.js" />
+     <Compile Include="assets\Scripts\Menu\Selecao de Jogos\NivelGUI.js" />
+     <Compile Include="assets\Scripts\Menu\Selecao de Jogos\SelecaoJogos.js" />
+     <Compile Include="assets\Scripts\Nivel\Nivel.js" />
+     <Compile Include="assets\Scripts\Parabens.js" />
+     <None Include="assets\AndroidImmersiveMode\Instructions\Instructions.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{C65147B5-5A37-642F-3E56-DA35850AA9B9}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

@@ -1,0 +1,217 @@
+System:
+  OS: Windows 8  (6.2.9200)
+  CPU: Intel(R) Core(TM) i3 CPU M 370 @ 2.40GHz, count: 4
+  Physical RAM: 2807 MB
+  Addressable RAM: 2048 MB
+
+D3D9:
+  no D3D hardware acceleration
+
+OpenGL:
+  Version: 2.1.0 - Build 8.15.10.2858
+  Vendor: Intel
+  Renderer: Intel(R) HD Graphics
+  Driver: igdumdx32, version 6750313.7667812.6553709.3342456
+  VRAM: 701 (via DXGI)
+  Extensions: GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_blend_color GL_EXT_abgr GL_EXT_texture3D GL_EXT_clip_volume_hint GL_EXT_compiled_vertex_array GL_SGIS_texture_edge_clamp GL_SGIS_generate_mipmap GL_EXT_draw_range_elements GL_SGIS_texture_lod GL_EXT_rescale_normal GL_EXT_packed_pixels GL_EXT_texture_edge_clamp GL_EXT_separate_specular_color GL_ARB_multitexture GL_EXT_texture_env_combine GL_EXT_bgra GL_EXT_blend_func_separate GL_EXT_secondary_color GL_EXT_fog_coord GL_EXT_texture_env_add GL_ARB_texture_cube_map GL_ARB_transpose_matrix GL_ARB_texture_env_add GL_IBM_texture_mirrored_repeat GL_EXT_multi_draw_arrays GL_NV_blend_square GL_ARB_texture_compression GL_3DFX_texture_compression_FXT1 GL_EXT_texture_filter_anisotropic GL_ARB_texture_border_clamp GL_ARB_point_parameters GL_ARB_texture_env_combine GL_ARB_texture_env_dot3 GL_ARB_texture_env_crossbar GL_EXT_texture_compression_s3tc GL_ARB_shadow GL_ARB_window_pos GL_EXT_shadow_funcs GL_EXT_stencil_wrap GL_ARB_vertex_program GL_EXT_texture_rectangle GL_ARB_fragment_program GL_EXT_stencil_two_side GL_ATI_separate_stencil GL_ARB_vertex_buffer_object GL_EXT_texture_lod_bias GL_ARB_occlusion_query GL_ARB_fragment_shader GL_ARB_shader_objects GL_ARB_shading_language_100 GL_ARB_texture_non_power_of_two GL_ARB_vertex_shader GL_NV_texgen_reflection GL_ARB_point_sprite GL_ARB_fragment_program_shadow GL_EXT_blend_equation_separate GL_ARB_depth_texture GL_ARB_texture_rectangle GL_ARB_draw_buffers GL_ARB_color_buffer_float GL_ARB_half_float_pixel GL_ARB_texture_float GL_ARB_pixel_buffer_object GL_EXT_framebuffer_object GL_ARB_draw_instanced GL_ARB_half_float_vertex GL_EXT_draw_buffers2 GL_WIN_swap_hint GL_EXT_texture_sRGB GL_EXT_packed_float GL_EXT_texture_shared_exponent GL_ARB_texture_rg GL_ARB_texture_compression_rgtc GL_NV_conditional_render GL_EXT_texture_swizzle GL_ARB_sync GL_ARB_framebuffer_sRGB GL_EXT_packed_depth_stencil GL_ARB_depth_buffer_float GL_EXT_transform_feedback GL_EXT_framebuffer_blit GL_ARB_framebuffer_object GL_EXT_texture_array GL_ARB_map_buffer_range GL_EXT_texture_snorm GL_INTEL_performance_queries GL_ARB_copy_buffer GL_ARB_sampler_objects GL_NV_primitive_restart GL_ARB_seamless_cube_map GL_ARB_uniform_buffer_object GL_ARB_depth_clamp GL_ARB_vertex_array_bgra GL_ARB_draw_elements_base_vertex GL_EXT_gpu_program_parameters GL_ARB_compatibility GL_ARB_vertex_array_object 
+
+User locale: pt-BR
+System locale: pt-BR
+
+Running processes:
+taskhostex.exe (3544)
+    path: C:\Windows\system32\taskhostex.exe
+    company:  Microsoft Corporation
+    product:  Sistema Operacional Microsoft® Windows®
+    filedesc: Processo de Host para Tarefas do Windows
+    filever:  6.2.9200.16548
+    prodver:  6.2.9200.16548
+Explorer.EXE (3732)
+    path: C:\Windows\Explorer.EXE
+    company:  Microsoft Corporation
+    product:  Sistema operacional Microsoft® Windows®
+    filedesc: Windows Explorer
+    filever:  6.2.9200.16384
+    prodver:  6.2.9200.16384
+avgui.exe (3904)
+    path: C:\Program Files\AVG\AVG2014\avgui.exe
+    company:  AVG Technologies CZ, s.r.o.
+    product:  AVG Internet Security
+    filedesc: AVG User Interface
+    filever:  14.0.0.4800
+    prodver:  14.0.0.4800
+igfxtray.exe (3900)
+    path: C:\Windows\System32\igfxtray.exe
+    company:  Intel Corporation
+    product:  Intel(R) Common User Interface
+    filedesc: igfxTray Module
+    filever:  8.15.10.2858
+    prodver:  8.15.10.2858
+hkcmd.exe (1720)
+    path: C:\Windows\System32\hkcmd.exe
+    company:  Intel Corporation
+    product:  Intel(R) Common User Interface
+    filedesc: hkcmd Module
+    filever:  8.15.10.2858
+    prodver:  8.15.10.2858
+igfxpers.exe (3488)
+    path: C:\Windows\System32\igfxpers.exe
+    company:  Intel Corporation
+    product:  Intel(R) Common User Interface
+    filedesc: persistence Module
+    filever:  8.15.10.2858
+    prodver:  8.15.10.2858
+AmIcoSinglun.exe (4052)
+    path: C:\Program Files\AmIcoSingLun\AmIcoSinglun.exe
+    company:  Alcor Micro Corp.
+    product:  IconUtility
+    filedesc: Single LUN Icon Utility for VID 058F PID 6366
+    filever:  1.1.0.55
+    prodver:  1.1.0.55
+RtHDVCpl.exe (3480)
+    path: C:\Program Files\Realtek\Audio\HDA\RtHDVCpl.exe
+    company:  Realtek Semiconductor
+    product:  Gerenciador de áudio HD Realtek
+    filedesc: Gerenciador de áudio HD Realtek
+    filever:  1.0.0.802
+    prodver:  1.0.0.802
+ctfmon.exe (4224)
+    path: C:\Windows\system32\ctfmon.exe
+    company:  Microsoft Corporation
+    product:  Sistema Operacional Microsoft® Windows®
+    filedesc: Carregador CTF
+    filever:  6.2.9200.16384
+    prodver:  6.2.9200.16384
+vprot.exe (4248)
+    path: C:\Program Files\AVG SafeGuard toolbar\vprot.exe
+    company:  
+    product:  VProtect Application
+    filedesc: VProtect Application 
+    filever:  18.3.0.885
+    prodver:  18.3.0.885
+SpotifyWebHelper.exe (4300)
+    path: C:\Users\Diogenes\AppData\Roaming\Spotify\SpotifyWebHelper.exe
+    company:  Spotify Ltd
+    product:  Spotify
+    filedesc: SpotifyWebHelper
+    filever:  1.0.2.6
+    prodver:  1.0.2.6
+ABRTMon.exe (4472)
+    path: C:\Program Files\Clarus\Samsung Drive Manager\ABRTMon.exe
+    company:  Clarus, Inc.
+    product:  ABRTMon
+    filedesc: ABRTMon
+    filever:  1.0.172.0
+    prodver:  1.0.0.0
+ctfmon.exe (4688)
+    path: C:\Windows\system32\ctfmon.exe
+    company:  Microsoft Corporation
+    product:  Sistema Operacional Microsoft® Windows®
+    filedesc: Carregador CTF
+    filever:  6.2.9200.16384
+    prodver:  6.2.9200.16384
+spotify.exe (5808)
+    path: C:\Users\Diogenes\AppData\Roaming\Spotify\spotify.exe
+    company:  Spotify Ltd
+    product:  Spotify
+    filedesc: Spotify
+    filever:  1.0.2.6
+    prodver:  1.0.2.6
+SpotifyCrashService.exe (5748)
+    path: C:\Users\Diogenes\AppData\Roaming\Spotify\SpotifyCrashService.exe
+    company:  Spotify Ltd
+    product:  Spotify
+    filedesc: SpotifyCrashService
+    filever:  1.0.2.6
+    prodver:  1.0.2.6
+firefox.exe (3460)
+    path: C:\Program Files\Mozilla Firefox\firefox.exe
+    company:  Mozilla Corporation
+    product:  Firefox
+    filedesc: Firefox
+    filever:  36.0.4.5557
+    prodver:  36.0.4.0
+spotify.exe (3684)
+    path: C:\Users\Diogenes\AppData\Roaming\Spotify\spotify.exe
+    company:  Spotify Ltd
+    product:  Spotify
+    filedesc: Spotify
+    filever:  1.0.2.6
+    prodver:  1.0.2.6
+spotify.exe (3348)
+    path: C:\Users\Diogenes\AppData\Roaming\Spotify\spotify.exe
+    company:  Spotify Ltd
+    product:  Spotify
+    filedesc: Spotify
+    filever:  1.0.2.6
+    prodver:  1.0.2.6
+plugin-container.exe (5008)
+    path: C:\Program Files\Mozilla Firefox\plugin-container.exe
+    company:  Mozilla Corporation
+    product:  Firefox
+    filedesc: Plugin Container for Firefox
+    filever:  36.0.4.5557
+    prodver:  36.0.4.0
+googletalkplugin.exe (3128)
+    path: C:\Users\Diogenes\AppData\Local\Google\Google Talk Plugin\googletalkplugin.exe
+    company:  Google
+    product:  Google Talk Plugin
+    filedesc: Hangouts Plugin
+    filever:  5.0.0.0
+    prodver:  5.0.0.0
+GitHub.exe (3528)
+    path: C:\Users\Diogenes\AppData\Local\Apps\2.0\RM9HPDE1.2EB\G2PDPBQG.VB0\gith..tion_317444273a93ac29_0002.000b_8e55c23574dfe1d4\GitHub.exe
+    company:  GitHub, Inc.
+    product:  GitHub for Windows
+    filedesc: GitHub
+    filever:  2.11.0.5
+    prodver:  2.11.0.5
+ssh-agent.exe (1596)
+    path: C:\Users\Diogenes\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\bin\ssh-agent.exe
+    company:  
+    product:  
+    filedesc: 
+    filever:  0.0.0.0
+    prodver:  0.0.0.0
+MonoDevelop.exe (4704)
+    path: C:\Program Files\Unity\MonoDevelop\bin\MonoDevelop.exe
+    company:  
+    product:  MonoDevelop
+    filedesc: MonoDevelop
+    filever:  2.6.0.0
+    prodver:  2.6.0.0
+plugin-container.exe (4580)
+    path: C:\Program Files\Mozilla Firefox\plugin-container.exe
+    company:  Mozilla Corporation
+    product:  Firefox
+    filedesc: Plugin Container for Firefox
+    filever:  36.0.4.5557
+    prodver:  36.0.4.0
+FlashPlayerPlugin_16_0_0_305.exe (3140)
+    path: C:\Windows\system32\Macromed\Flash\FlashPlayerPlugin_16_0_0_305.exe
+    company:  Adobe Systems, Inc.
+    product:  Shockwave Flash
+    filedesc: Adobe Flash Player 16.0 r0
+    filever:  16.0.0.305
+    prodver:  16.0.0.305
+FlashPlayerPlugin_16_0_0_305.exe (1772)
+    path: C:\Windows\system32\Macromed\Flash\FlashPlayerPlugin_16_0_0_305.exe
+    company:  Adobe Systems, Inc.
+    product:  Shockwave Flash
+    filedesc: Adobe Flash Player 16.0 r0
+    filever:  16.0.0.305
+    prodver:  16.0.0.305
+taskeng.exe (3392)
+    path: C:\Windows\system32\taskeng.exe
+    company:  Microsoft Corporation
+    product:  Sistema Operacional Microsoft® Windows®
+    filedesc: Mecanismo do Agendador de Tarefas
+    filever:  6.2.9200.16384
+    prodver:  6.2.9200.16384
+UnityBugReporter.exe (3644)
+    path: C:\Program Files\Unity\Editor\UnityBugReporter.exe
+    company:  Unity Technologies ApS
+    product:  Unity Bug Reporter
+    filedesc: Unity Bug Reporter
+    filever:  4.6.1.51269
+    prodver:  4.6.1.51269

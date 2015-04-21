@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menu\Menu 3.js">
+    <Files>
+      <File FileName="Assets\Scripts\Quanto E\Principal.js" Line="76" Column="2" />
+      <File FileName="Assets\Scripts\Quanto E\Maca.js" Line="112" Column="22" />
+      <File FileName="Assets\Scripts\Cores\Cores.js" Line="12" Column="1" />
+      <File FileName="Assets\Scripts\Menu\Menu 3.js" Line="58" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

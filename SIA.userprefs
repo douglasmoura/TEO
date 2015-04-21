@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Quebra-cabeca\PecasDrag.js">
+    <Files>
+      <File FileName="Assets\Scripts\Quebra-cabeca\PecasDrag.js" Line="27" Column="58" />
+      <File FileName="Assets\Scripts\Quebra-cabeca\Pecas.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cores\Cores.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Quebra-cabeca\Peca.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cores\Instanciador.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menu\Menu 3.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menu\Menu 4.js" Line="47" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
