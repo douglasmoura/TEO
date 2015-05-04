@@ -2,7 +2,7 @@
 
 import Coletor;
 
-/*	Script intermediario entre o script do jogo e o banco.
+/*	Script intermediario entre o script do jogo e a base de dados.
 *	A receber: Acertos, Erros, Tentativas, DragDrop, Tempo Total, Delay, Step.
 *	Vide Dados no excel para maior informacoes sobre os dados coletados.
 *

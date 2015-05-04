@@ -1,5 +1,13 @@
 ﻿#pragma strict
 
+/*
+*
+* POPUP que aparece no final de cada jogo trazendo as informaçoes sobre o GameObject.
+*
+*
+*/
+
+
 private var janela : Rect;
 private var dados : Rect;
 //private var pause : boolean;
@@ -17,15 +25,7 @@ function Start () {
 	//pause = true;
 }
 
-function Update () {
-	/**
-	if (pause) {
-		Time.timeScale = 0;
-	} else {
-		Time.timeScale = 1;
-	}
-	**/
-}
+function Update () {}
 
 //Passando array de dados como parametro., para resgatar por index e apresentar "Nome" + valor;
 //Atencao!!!

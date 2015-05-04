@@ -73,8 +73,13 @@ function girarRoleta() {
 	
 	print(parar);
 	Sortear(4.8, limite, parar);
+	
+	/*
+	*Futura implementaçao do nivel 2 com tres casas.
+	*
 	limite = Random.Range(25, 30);
 	Sortear(3.45, limite, 0);
+	*/
 	habilita = false;	
 }
 
