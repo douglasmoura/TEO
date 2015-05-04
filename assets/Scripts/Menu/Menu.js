@@ -13,11 +13,15 @@ public var teo: Texture2D;
 //Janela coletor.
 private var janelaColetor: JanelaColetor;
 
+private var login: Login;
+
 function Start () {
 	
 	janelaColetor = FindObjectOfType(typeof(JanelaColetor)) as JanelaColetor;
 	
 	scriptMusica = FindObjectOfType(typeof(Musica)) as Musica;
+	
+	login = FindObjectOfType(typeof(Login)) as Login;
 }
 
 function Update () {
@@ -60,8 +64,12 @@ function OnGUI() {
 	
 	
 	if (jogar) {
-		//Application.LoadLevel("Menu 2");
-		Application.LoadLevel("SuiteJogos");
+	
+		if(login.getPassagemLiberada() == true){
+			Application.LoadLevel("SuiteJogos");
+		}else{
+			login.habilita_Desabilita();
+		}
 	}
 	
 	else if(coleta){
