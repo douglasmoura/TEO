@@ -36,7 +36,7 @@ function OnGUI() {
 	var y = Screen.height/2;
 	
 			
-	GUI.DrawTexture(new Rect(x/8 - 70, y/8 + 155, teo.width/1.1, teo.height/1.08), teo);
+	//GUI.DrawTexture(new Rect(x/8 - 70, y/8 + 155, teo.width/1.1, teo.height/1.08), teo);
 	
 	//Botao jogar
 	GUI.skin = botaoJogar;
