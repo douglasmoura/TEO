@@ -30,9 +30,9 @@ Cada jogo possui níveis de dificuldade, o aplicativo coleta dados do jogador, c
  
 
 ## Download
-A versão do aplicativo para android está disponível em:
+A versão atual do aplicativo para android está disponível em:
 
-[v0.5.0.zip](https://github.com/douglasmoura/TEO/archive/v0.5.0.zip)
+[v0.5.0](https://github.com/douglasmoura/TEO/releases/tag/v0.5.0)
 
 ## Desenvolvedores
 O projeto partiu de uma inicitiava dos alunos e professores da Universidade Federal de Alagoas - Campus Arapiraca.
