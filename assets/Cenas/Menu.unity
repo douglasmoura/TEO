@@ -1048,7 +1048,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   habilitar: 0
-  skin: {fileID: 0}
+  skinJanela: {fileID: 0}
+  skinSair: {fileID: 0}
+  skinOk: {fileID: 0}
+  skinNovoRegistro: {fileID: 0}
+  skinLogin: {fileID: 0}
 --- !u!1001 &1905035501
 Prefab:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 
 public var botaoHome: GUISkin;
 public var botaoJogos: GUISkin;
-public var logo: Texture2D;
+//public var logo: Texture2D;
 
 function Start () {
 
@@ -25,7 +25,7 @@ function OnGUI() {
 	 * Textura contendo a logo.
 	 * new Rect recebe posicao x, posicao y, largura e altura.
 	**/
-	GUI.DrawTexture(new Rect(Screen.width/2 + 480, 20, logo.width/8, logo.height/8), logo);
+	//GUI.DrawTexture(new Rect(Screen.width/2 + 480, 20, logo.width/8, logo.height/8), logo);
 	
 	//Botao home
 	var home = GUI.Button(new Rect(-40 , -15, 791/3.2, 440/2.8), "");

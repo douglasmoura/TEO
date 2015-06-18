@@ -1,19 +1,24 @@
 ﻿#pragma strict
 
-public static final var larguraTela = Screen.width;
-public static final var alturaTela = Screen.height;
+public static final var x_Tela = Screen.width;
+public static final var y_Tela = Screen.height;
 
 private var janela : Rect;
 public var habilitar = false;
 
-private var largura = 400;
-private var altura = 200;
+private var largura = 300;
+private var altura = 280;
 
-public var skin: GUISkin;
+public var skinJanela: GUISkin;
+public var skinSair: GUISkin;
+public var skinOk: GUISkin;
+public var skinNovoRegistro: GUISkin;
+public var skinLogin: GUISkin;
 
-private var textoLogin = "Login";
+private var loginName : String;
 
 private var passagemLiberada = false;
+private var showButton = true;
 
 
 //Script em C# responsavel por ler o arquivo csv e colocar os dados dentro da janela.
@@ -25,7 +30,7 @@ function Awake (){
 
 function Start () {
 
-	janela = Rect(larguraTela/2 - largura/10, alturaTela/2 - altura/3, largura, altura);
+	janela = Rect(x_Tela/1.1 - largura/10, y_Tela/1.35 - altura/2, largura, altura);
 
 }
 
@@ -34,8 +39,8 @@ function Update () {}
 function OnGUI () {
 	
 	if(habilitar){
-		GUI.skin = skin; //Limpar fica muito grande
-		janela = GUI.Window(0,janela,WindowFunction, "Entrar");
+		GUI.skin = skinJanela;
+		janela = GUI.Window(0,janela,WindowFunction, "");
 	}
 }
 
@@ -43,22 +48,43 @@ function WindowFunction (windowID : int) {
 	
 	var dados = csScript.ReadFromFile();
 	
-	var loginField = GUI.TextField (Rect (largura-350,altura/3,300,35), textoLogin, 25);
+	GUI.skin = skinSair;
+	var xSair = largura-40;
+	var ySair = altura/23;
+	var sair = GUI.Button (Rect (xSair,ySair,35,35), "X");
 	
-	var sair = GUI.Button (Rect (largura-40,altura/10,35,35), "X");
-	
-	var pular = GUI.Button (Rect (largura-120,altura/1.5,100,35), "Pular");
-	
-	var login = GUI.Button (Rect (largura - 240,altura/1.5,100,35), "Entrar");
-	
-	var registrar = GUI.Button (Rect (largura - 360,altura/1.5,100,35), "Registrar");
-	
-	if(pular){
-		habilita_Desabilita();
+	if(showButton){
+		GUI.skin = skinLogin;
+		var xLogin = largura - 200;
+		var yLogin = altura/3.2; 
+		var login = GUI.Button (Rect (xLogin,yLogin,100,35), "Entrar");
 	}
+		
+	GUI.skin = skinNovoRegistro;
+	var xReg = largura - 200;
+	var yReg = altura/1.7;
+	var registrar = GUI.Button (Rect (xReg,yReg,100,35), "Registrar");
 	
-	else if(sair){
+	GUI.skin = skinOk;
+	var xOk = largura - 190;
+	var yOk = altura/1.25;
+	var okBT = GUI.Button (Rect (xOk,yOk,80,35), "OK");
+	
+	
+	if(sair){
 		setHabilita(false);
+		
+	}else if(okBT){
+		Application.LoadLevel("SuiteJogos");
+		
+		
+	}else if(login){
+		showButton = false;
+		
+		//Sumiria o botao criar e so seria colocado o login apos isso ok e ja iria pra suite.
+		var xField = largura - 200;
+		var yField = altura/3.2; 
+		loginName = GUI.TextField (Rect (xField, yField, 100, 20), "", 25);
 	}
 }
 
