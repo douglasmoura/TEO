@@ -2,7 +2,10 @@
 
 /**
  * Todos os objetos que possuem a propriedade drag and drop herdam desta classe.
- *
+ * Classe tambem implementa metodos de MonoBehaviour (start, update, eventos de
+ * mouse e colisao).
+ * Objeto possui um ponto de origem e retorna ao mesmo sempre que for associado
+ * ao objeto errado. 
 **/ 
 public class Objeto extends MonoBehaviour {
 	//Ponto de origem do cubo
@@ -22,7 +25,7 @@ public class Objeto extends MonoBehaviour {
 	
 	
 	/*******************************************************************
-	//Para os metodos abaixo, basta sobrescreve-los na classe filha.
+	 Para os metodos abaixo, basta sobrescreve-los na classe filha.
 	********************************************************************/
 	
 	//Metodo para acrescentar alguma implementacao ao metodo start
@@ -33,7 +36,7 @@ public class Objeto extends MonoBehaviour {
 
 	
 	/*******************************************************************
-	//Metodos principais da classe MonoBehaviour.
+	 Metodos principais da classe MonoBehaviour.
 	********************************************************************/
 	
 	//Chamado ao criar o objeto.
@@ -62,7 +65,7 @@ public class Objeto extends MonoBehaviour {
 	
 	
 	/*******************************************************************
-	//Metodos da classe Objeto.
+	 Metodos da classe Objeto.
 	********************************************************************/
 	
 	function Retornar() {
@@ -81,7 +84,7 @@ public class Objeto extends MonoBehaviour {
 	
 	
 	/*******************************************************************
-	//Metodos que tratam eventos do mouse
+	 Metodos que tratam eventos do mouse
 	********************************************************************/
 	
 	//Trata evento de quando clicar em cima do objeto.
@@ -109,7 +112,7 @@ public class Objeto extends MonoBehaviour {
 	}
 	
 	/*******************************************************************
-	//Metodos que tratam eventos de colisao.
+	 Metodos que tratam eventos de colisao.
 	********************************************************************/
 	
 	//Detecta quando o cubo encontra outro objeto.
@@ -123,5 +126,4 @@ public class Objeto extends MonoBehaviour {
 
 		
 	}
-	
 }
