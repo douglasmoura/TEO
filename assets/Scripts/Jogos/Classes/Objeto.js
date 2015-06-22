@@ -5,7 +5,10 @@
  * Classe tambem implementa metodos de MonoBehaviour (start, update, eventos de
  * mouse e colisao).
  * Objeto possui um ponto de origem e retorna ao mesmo sempre que for associado
- * ao objeto errado. 
+ * ao objeto errado.
+ *
+ * Author: Douglas
+ * Date: 21/06/15
 **/ 
 public class Objeto extends MonoBehaviour {
 	//Ponto de origem do cubo
@@ -104,26 +107,5 @@ public class Objeto extends MonoBehaviour {
 	    var curScreenSpace = Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
 	    //Atualiza posicao do objeto  
 	    transform.position = Camera.main.ScreenToWorldPoint(curScreenSpace) + offset;
-	}
-
-	//Trata evento de quando soltar o botao do mouse.
-	function OnMouseUp() {
-		drag = false;
-	}
-	
-	/*******************************************************************
-	 Metodos que tratam eventos de colisao.
-	********************************************************************/
-	
-	//Detecta quando o cubo encontra outro objeto.
-	function OnTriggerEnter2D(colisor: Collider2D) {
-		
-		
-	}
-
-	//Detecta quando o cubo sai da colicao de outro objeto.
-	function OnTriggerExit2D(colisor : Collider2D){
-
-		
 	}
 }

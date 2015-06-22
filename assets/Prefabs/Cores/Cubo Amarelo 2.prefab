@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 114: {fileID: 11400000}
   - 58: {fileID: 5800000}
+  - 114: {fileID: 11405478}
   m_Layer: 0
   m_Name: Cubo Amarelo 2
   m_TagString: Cubo Amarelo
@@ -41,7 +41,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 2
   m_Center: {x: 0, y: 0}
---- !u!114 &11400000
+--- !u!114 &11405478
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,9 +49,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bed03bcb34bc3c4e8b52c5a482b6306, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ae9319dc5912384db56d26e60c6fce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 6
+  y: -2.5
+  velocidade: 30
+  drag: 0
+  valida: 0
+  destino: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
