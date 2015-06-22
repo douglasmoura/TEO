@@ -220,7 +220,7 @@ Transform:
   m_LocalScale: {x: 1.10000002, y: 1.10000002, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &447418131
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +406,7 @@ Transform:
   m_LocalScale: {x: 1.10000002, y: 1.10000002, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!68 &997881122
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -606,7 +606,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &1457520818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,7 +1182,7 @@ Transform:
   - {fileID: 995547493}
   - {fileID: 1965310551}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
 --- !u!1 &2082783848
 GameObject:
   m_ObjectHideFlags: 0
