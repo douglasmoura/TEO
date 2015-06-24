@@ -43,7 +43,7 @@ function Update () {
 		girarRoleta();
 	}
 	
-	if (controle == 3) {
+	if (controle == 2) {
 		Inverter(resultado);
 		print("final " + resultado);
 		controle = -1;
@@ -61,7 +61,7 @@ function girarRoleta() {
 	
 	print(parar);
 	
-	Sortear(5.1, limite, parar);
+	Sortear(5.5, limite, parar);
 	
 	limite = Random.Range(13, 19);
 	
@@ -72,7 +72,7 @@ function girarRoleta() {
 	}
 	
 	print(parar);
-	Sortear(3.15, limite, parar);
+	Sortear(3.5, limite, parar);
 	
 	/*
 	*Futura implementaçao do nivel 2 com tres casas.
@@ -105,7 +105,7 @@ function Sortear(x:float, limite:int, parar:int) {
 	while (contador < limite || indexSub != parar) {
 		print("Valor do index " + (index - 1));
 		print("Contador do limite: " + contador + "; limite: " + limite);
-		primeiro = Instantiate(numeros[index],  Vector2(x, 2.7), Quaternion.identity);
+		primeiro = Instantiate(numeros[index],  Vector2(x, 2.5), Quaternion.identity);
 		
 		//if (index == parar) {
 		//	break;
@@ -130,10 +130,10 @@ function Sortear(x:float, limite:int, parar:int) {
 		resultado2 = 9;
 	}
 	
-	Instantiate(bloqueador,  Vector2(x, 1.5), Quaternion.identity);
+	Instantiate(bloqueador,  Vector2(x, 1.2), Quaternion.identity);
 	
 	resultado += resultado2;
-	controle += 1;
+	controle ++;
 }
 
 function OnGUI() {

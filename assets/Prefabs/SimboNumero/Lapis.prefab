@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5000000}
   m_Layer: 0
   m_Name: Lapis
-  m_TagString: Untagged
+  m_TagString: Lapis
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
@@ -55,7 +55,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 30, y: 5}
+  m_Size: {x: 32, y: 6}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400002
 MonoBehaviour:
