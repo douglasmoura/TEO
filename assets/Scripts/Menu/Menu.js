@@ -5,19 +5,27 @@ public var botaoSobre: GUISkin;
 public var botaoColeta: GUISkin;
 public var botaoSair: GUISkin;
 public var botaoMusica: GUISkin[];
+public var botaoFerramentas: GUISkin;
+
+public var clickFerramentas = false;
 
 private var scriptMusica: Musica;
 
-public var teo: Texture2D;
+
+public var logo: Texture2D;
 
 //Janela coletor.
 private var janelaColetor: JanelaColetor;
 
 private var login: Login;
 
-function Start () {
-	
+function Awake () {
+
 	janelaColetor = FindObjectOfType(typeof(JanelaColetor)) as JanelaColetor;
+
+}
+
+function Start () {
 	
 	scriptMusica = FindObjectOfType(typeof(Musica)) as Musica;
 	
@@ -35,8 +43,8 @@ function OnGUI() {
 	//Metade da altura da tela
 	var y = Screen.height/2;
 	
-			
-	//GUI.DrawTexture(new Rect(x/8 - 70, y/8 + 155, teo.width/1.1, teo.height/1.08), teo);
+	//Logo Canto da Tela.			
+	GUI.DrawTexture(new Rect(Screen.width/2 + 480, 20, logo.width/8, logo.height/8), logo);
 	
 	//Botao jogar
 	GUI.skin = botaoJogar;
@@ -60,7 +68,14 @@ function OnGUI() {
 	}else{
 		GUI.skin = botaoMusica[1];
 	}
-	var musica = GUI.Button(new Rect(Screen.width - 120, Screen.height - 750, 90, 80), "");
+	
+	//Gatilho para o click do botao ferramentas.
+	if(clickFerramentas!= false){
+		var musica = GUI.Button(new Rect(Screen.width - 260, Screen.height - 665, 90, 80), "");
+	}
+	
+	GUI.skin = botaoFerramentas;
+	var ferramentas = GUI.Button(new Rect(Screen.width - 260, Screen.height - 730, 90, 80), "");
 	
 	
 	if (jogar) {
@@ -84,6 +99,14 @@ function OnGUI() {
 	else if (sair) {
 		print("Saiu!");
 		Application.Quit();
+	}
+	
+	else if(ferramentas){
+		if(clickFerramentas == false){
+			clickFerramentas = true;
+		}else{
+			clickFerramentas = false;
+		}
 	}
 	
 	//Troca de Skins ainda nao esta funcionando.
