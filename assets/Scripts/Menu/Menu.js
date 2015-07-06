@@ -44,11 +44,11 @@ function OnGUI() {
 	var y = Screen.height/2;
 	
 	//Logo Canto da Tela.			
-	GUI.DrawTexture(new Rect(Screen.width/2 + 480, 20, logo.width/8, logo.height/8), logo);
+	GUI.DrawTexture(new Rect(Screen.width/2 + 495, 20, logo.width/8, logo.height/8), logo);
 	
 	//Botao jogar
 	GUI.skin = botaoJogar;
-	var jogar = GUI.Button(new Rect(x + 180, y - 230, 280, 280), "");
+	var jogar = GUI.Button(new Rect(x + 180, y - 230, 260, 260), "");
 	
 	//Botao que representa a coleta de dados.
 	GUI.skin = botaoColeta;
@@ -71,11 +71,11 @@ function OnGUI() {
 	
 	//Gatilho para o click do botao ferramentas.
 	if(clickFerramentas!= false){
-		var musica = GUI.Button(new Rect(Screen.width - 260, Screen.height - 665, 90, 80), "");
+		var musica = GUI.Button(new Rect(Screen.width - 260, Screen.height - 700, 90, 80), "");
 	}
 	
 	GUI.skin = botaoFerramentas;
-	var ferramentas = GUI.Button(new Rect(Screen.width - 260, Screen.height - 730, 90, 80), "");
+	var ferramentas = GUI.Button(new Rect(Screen.width - 260, Screen.height - 770, 90, 80), "");
 	
 	
 	if (jogar) {
@@ -83,7 +83,8 @@ function OnGUI() {
 		if(login.getPassagemLiberada() == true){
 			Application.LoadLevel("SuiteJogos");
 		}else{
-			login.habilita_Desabilita();
+			//login.habilita_Desabilita();
+			Application.LoadLevel("SuiteJogos");
 		}
 	}
 	
@@ -109,7 +110,6 @@ function OnGUI() {
 		}
 	}
 	
-	//Troca de Skins ainda nao esta funcionando.
 	else if(musica){
 		if(scriptMusica.GetEstado()){
 			scriptMusica.PauseOrPlay();

@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   habilitar: 0
   skin: {fileID: 11400000, guid: 95d364e5fe3dc4c4aaa51d9d393ead65, type: 2}
+  fontePopUp: {fileID: 0}
 --- !u!114 &155353972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,7 +794,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botaoHome: {fileID: 11400000, guid: c3355504f078d6a43b0125a90db76789, type: 2}
   botaoJogos: {fileID: 11400000, guid: acfce5084d78a55438aba545d8080cab, type: 2}
-  logo: {fileID: 2800000, guid: bfde7f6b59e77c74e8c06d51927e924d, type: 3}
 --- !u!4 &1887714292
 Transform:
   m_ObjectHideFlags: 0

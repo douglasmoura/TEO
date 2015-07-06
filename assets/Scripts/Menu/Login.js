@@ -68,7 +68,7 @@ function WindowFunction (windowID : int) {
 	GUI.skin = skinOk;
 	var xOk = largura - 190;
 	var yOk = altura/1.25;
-	var okBT = GUI.Button (Rect (xOk,yOk,80,35), "");
+	var okBT = GUI.Button (Rect (xOk,yOk,200,135), "");
 	
 	
 	if(sair){
