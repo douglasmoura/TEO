@@ -1,7 +1,8 @@
 ﻿#pragma strict
 
 public var nivel:int;
-public var jogador: String;
+public var jogador: String; //Nao esta sendo usado!
+
 
 function Awake() {
 	DontDestroyOnLoad (this);

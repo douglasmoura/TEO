@@ -33,6 +33,7 @@ function Update () {
 }
 
 
+
 public function Associacao() {
 	Estilo(COR);
 	

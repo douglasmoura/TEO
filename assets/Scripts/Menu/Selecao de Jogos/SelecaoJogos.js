@@ -1,15 +1,19 @@
-﻿	#pragma strict
+﻿#pragma strict
 
-public var fundo: Texture2D;
-public var atividades: Texture2D;
-public var cachorro: Texture2D;
+/**
+ * Script responsavel pela tela de seleçao de jogos, conta 
+ * Objeto possui um ponto de origem e retorna ao mesmo sempre que for associado
+ * ao objeto errado.
+ *
+ * Author: Douglas
+ * Date: 21/06/15
+**/ 
 
-public var skinCores: GUISkin;
-public var skinNumeros: GUISkin;
-public var skinOndeEsta: GUISkin;
-public var skinPuzzle: GUISkin;
-public var skinMemoria: GUISkin;
-public var skinAVD: GUISkin;
+public var skins: GUISkin[];
+public var botoes: boolean[];
+public var jogos: String[];
+
+//Skins
 public var skinPopUp: GUISkin;
 public var skinTitulo: GUISkin;
 public var skinJogar: GUISkin;
@@ -17,9 +21,7 @@ public var skinVoltar: GUISkin;
 public var skinLista: GUISkin;
 public var infoSkin: GUISkin;
 
-public static final var LARGURA = 1282;
-public static final var ALTURA = 777;
-
+//Constantes
 public static final var ASSOCIACAO = "Associação";
 public static final var MATEMATICA = "Matemática";
 public static final var PUZZLE = "Puzzle";
@@ -50,76 +52,29 @@ function Update () {
 }
 
 function OnGUI () {
-	
-	var xCachorro = 0;
-	var yCachorro = 260;
-	
-	var larguraCachorro = 810/2.1 ;
-	var alturaCachorro = 1012/1.8  ;
-
-	GUI.DrawTexture(new Rect(0, 0, LARGURA, ALTURA), fundo);
-	GUI.DrawTexture(new Rect(300, 40, 1007 - 150, 161 - 30), atividades);
-	GUI.DrawTexture(new Rect(xCachorro, yCachorro,larguraCachorro , alturaCachorro), cachorro);
-	
+		
 	var largura = 450;
 	var altura = 198;
 	
-	GUI.skin = skinCores;
-	var cores = GUI.Button(new Rect(largura , altura, 577/3, 577/3), "");
-	
-	largura += 200;
-	
-	GUI.skin = skinNumeros;
-	var numeros = GUI.Button(new Rect(largura , altura, 577/3, 577/3), "");
-	
-	largura += 200;
-	GUI.skin = skinPuzzle;
-	var puzzle = GUI.Button(new Rect(largura , altura, 577/3, 577/3), "");
-	
-	largura = 450;
-	altura += 200;
-	GUI.skin = skinMemoria;
-	var memoria = GUI.Button(new Rect(largura , altura, 577/3, 577/3), "");
-	
-	largura += 200;
-	GUI.skin = skinAVD;
-	var avd = GUI.Button(new Rect(largura , altura, 577/3, 577/3), "");
-	
-	largura += 200;
-	GUI.skin = skinOndeEsta;
-	var ondeEsta = GUI.Button(new Rect(largura , altura, 577/3, 577/3), "");
-	
-	if (!popUp) {
-		if (cores) {
-			popUp = true;
-			jogo = ASSOCIACAO;
-	}
-
-		if (numeros) {
-			popUp = true;
-			jogo = MATEMATICA;
-	}
-	
-		if (puzzle) {
-			popUp = true;
-			jogo = PUZZLE;
-	}
-	
-		if (memoria) {
-			popUp = true;
-			jogo = MEMORIA;
-	}
+	for (var i: int = 0; i < 6; i++) {
+		GUI.skin = skins[i];
+		botoes[i] = GUI.Button(new Rect(largura, altura, 577/3, 577/3), "");
 		
-		if (ondeEsta) {
-			popUp = true;
-			jogo = ONDE_ESTA;
+		largura += 200;
+		
+		if (i == 2) {
+			largura = 450;
+			altura += 200;
 		}
 		
-		if (avd){
-			popUp = true;
-			jogo = AVD;
+		if (!popUp) {
+			if (botoes[i]) {
+				popUp = true;
+				jogo = jogos[i];
+			}
 		}
 	}
+	
 	
 	if (popUp) {
 		GUI.skin = skinPopUp;
