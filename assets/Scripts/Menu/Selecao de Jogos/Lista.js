@@ -32,6 +32,13 @@ function Update () {
 
 }
 
+public function CriarBotoes(cor : int) {
+	Estilo(cor);
+	
+	var distancia = 0;
+	
+	
+}
 
 
 public function Associacao() {

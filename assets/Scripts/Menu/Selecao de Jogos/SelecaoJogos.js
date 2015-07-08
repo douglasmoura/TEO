@@ -9,11 +9,11 @@
  * Date: 21/06/15
 **/ 
 
-public var skins: GUISkin[];
-public var botoes: boolean[];
-public var jogos: String[];
+public var skins: GUISkin[]; //Array com as skins das categorias
+public var botoes: boolean[]; //Array com o valor bool dos botoes das categorias
+public var jogos: String[]; //Nome das categorias dos jogos
 
-//Skins
+//Demais Skins
 public var skinPopUp: GUISkin;
 public var skinTitulo: GUISkin;
 public var skinJogar: GUISkin;
@@ -29,8 +29,8 @@ public static final var MEMORIA = "Memória";
 public static final var ONDE_ESTA = "Onde Está?";
 public static final var AVD = "AVD";
 
-private var lista: Lista;
-private var nivelGUI: NivelGUI;
+private var lista: Lista; //Script que gerencia a lista de jogos
+private var nivelGUI: NivelGUI; //Script que gerencia a visualizacao do nivel
 
 private var popUp = false;
 private var janela : Rect;
@@ -45,10 +45,6 @@ function Start () {
 	janela = Rect(Screen.width/2 - 750/2.7, Screen.height/2 - 560/2.2, 800, 600);
 	lista = FindObjectOfType(typeof(Lista)) as Lista;
 	nivelGUI = FindObjectOfType(typeof(NivelGUI)) as NivelGUI;
-}
-
-function Update () {
-
 }
 
 function OnGUI () {
