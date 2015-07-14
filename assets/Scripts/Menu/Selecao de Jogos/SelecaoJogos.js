@@ -49,6 +49,15 @@ function Start () {
 
 function OnGUI () {
 		
+	Categorias();
+	
+	if (popUp) {
+		GUI.skin = skinPopUp;
+		janela = GUI.Window (0, janela, DoMyWindow, "");
+	}
+}
+
+function Categorias() {
 	var largura = 450;
 	var altura = 198;
 	
@@ -70,12 +79,6 @@ function OnGUI () {
 			}
 		}
 	}
-	
-	
-	if (popUp) {
-		GUI.skin = skinPopUp;
-		janela = GUI.Window (0, janela, DoMyWindow, "");
-	}
 }
 
 function DoMyWindow (windowID : int) {
@@ -85,7 +88,7 @@ function DoMyWindow (windowID : int) {
 	GUI.Label(Rect (360, 280, 345, 290), infoGames);
 
 	GUI.skin = skinTitulo;
-	GUI.Label (Rect (245, 45, 290, 70), jogo);
+	GUI.Label (Rect (210, 45, 370, 70), jogo);
 	
 	GUI.skin = skinLista;
 	

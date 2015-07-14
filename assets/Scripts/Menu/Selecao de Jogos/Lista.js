@@ -17,27 +17,22 @@ public static final var ONDE_ESTA_ROSTO = 6;
 public var info = "";
 
 private var boolArray = new boolean[JOGOS];
-
+private var jogos = new Jogo[JOGOS];
 
 public var skinLista1: GUISkin;
 public var skinLista2: GUISkin;
 
 function Start () {
+	
+	jogos[COR] = new Jogo("Cor", "Associar circulos coloridos\na seus equivalentes.", 2);
+	jogos[QUANTO_E] = new Jogo("Quanto é?", "Associar o sentido de \nquantidade com unidades \ne dezenas realizando uma \nsoma." , 1);
+	jogos[SIMBO_NUMERO] = new Jogo("SimboNúmero", "Associar o sentido de \nquantidade com unidades \ne dezenas.", 1);
+	jogos[TARTARUGA] = new Jogo("Tartaruga", "Estimular o raciocínio lógico \nresolvendo o quebra-cabecas \nda tartaruga.", 4);
+	jogos[ONDE_ESTA_ROSTO] = new Jogo("Onde Esta?", "Identificar e localizar partes \npresentes no rosto." , 2);
+	
 	for (var i = 0; i < JOGOS; i ++) {
 		boolArray[i] = false;
 	}
-}
-
-function Update () {
-
-}
-
-public function CriarBotoes(cor : int) {
-	Estilo(cor);
-	
-	var distancia = 0;
-	
-	
 }
 
 
