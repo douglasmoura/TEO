@@ -35,6 +35,9 @@ function Start () {
 	}
 }
 
+public function Selecionar(categoria : String) {
+	
+}
 
 public function Associacao() {
 	Estilo(COR);

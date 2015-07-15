@@ -94,6 +94,13 @@ function DoMyWindow (windowID : int) {
 	
 	scrollPosition = GUI.BeginScrollView (Rect (70,155,265,330),
 			scrollPosition, Rect (10, 0, 155, 380));
+			
+	for (var categoria : String in jogos) {
+		if (jogo == categoria) {
+			Debug.Log("Categoria " + jogo);
+			
+		}
+	}
 
 	if (jogo == ASSOCIACAO) {
 	
