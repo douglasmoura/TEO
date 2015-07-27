@@ -18,7 +18,7 @@ EditorBuildSettings:
   - enabled: 1
     path: assets/Cenas/Jogos/Quanto E.unity
   - enabled: 1
-    path: assets/Cenas/Jogos/SimboNumero.unity
+    path: "assets/Cenas/Jogos/SimboN\xFAmero.unity"
   - enabled: 1
     path: assets/Cenas/Jogos/QuebraCabeca/Tartaruga/Tartaruga1.unity
   - enabled: 1

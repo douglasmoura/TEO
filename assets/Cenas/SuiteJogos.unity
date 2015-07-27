@@ -102,8 +102,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labelSkin: {fileID: 11400000, guid: 6af30fce98582b446a4212422b747eff, type: 2}
+  estrelas:
+  - {fileID: 11400000, guid: c711857e053b2ec48854a971750338ab, type: 2}
+  - {fileID: 11400000, guid: 0ea63d28a24e8db4e882cd9c9ae6111f, type: 2}
+  - {fileID: 11400000, guid: f4d9c6d580f9ab8499d137ea96b2d36e, type: 2}
   botaoNivel1: {fileID: 11400000, guid: c711857e053b2ec48854a971750338ab, type: 2}
   botaoNivel2: {fileID: 11400000, guid: 0ea63d28a24e8db4e882cd9c9ae6111f, type: 2}
+  botaoNivel3: {fileID: 0}
   nivel: {fileID: 0}
 --- !u!4 &451100411
 Transform:
@@ -375,7 +380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90f9627d5beaa7448188dcbb9011dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jogo: 
   info: 
   skinLista1: {fileID: 11400000, guid: be7f0aaccbef2c94b9ecc39d2094276d, type: 2}
   skinLista2: {fileID: 11400000, guid: 3eda2972a1372114bbde35d922c07085, type: 2}
@@ -492,16 +496,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 548b8809d0231074c85abdd1403a6f64, type: 2}
   - {fileID: 11400000, guid: 9ca2f728c00c4814582615489fb1fa75, type: 2}
   - {fileID: 11400000, guid: 97d56382b32b917448a01d160cde87a9, type: 2}
-  - {fileID: 11400000, guid: def62c29e4ae63945a3edb134f2f392e, type: 2}
   - {fileID: 11400000, guid: a0d9b8d3a51a3be44a3dcf9f42077bcc, type: 2}
+  - {fileID: 11400000, guid: def62c29e4ae63945a3edb134f2f392e, type: 2}
   botoes: 000000000000
   jogos:
   - "Associa\xE7\xE3o"
   - "Matem\xE1tica"
   - "Quebra-cabe\xE7a"
   - "Mem\xF3ria"
-  - "Onde Est\xE1?"
   - AVD
+  - "Onde Est\xE1?"
   skinPopUp: {fileID: 11400000, guid: 9d6f0e73d7fabca4bb4d1fbd068b5264, type: 2}
   skinTitulo: {fileID: 11400000, guid: 6436f9a90cad14c48ad8aadbe26c8278, type: 2}
   skinJogar: {fileID: 11400000, guid: b811ee219697e614e82babb12881607c, type: 2}

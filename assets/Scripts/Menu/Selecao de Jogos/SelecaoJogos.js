@@ -24,7 +24,7 @@ public var infoSkin: GUISkin;
 //Constantes
 public static final var ASSOCIACAO = "Associação";
 public static final var MATEMATICA = "Matemática";
-public static final var PUZZLE = "Puzzle";
+public static final var PUZZLE = "Quebra-cabeça";
 public static final var MEMORIA = "Memória";
 public static final var ONDE_ESTA = "Onde Está?";
 public static final var AVD = "AVD";
@@ -38,8 +38,6 @@ private var janela : Rect;
 private var jogo: String;
 
 private var scrollPosition : Vector2 = Vector2.zero;
-
-//private var infoGames = "Clique em um Jogo \npara começar.";
 
 function Start () {
 	janela = Rect(Screen.width/2 - 750/2.7, Screen.height/2 - 560/2.2, 800, 600);
@@ -100,54 +98,14 @@ function DoMyWindow (windowID : int) {
 			Selecionar(jogo);	
 		}
 	}
-
-	/**
-	if (jogo == ASSOCIACAO) {
-	
-		lista.Associacao();
-		infoGames = getInfoGame();
-		
-	} else if (jogo == MATEMATICA) {
-		lista.Matematica();
-		if(lista.info != "ESCOLHA UM JOGO \n   PARA COMEÇAR"){
-			infoGames = getInfoGame();
-			print(infoGames);
-		}
-
-	//Ainda nao implementado no script lista.	
-	} else if (jogo == MEMORIA) {
-		if(lista.info != "Clique em um Jogo \n para começar!"){
-			infoGames = lista.info;
-			print(infoGames);
-		}
-		
-	} else if (jogo == PUZZLE) {
-		lista.Puzzle();
-		print(infoGames);
-		if(lista.info != "ESCOLHA UM JOGO \n   PARA COMEÇAR"){
-			infoGames = getInfoGame();
-			print(infoGames);
-		}
-		
-	} else if (jogo == ONDE_ESTA) {
-		lista.OndeEsta();
-		if(lista.info != "ESCOLHA UM JOGO \n   PARA COMEÇAR"){
-			infoGames = getInfoGame();
-			print(infoGames);
-		}
-	//Ainda nao implementado no script lista.		
-	} else if (jogo == AVD) {
-		if(lista.info != "Clique em um Jogo \n para começar!"){
-			infoGames = lista.info;
-			print(infoGames);
-		}
-		
-	}
-	**/	
 	
 	GUI.EndScrollView ();
 	
-	nivelGUI.Exibir();
+	if (lista.jogo != null) {
+		nivelGUI.Exibir(lista.jogo.getNivel());
+	} else {
+		nivelGUI.Exibir(0);
+	}
 	
 	GUI.skin = skinJogar;
 	var jogar = GUI.Button(new Rect(645 , 437, 537/4.0, 500/4.0), "");
@@ -156,15 +114,14 @@ function DoMyWindow (windowID : int) {
 	var voltar = GUI.Button(new Rect(562 , 466, 537/4.5, 500/4.15), "");
 	
 	if (voltar) {
-//		infoGames = "ESCOLHA UM JOGO \n   PARA COMEÇAR";
 		lista.Validar(-1);
-		lista.jogo = "";
-		nivelGUI.nivel.nivel = 1;
+		lista.jogo = null;
+		nivelGUI.nivel.nivel = 0;
 		popUp = false;
 	}
 	
 	if (jogar) {
-		var jogo = lista.jogo;
+		var jogo = lista.jogo.getCena();
 		if (jogo.Equals("Tartaruga")) {
 			jogo += nivelGUI.nivel.nivel;
 		}
@@ -181,18 +138,13 @@ public function Selecionar(categoria : String) {
 			lista.Listar(1, 3);
 			break;
 		case PUZZLE:
-			lista.Puzzle();
+			lista.Listar(3, 4);
 			break;
 		case MEMORIA:
 			break;
 		case AVD:
 			break;
 		default:
-			lista.OndeEsta();
+			lista.Listar(4, 5);
 	}
-}
-
-//Adiquirindo informaçao sobre o jogo direto da lista.
-function getInfoGame (){
-	return lista.info;
 }
