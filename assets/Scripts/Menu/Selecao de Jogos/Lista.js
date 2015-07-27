@@ -4,15 +4,15 @@ public var jogo: String;
 private var selecaoJogos : SelecaoJogos;
 
 //Constantes
-public static final var JOGOS = 7;
+public static final var JOGOS = 5;
 
 public static final var COR = 0;
 public static final var QUANTO_E = 1;
 public static final var SIMBO_NUMERO = 2;
 public static final var TARTARUGA = 3;
-public static final var HIPOPOTAMO = 4;
-public static final var PINTINHO = 5;
-public static final var ONDE_ESTA_ROSTO = 6;
+//public static final var HIPOPOTAMO = 4;
+//public static final var PINTINHO = 5;
+public static final var ONDE_ESTA_ROSTO = 4;
 
 public var info = "";
 
@@ -24,7 +24,7 @@ public var skinLista2: GUISkin;
 
 function Start () {
 	
-	jogos[COR] = new Jogo("Cor", "Associar circulos coloridos\na seus equivalentes.", 2);
+	jogos[COR] = new Jogo("Cores", "Associar circulos coloridos\na seus equivalentes.", 2);
 	jogos[QUANTO_E] = new Jogo("Quanto é?", "Associar o sentido de \nquantidade com unidades \ne dezenas realizando uma \nsoma." , 1);
 	jogos[SIMBO_NUMERO] = new Jogo("SimboNúmero", "Associar o sentido de \nquantidade com unidades \ne dezenas.", 1);
 	jogos[TARTARUGA] = new Jogo("Tartaruga", "Estimular o raciocínio lógico \nresolvendo o quebra-cabecas \nda tartaruga.", 4);
@@ -35,8 +35,21 @@ function Start () {
 	}
 }
 
-public function Selecionar(categoria : String) {
-	
+public function Listar(inicio: int, fim : int) {
+	var altura = 0;
+	for (var i = inicio; i < fim; i++) {
+		Estilo(i);
+		
+		var botao = GUI.Button(Rect (10, altura, 250, 60), jogos[i].GetNome());
+		
+		if (botao) {
+			Validar(i);
+			info = jogos[i].GetDescricao();
+			jogo = jogos[i].GetNome();
+		}
+		
+		altura += 70;
+	}
 }
 
 public function Associacao() {
@@ -48,10 +61,11 @@ public function Associacao() {
 	var cor = GUI.Button (Rect (10,distanciaBotao1,250,60), "Cor");
 	if (cor) {
 		Validar(COR);
+		info = jogos[COR].GetDescricao();
+		jogo = jogos[COR].GetNome();
+		//info = "Associar circulos coloridos\na seus equivalentes.";
 		
-		info = "Associar circulos coloridos\na seus equivalentes.";
-		
-		jogo = "Cores";
+		//jogo = "Cores";
 
 		print(info);
 	}
@@ -145,7 +159,8 @@ private function Estilo (jogo: int) {
 		GUI.skin = skinLista2;
 	} else {
 		GUI.skin = skinLista1;
-		info = "ESCOLHA UM JOGO \n   PARA COMEÇAR"; //O segredo esta aqui pois, esse estilo indica que nao tem nada selecionado.
+		//info = "ESCOLHA UM JOGO \n   PARA COMEÇAR"; //O segredo esta aqui pois, esse estilo indica que nao tem nada selecionado.
+		info = "Selecione um jogo e seu\nnível para começar.";
 	}
 }
 

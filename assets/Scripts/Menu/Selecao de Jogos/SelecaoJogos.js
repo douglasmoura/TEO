@@ -39,7 +39,7 @@ private var jogo: String;
 
 private var scrollPosition : Vector2 = Vector2.zero;
 
-private var infoGames = "Clique em um Jogo \npara começar.";
+//private var infoGames = "Clique em um Jogo \npara começar.";
 
 function Start () {
 	janela = Rect(Screen.width/2 - 750/2.7, Screen.height/2 - 560/2.2, 800, 600);
@@ -85,7 +85,7 @@ function DoMyWindow (windowID : int) {
 
 	//Label responsavel pelo info do jogo.
 	GUI.skin = infoSkin;
-	GUI.Label(Rect (360, 280, 345, 290), infoGames);
+	GUI.Label(Rect (360, 280, 345, 290), lista.info);
 
 	GUI.skin = skinTitulo;
 	GUI.Label (Rect (210, 45, 370, 70), jogo);
@@ -97,11 +97,11 @@ function DoMyWindow (windowID : int) {
 			
 	for (var categoria : String in jogos) {
 		if (jogo == categoria) {
-			Debug.Log("Categoria " + jogo);
-			
+			Selecionar(jogo);	
 		}
 	}
 
+	/**
 	if (jogo == ASSOCIACAO) {
 	
 		lista.Associacao();
@@ -116,10 +116,10 @@ function DoMyWindow (windowID : int) {
 
 	//Ainda nao implementado no script lista.	
 	} else if (jogo == MEMORIA) {
-		/*if(lista.info != "Clique em um Jogo \n para começar!"){
+		if(lista.info != "Clique em um Jogo \n para começar!"){
 			infoGames = lista.info;
 			print(infoGames);
-		}*/
+		}
 		
 	} else if (jogo == PUZZLE) {
 		lista.Puzzle();
@@ -137,13 +137,13 @@ function DoMyWindow (windowID : int) {
 		}
 	//Ainda nao implementado no script lista.		
 	} else if (jogo == AVD) {
-		/*if(lista.info != "Clique em um Jogo \n para começar!"){
+		if(lista.info != "Clique em um Jogo \n para começar!"){
 			infoGames = lista.info;
 			print(infoGames);
-		}*/
+		}
 		
 	}
-		
+	**/	
 	
 	GUI.EndScrollView ();
 	
@@ -156,7 +156,7 @@ function DoMyWindow (windowID : int) {
 	var voltar = GUI.Button(new Rect(562 , 466, 537/4.5, 500/4.15), "");
 	
 	if (voltar) {
-		infoGames = "ESCOLHA UM JOGO \n   PARA COMEÇAR";
+//		infoGames = "ESCOLHA UM JOGO \n   PARA COMEÇAR";
 		lista.Validar(-1);
 		lista.jogo = "";
 		nivelGUI.nivel.nivel = 1;
@@ -169,6 +169,26 @@ function DoMyWindow (windowID : int) {
 			jogo += nivelGUI.nivel.nivel;
 		}
 		Application.LoadLevel(jogo);
+	}
+}
+
+public function Selecionar(categoria : String) {
+	switch (categoria) {
+		case ASSOCIACAO:
+			lista.Listar(0, 1);
+			break;
+		case MATEMATICA:
+			lista.Listar(1, 3);
+			break;
+		case PUZZLE:
+			lista.Puzzle();
+			break;
+		case MEMORIA:
+			break;
+		case AVD:
+			break;
+		default:
+			lista.OndeEsta();
 	}
 }
 
