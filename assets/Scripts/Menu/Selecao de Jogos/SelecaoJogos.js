@@ -121,11 +121,19 @@ function DoMyWindow (windowID : int) {
 	}
 	
 	if (jogar) {
-		var jogo = lista.jogo.getCena();
-		if (jogo.Equals("Tartaruga")) {
-			jogo += nivelGUI.nivel.nivel;
+		Debug.Log("Nivel " + nivelGUI.nivel.nivel);
+		Debug.Log("Lista " + lista.jogo.getCena());
+		if (lista.jogo.getCena() == null) {
+			lista.info = "Selecione um jogo";
+		} else if (nivelGUI.nivel.nivel == 0) {
+			lista.info = "Selecione um nível";
+		} else {
+			var jogo = lista.jogo.getCena();
+			if (jogo.Equals("Tartaruga")) {
+				jogo += nivelGUI.nivel.nivel;
+			}
+			Application.LoadLevel(jogo);
 		}
-		Application.LoadLevel(jogo);
 	}
 }
 

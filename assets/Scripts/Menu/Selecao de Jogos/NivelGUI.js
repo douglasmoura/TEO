@@ -42,7 +42,7 @@ function Exibir(nivelJogo : int) {
 		MarcarNivel(i);
 		botoes[i-1] = GUI.Button (Rect (largura,435,55,53), "");
 		
-		if (botoes[i-1]) {
+		if (botoes[i-1] && !(i > nivelMaximo)) {
 			if (nivel.nivel != i) {
 				nivel.nivel = i;
 			}
