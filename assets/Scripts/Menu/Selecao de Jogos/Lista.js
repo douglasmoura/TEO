@@ -31,6 +31,7 @@ function Start () {
 	jogos[ONDE_ESTA_ROSTO] = new Jogo("Onde Está?", "Identificar e localizar partes \npresentes no rosto." , 2);
 	
 	jogos[QUANTO_E].setCena("Quanto E");
+	jogos[TARTARUGA].setCena("QuebraCabeca");
 	jogos[ONDE_ESTA_ROSTO].setCena("Onde Esta");
 	
 	for (var i = 0; i < JOGOS; i ++) {

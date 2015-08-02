@@ -129,9 +129,7 @@ function DoMyWindow (windowID : int) {
 			lista.info = "Selecione um nível";
 		} else {
 			var jogo = lista.jogo.getCena();
-			if (jogo.Equals("Tartaruga")) {
-				jogo += nivelGUI.nivel.nivel;
-			}
+			nivelGUI.nivel.jogo = lista.jogo.GetNome();
 			Application.LoadLevel(jogo);
 		}
 	}

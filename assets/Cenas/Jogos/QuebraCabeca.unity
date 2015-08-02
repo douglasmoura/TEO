@@ -193,11 +193,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pecas:
-  - {fileID: 100000, guid: 3242b0bea7132394f9a2da51ce9f998e, type: 2}
-  - {fileID: 100000, guid: 1b198f095efd6f34882c0983aee879e2, type: 2}
-  - {fileID: 100000, guid: 9920e006032a5f141939b40b340d6b08, type: 2}
-  - {fileID: 100000, guid: 020360289d0912045902b9d1dd871e98, type: 2}
-  teste: {fileID: 0}
+  - {fileID: 100000, guid: d462af94f07951d4ab6c9284718ecd4c, type: 2}
+  - {fileID: 100000, guid: 680bd29508fe67f4d80e949b64ec7177, type: 2}
+  - {fileID: 100000, guid: 4fb14421ebbecf045b443c7a7a152d3f, type: 2}
+  - {fileID: 100000, guid: 5bfc4dea0233bf8409ee03bbcfe8e185, type: 2}
 --- !u!4 &1112863942
 Transform:
   m_ObjectHideFlags: 0
@@ -336,10 +335,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pecas:
-  - {fileID: 100000, guid: a6ebc3910618aa64ebaecd05e9ea9ad7, type: 2}
-  - {fileID: 100000, guid: ffae08a4e9d7c4d449db4b577158f2d7, type: 2}
-  - {fileID: 100000, guid: d15691e938353ce4e83bfa84ac1cfd8c, type: 2}
-  - {fileID: 100000, guid: b185628aac7acda488855e22cbcc8ad4, type: 2}
+  - {fileID: 100000, guid: 83d434e926e936d43bad59e5630043f1, type: 2}
+  - {fileID: 100000, guid: 5ac7f8577983200479191bc750900dea, type: 2}
+  - {fileID: 100000, guid: 4d45f215ea24203478fecaedde00195b, type: 2}
+  - {fileID: 100000, guid: 6c7d4a30b06f7804181a7ba37bab7cc7, type: 2}
   erros: 0
   jogou: 0
   completou: 0

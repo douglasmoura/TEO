@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nivel: 0
+  jogo: 
   jogador: 
 --- !u!4 &1193790030
 Transform:

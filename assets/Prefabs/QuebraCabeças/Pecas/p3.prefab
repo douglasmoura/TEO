@@ -12,9 +12,9 @@ GameObject:
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: 2
-  m_TagString: Dois
-  m_Icon: {fileID: 1170012219, guid: 0000000000000000d000000000000000, type: 0}
+  m_Name: p3
+  m_TagString: Tres
+  m_Icon: {fileID: 1177953632, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -39,8 +39,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2.4000001, y: 1.39999998}
-  m_Center: {x: 0, y: .200000003}
+  m_Size: {x: 2.0999999, y: 1.60000002}
+  m_Center: {x: 0, y: -.200000003}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1102283321
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70db54ab5f65fb54d844683eab7b85b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ab3d3baa4991604bb0f58977af8941b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
