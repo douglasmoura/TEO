@@ -1,8 +1,8 @@
 ﻿#pragma strict
 
 public var pecas: GameObject[];
-private var nivel: Nivel;
-private var load: Load;
+public var nivel: Nivel;
+public var load: Load;
 public var texturas: Object[];
 
 function Start () {

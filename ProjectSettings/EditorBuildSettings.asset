@@ -20,12 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: "assets/Cenas/Jogos/SimboN\xFAmero.unity"
   - enabled: 1
-    path: assets/Cenas/Jogos/QuebraCabeca/Tartaruga/Tartaruga1.unity
-  - enabled: 1
-    path: assets/Cenas/Jogos/QuebraCabeca/Tartaruga/Tartaruga2.unity
-  - enabled: 1
-    path: assets/Cenas/Jogos/QuebraCabeca/Tartaruga/Tartaruga3.unity
-  - enabled: 1
-    path: assets/Cenas/Jogos/QuebraCabeca/Tartaruga/Tartaruga4.unity
-  - enabled: 1
     path: assets/Cenas/Jogos/QuebraCabeca.unity

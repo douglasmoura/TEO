@@ -17,17 +17,22 @@ private var popupScript: Popup;
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
 private var csScript : CsColetor;
 
+private var elementos: Elementos;
+public var texturas: Object[];
+
 function Awake() {
 
+	
+}
+
+function Start () {
 	csScript = this.GetComponent("CsColetor");
 	
 	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
 	
+	elementos = FindObjectOfType(typeof(Elementos)) as Elementos;
+	
 	embaralhar();
-}
-
-function Start () {
-
 }
 
 function Update () {
@@ -45,7 +50,11 @@ function Update () {
 	}
 }
 
-function embaralhar() {  
+function embaralhar() {
+	var pasta = elementos.nivel.jogo + "/Pecas";
+	Debug.Log("Pasta " + pasta);
+	texturas = Resources.LoadAll(pasta, typeof(Sprite));
+	Debug.Log("Array " + texturas);
  
     for (var i : int = 0; i < pecas.Length; i++) {
         var primeiro : int = Random.Range(i, pecas.Length);
@@ -54,6 +63,7 @@ function embaralhar() {
         pecas[i].transform.position = pecas[primeiro].transform.position;
         Instantiate(pecas[i], pecas[i].transform.position, Quaternion.identity);
         pecas[primeiro].transform.position = segundo;
+        pecas[i].GetComponent(SpriteRenderer).sprite = texturas[i];
     }
 }
 
