@@ -144,13 +144,13 @@ public function Selecionar(categoria : String) {
 			lista.Listar(1, 3);
 			break;
 		case PUZZLE:
-			lista.Listar(3, 4);
+			lista.Listar(3, 5);
 			break;
 		case MEMORIA:
 			break;
 		case AVD:
 			break;
 		default:
-			lista.Listar(4, 5);
+			lista.Listar(5, 6);
 	}
 }
