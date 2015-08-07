@@ -7,7 +7,8 @@ public var botaoSair: GUISkin;
 public var botaoMusica: GUISkin[];
 public var botaoFerramentas: GUISkin;
 
-public var clickFerramentas = false;
+// Auxiliar ao Botao Ferramentas, proposta suspensa.
+//public var clickFerramentas = false;
 
 private var scriptMusica: Musica;
 
@@ -44,7 +45,7 @@ function OnGUI() {
 	var y = Screen.height/2;
 	
 	//Logo Canto da Tela.			
-	GUI.DrawTexture(new Rect(Screen.width/2 + 495, 20, logo.width/8, logo.height/8), logo);
+	//GUI.DrawTexture(new Rect(Screen.width/2 + 495, 20, logo.width/8, logo.height/8), logo);
 	
 	//Botao jogar
 	GUI.skin = botaoJogar;
@@ -70,12 +71,16 @@ function OnGUI() {
 	}
 	
 	//Gatilho para o click do botao ferramentas.
+	/*
+	* Botao Ferramentas. Prospota suspensa.
+	*
 	if(clickFerramentas!= false){
 		var musica = GUI.Button(new Rect(Screen.width - 260, Screen.height - 700, 90, 80), "");
 	}
 	
 	GUI.skin = botaoFerramentas;
 	var ferramentas = GUI.Button(new Rect(Screen.width - 260, Screen.height - 770, 90, 80), "");
+	*/
 	
 	
 	if (jogar) {
@@ -102,14 +107,20 @@ function OnGUI() {
 		Application.Quit();
 	}
 	
-	else if(ferramentas){
+	/*
+	* Botao Ferramentas. Proposta Suspensa.
+	*else if(ferramentas){
 		if(clickFerramentas == false){
 			clickFerramentas = true;
 		}else{
 			clickFerramentas = false;
 		}
 	}
+	*/
 	
+	/*
+	* Proposta incluido junto do botao ferramentas. Suspensa.
+	*	
 	else if(musica){
 		if(scriptMusica.GetEstado()){
 			scriptMusica.PauseOrPlay();
@@ -119,4 +130,5 @@ function OnGUI() {
 			print("Musica On!");
 		}
 	}
+	*/
 }

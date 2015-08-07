@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-public var sprites: Sprite[];
+public var imagem: Sprite;
 
 public var origem: Transform;
 
@@ -37,9 +37,9 @@ function Start () {
 	x = origem.position.x;
 	y = origem.position.y;
 	
-	var sprite: SpriteRenderer;
-	sprite = this.GetComponent(SpriteRenderer);
-	sprite.sprite = sprites[0]; //Random.Range(0, 5); //No caso de sortear mais frutas.
+	var spriteRender: SpriteRenderer;
+	spriteRender = this.GetComponent(SpriteRenderer);
+	spriteRender.sprite = imagem;
 	
 	//Ao ser instanciado ele apenas ira deslizar um valor definido para dar o efeito da "fila".
 	//Deslizar(-8,-1.6f);
@@ -50,10 +50,7 @@ function Update () {
 	 * Se objeto não foi associado corretamente, ele irá retornar
 	 * ao ponto de origem.
 	**/	
-	/*if (valida && drag && tavaDentro) {
-		principal.resultArea--;
-		Retornar();
-	}else */
+
 	if (!valida && !drag) {
 		Retornar();
 	}

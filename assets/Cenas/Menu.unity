@@ -1010,7 +1010,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aa872a87a3acbd445ac311968bd0d803, type: 2}
   - {fileID: 11400000, guid: 89ff8243b82bc14459d36672f22816cb, type: 2}
   botaoFerramentas: {fileID: 11400000, guid: e552dd47db4269a4795f347bb3cffa99, type: 2}
-  clickFerramentas: 0
   logo: {fileID: 2800000, guid: ed31c97edee1e834092214a999699e54, type: 3}
 --- !u!114 &1841138042
 MonoBehaviour:
@@ -1024,7 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   habilitar: 0
-  skin: {fileID: 11400000, guid: 95d364e5fe3dc4c4aaa51d9d393ead65, type: 2}
+  skin: {fileID: 11400000, guid: 4cd569b2c0785ec4fb5150a2170717a6, type: 2}
   scrollPosition: {x: 0, y: 0}
 --- !u!114 &1841138043
 MonoBehaviour:

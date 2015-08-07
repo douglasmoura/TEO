@@ -1,12 +1,16 @@
 ﻿#pragma strict
 
-public static final var x = 0; //Delay para as peças chegarem.
-public static final var y = -4;
+public static final var x = -7; //Delay para as peças chegarem.
+public static final var y = -1.6f;
 
 //Unidades.
 public var unidade: GameObject;
 public var qtUnidades: int;
+
 private var unidadeMomento: GameObject; //Sera a do atual momento sempre.
+private var a: GameObject; //Sera a do atual momento sempre.
+private var b: GameObject; //Sera a do atual momento sempre.
+private var c: GameObject; //Sera a do atual momento sempre.
 
 //Usado para saber se e uma nova peça ou nao, para poder ser criado outra. Ver Maca.js
 public var seNovo: boolean;
@@ -41,6 +45,10 @@ private var musicaScript: Musica;
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
 private var csScript : CsColetor;
 
+private var tamanhoFila = 4;
+
+private 
+
 
 function Awake () {
 
@@ -57,6 +65,9 @@ function Start () {
 	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
 	
 	unidadeMomento = Instantiate(unidade,  Vector2(x, y), Quaternion.identity);
+	a = Instantiate(unidade,  Vector2(-5, -1.6f), Quaternion.identity);
+	b = Instantiate(unidade,  Vector2(-3, -1.6f), Quaternion.identity);
+	c = Instantiate(unidade,  Vector2(-1, -1.6f), Quaternion.identity);
 	
 	musicaScript = FindObjectOfType(typeof(Musica)) as Musica;
 	//musicaScript.GetInstance() = null;
@@ -111,10 +122,10 @@ function OnGUI (){
 //Definindo a conta que sera apresentada.
 function DefinirConta () {
 	var v1 = Random.Range(1, 5);
-	var v2 = Random.Range(0, 5);
+	var v2 = Random.Range(1, 5);
 	resultTotal = v1 + v2;
 	
-	conta.text = v1.ToString() + "  +  " + v2.ToString();
+	conta.text = v1.ToString() + "  +  " + v2.ToString() + " = ";
 }
 
 //Funçao para que possa ser apresentado e futuramente armazenado os dados coletados.
