@@ -61,9 +61,10 @@ function embaralhar() {
         var segundo = pecas[i].transform.position;
         
         pecas[i].transform.position = pecas[primeiro].transform.position;
+        pecas[i].GetComponent(SpriteRenderer).sprite = texturas[i];
         Instantiate(pecas[i], pecas[i].transform.position, Quaternion.identity);
         pecas[primeiro].transform.position = segundo;
-        pecas[i].GetComponent(SpriteRenderer).sprite = texturas[i];
+        
     }
 }
 
