@@ -4,7 +4,7 @@ public var jogo: Jogo;
 private var selecaoJogos : SelecaoJogos;
 
 //Constantes
-public static final var JOGOS = 9;
+public static final var JOGOS = 10;
 
 public static final var COR = 0;
 public static final var QUANTO_E = 1;
@@ -14,7 +14,8 @@ public static final var CACHORRO_2 = 4;
 public static final var MENINA = 5;
 public static final var PEIXE = 6;
 public static final var TARTARUGA = 7;
-public static final var ONDE_ESTA_ROSTO = 8;
+public static final var MEMORIA = 8;
+public static final var ONDE_ESTA_ROSTO = 9;
 
 public var info = "";
 
@@ -34,12 +35,14 @@ function Start () {
 	jogos[MENINA] = new Jogo("Menina", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \nda menina.", 4);
 	jogos[PEIXE] = new Jogo("Peixe", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \ndo peixe.", 4);
 	jogos[TARTARUGA] = new Jogo("Tartaruga", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \nda tartaruga.", 4);
+	jogos[MEMORIA] = new Jogo("Memória", "Estimular a memória xD", 1);
 	jogos[ONDE_ESTA_ROSTO] = new Jogo("Onde Está?", "Identificar e localizar partes \npresentes no rosto." , 2);
 	
 	jogos[QUANTO_E].setCena("Quanto E");
 	jogos[TARTARUGA].setCena("QuebraCabeca");
 	jogos[CACHORRO_1].setCena("QuebraCabeca");
 	jogos[CACHORRO_2].setCena("QuebraCabeca");
+	jogos[MEMORIA].setCena("Memoria");
 	jogos[ONDE_ESTA_ROSTO].setCena("Onde Esta");
 	
 	for (var i = 0; i < JOGOS; i ++) {
