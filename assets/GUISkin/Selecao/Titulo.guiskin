@@ -235,8 +235,8 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: ac5ef2c3315bf6741981e43339b7a178, type: 3}
-    m_FontSize: 52
+    m_Font: {fileID: 12800000, guid: f0e31d67013c60a41be0bd415a6eb209, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_Alignment: 4
     m_WordWrap: 1
