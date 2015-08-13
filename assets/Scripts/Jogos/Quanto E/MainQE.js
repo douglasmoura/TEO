@@ -27,9 +27,6 @@ private var resultTotal : int;
 //Usados na troca de dados com o Script Maca.
 public var resultArea: int;
 
-//Erros presentes nos jogos.
-public var erros: int;
-
 //Janela popup.
 private var popupScript: Popup;
 
@@ -45,11 +42,6 @@ private var musicaScript: Musica;
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
 private var csScript : CsColetor;
 
-private var tamanhoFila = 4;
-
-private 
-
-
 function Awake () {
 
 	csScript = this.GetComponent("CsColetor");
@@ -57,6 +49,7 @@ function Awake () {
 }
 
 function Start () {
+
 	seNovo = false;
 	clickPermitido = true;	
 		
