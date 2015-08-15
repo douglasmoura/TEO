@@ -1,12 +1,8 @@
 ﻿#pragma strict
 
-public static final var x = -7; //Delay para as peças chegarem.
-public static final var y = -1.6f;
-
 //Unidades.
 public var unidade: GameObject;
-public var qtUnidades: int;
-private var unidadeMomento: GameObject; 
+public var qtUnidades: int; 
 
 //Usado para saber se e uma nova peça ou nao, para poder ser criado outra. Ver Maca.js
 public var seNovo: boolean;
@@ -16,9 +12,13 @@ public var primeiroValor: GUIText;
 public var segundoValor: GUIText;
 public var valorTotal: GUIText;
 
-private var primeiro_valor: int;
-private var segundo_valor: int;
+public var primeiro_valor: int;
+public var segundo_valor: int;
 private var valor_total: int;
+
+//Futuramente gerar gets e sets.
+public var primeiroValor_corrente = 0;
+public var segundoValor_corrente = 0;
 
 //Guarda o valor do primeiro e segundo circulo consecutivamente.
 private var primeiroCirculo : int;
@@ -43,21 +43,28 @@ function Start () {
 
 	DefinirConta();
 	
+	CriandoObjetos();
+	
 	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
+	
 
 }
 
 function Update () {
 
+
+	if((primeiro_valor == primeiroValor_corrente) && (segundo_valor == segundoValor_corrente)){
+		coletorGame.SetAcerto(2);
+		PlayerCompletaGame();
+	}else{
+		//Verificando o tempo para informar ao termino.
+		coletorGame.SetTempoTotal(Time.timeSinceLevelLoad);
+		coletorGame.VerificaMaiorDelay();
+	}
+
 }
 
-function OnGUI (){
-
-	
-
-
-
-}
+function OnGUI (){}
 
 //Definindo os valores que serao apresentados e armazenados para serem conferidps.
 function DefinirConta () {
@@ -77,9 +84,21 @@ function DefinirConta () {
 	
 }
 
+function CriandoObjetos (){
+	var objects = {};
+	var posiX = -5.5f;
+	
+	for(var cont = 0; cont < qtUnidades; cont++){
+	
+		objects[cont] = Instantiate(unidade,  Vector2(posiX, -3.7f), Quaternion.identity);
+		posiX+= 1.7;
+	}
+}
+
 
 //Funçao para que possa ser apresentado e futuramente armazenado os dados coletados.
 function PlayerCompletaGame(){
+
 	popupScript.habilitar = true;
 	
 	var dadosPopUp = coletorGame.RetornaDados();//Gera um array contendo os dados da partida.

@@ -239,7 +239,7 @@ GameObject:
   - 50: {fileID: 559333128}
   m_Layer: 0
   m_Name: PrimeiroPrato
-  m_TagString: Untagged
+  m_TagString: PrimeiroPrato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,8 +502,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1030420632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .430000007, y: -3.67000008, z: 0}
-  m_LocalScale: {x: .713671803, y: .624999821, z: 1}
+  m_LocalPosition: {x: .550000012, y: -3.67000008, z: 0}
+  m_LocalScale: {x: .749355376, y: .624999821, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -711,6 +711,10 @@ MonoBehaviour:
   primeiroValor: {fileID: 932725272}
   segundoValor: {fileID: 296966784}
   valorTotal: {fileID: 1583436874}
+  primeiro_valor: 0
+  segundo_valor: 0
+  primeiroValor_corrente: 0
+  segundoValor_corrente: 0
 --- !u!114 &1249056593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,6 +728,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   habilitar: 0
   skin: {fileID: 11400000, guid: 95d364e5fe3dc4c4aaa51d9d393ead65, type: 2}
+  skinBotao_sim: {fileID: 11400000, guid: 8ff5cee3f61c5d248a7a21e61b048caf, type: 2}
+  skinBotao_nao: {fileID: 11400000, guid: c4ef533dc283d5e43b6d7e6e7bfccf5e, type: 2}
   fontePopUp: {fileID: 0}
 --- !u!114 &1249056594
 MonoBehaviour:
@@ -749,7 +755,7 @@ GameObject:
   - 50: {fileID: 1323559409}
   m_Layer: 0
   m_Name: SegundoPrato
-  m_TagString: Untagged
+  m_TagString: SegundoPrato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -798,7 +804,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1323559405}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Radius: 3.44000006
   m_Center: {x: 0, y: 0}
 --- !u!50 &1323559409
@@ -811,7 +817,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1

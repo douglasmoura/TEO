@@ -47,6 +47,12 @@ public class Coletor{
 			this.erros++;
 		}
 		
+		public function SetAcerto (qnt : int) { //Usado nos games como Quebra-Cabeca, Associaca e Quanto E.
+			if(qnt != 0){
+				this.acertos = qnt;
+			}
+		}
+		
 		public function SetErro (qnt : int) { //Usado nos games como Quebra-Cabeca, Associaca e Quanto E.
 			if(qnt != 0){
 				this.erros = qnt;

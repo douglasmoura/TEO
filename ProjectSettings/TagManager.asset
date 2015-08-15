@@ -27,6 +27,9 @@ TagManager:
   - 
   - Digito 1
   - 
+  - PrimeiroPrato
+  - SegundoPrato
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast

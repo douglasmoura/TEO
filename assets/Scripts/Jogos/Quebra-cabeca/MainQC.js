@@ -95,7 +95,6 @@ function PlayerCompletaGame(){
 	//A nivel de debug.
 	coletorGame.ConfereDados();
 	
-	//Entrada para o banco de dados.
 }
 
 
@@ -110,8 +109,4 @@ public function AddErro () {
 
 public function AddDragDrop () {
 	coletorGame.SetDragDrop();
-}
-
-public function AddStep () {
-	coletorGame.SetStep();
 }

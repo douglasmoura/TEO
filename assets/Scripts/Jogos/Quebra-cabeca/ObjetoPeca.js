@@ -7,6 +7,7 @@
  * Date: 03/08/15
 **/ 
 public class ObjetoPeca extends Objeto {
+
 	private var pecasDrag: MainQC;
 	//Coletar o DragAndDrop;
 	private var colidiuOutraPeca: boolean;

@@ -2,7 +2,7 @@
 
 /*
 *
-* POPUP que aparece no final de cada jogo trazendo as informaçoes sobre o GameObject.
+* POPUP que aparece no final de cada jogo trazendo as informaçoes sobre o jogo.
 *
 *
 */
@@ -19,6 +19,8 @@ public var habilitar = false;
 private var popUpDados : int[];
 
 public var skin: GUISkin;
+public var skinBotao_sim : GUISkin;
+public var skinBotao_nao: GUISkin;
 
 public var fontePopUp : Font;
 
@@ -60,34 +62,34 @@ function DoMyWindow (windowID : int) {
 	
 	//GUI.Box (Rect (55, 100, largura - 110, 90),"Tempo : " + tempoJogo(popUpDados[4]) + "\n" + "Erros: " +  + "\n" + "Tentativas Totais: " + popUpDados[2] + "\n" + "Maior Atraso: " + tempoJogo(popUpDados[5]));
 	
-	GUI.contentColor = new Color(0.65f, 0.12f, 0.45f, 0.8f);
+	GUI.contentColor = new Color(0.55f, 0.35f, 0.6f, 0.8f);
 	GUI.skin.font = fontePopUp;
 	
 	//Acertos
-	GUI.Label (Rect (35, 50, largura - 20, 150), "<size=30>" + popUpDados[0] + "</size>");
+	GUI.Label (Rect (35, 70, largura - 20, 150), "<size=30>" + popUpDados[0] + "</size>");
 	
 	//Tentativas
-	GUI.Label (Rect (35, 70, largura - 20, 200), "<size=30>" + popUpDados[2] + "</size>");
+	GUI.Label (Rect (35, 92, largura - 20, 200), "<size=30>" + popUpDados[2] + "</size>");
 	
 	//Erros
-	GUI.Label (Rect (-5, 118, largura - 20, 200), "<size=30>" + popUpDados[1] + "</size>");
+	GUI.Label (Rect (-5, 140, largura - 20, 200), "<size=30>" + popUpDados[1] + "</size>");
 	
 	//Atraso
-	GUI.Label (Rect (50, 160, largura - 20, 200), "<size=30>"+ tempoJogo(popUpDados[5]) + "</size>");
+	GUI.Label (Rect (50, 185, largura - 20, 200), "<size=30>"+ tempoJogo(popUpDados[5]) + "</size>");
 	
 	//Tempo
-	GUI.Label (Rect (60, 203, largura - 20, 200), "<size=30>"+ tempoJogo(popUpDados[4]) + "</size>");
+	GUI.Label (Rect (75, 230, largura - 20, 200), "<size=30>"+ tempoJogo(popUpDados[4]) + "</size>");
 	
 	//Ajuda/Step
-	GUI.Label (Rect (-5, 245, largura - 20, 200), "<size=30>" + popUpDados[6] + "</size>");
+	GUI.Label (Rect (-5, 275, largura - 20, 200), "<size=30>" + popUpDados[6] + "</size>");
 	
-	
-	if (GUI.Button (Rect (110,380,130,50), "Sim")) {
+	GUI.skin = skinBotao_sim;
+	if (GUI.Button (Rect (0,290,150,150), "")) {
 		print ("Sim");
 		Application.LoadLevel(Application.loadedLevelName);
 	}
-	
-	if (GUI.Button (Rect (260,380,130,50), "Não")) {
+	GUI.skin = skinBotao_nao;
+	if (GUI.Button (Rect (340,320,150,150), "")) {
 		print ("Não");
 		Application.LoadLevel("SuiteJogos");
 	}
