@@ -43,30 +43,36 @@ public class ObjetoFruta extends Objeto {
 				*
 				*/
 				if(comunicadorQuantoE.primeiroValor_corrente <= comunicadorQuantoE.primeiro_valor -1){
-					Debug.Log("Corre: " + comunicadorQuantoE.primeiroValor_corrente + "- " + comunicadorQuantoE.primeiro_valor);
+					Debug.Log("Corre Prato 1: " + comunicadorQuantoE.primeiroValor_corrente + "- " + comunicadorQuantoE.primeiro_valor);
 					comunicadorQuantoE.primeiroValor_corrente++;
+					estavaDentro = true;	
 				}else{
 					comunicadorQuantoE.AddErro();
+					Debug.Log("ERRO");
 					valida = false;
 				}
 
 			}else if(idPrato == 1){
 				if(comunicadorQuantoE.segundoValor_corrente <= comunicadorQuantoE.segundo_valor -1){
-					Debug.Log("Corre: " + comunicadorQuantoE.segundoValor_corrente + "- " + comunicadorQuantoE.segundo_valor);
+					Debug.Log("Corre Prato 2: " + comunicadorQuantoE.segundoValor_corrente + "- " + comunicadorQuantoE.segundo_valor);
 					comunicadorQuantoE.segundoValor_corrente++;
+					estavaDentro = true;	
 				}else{
 					comunicadorQuantoE.AddErro();
+					Debug.Log("ERRO");
 					valida = false;
 				}
 			}
-			estavaDentro = true;	
 			
 		}else if(!valida && estavaDentro){
 			if(idPrato_Diminuindo == 0){
+				Debug.Log("Corre Prato 1: " + comunicadorQuantoE.primeiroValor_corrente + "- " + comunicadorQuantoE.primeiro_valor);
 				comunicadorQuantoE.primeiroValor_corrente--;
 			}else if(idPrato_Diminuindo == 1){
+				Debug.Log("Corre Prato 2: " + comunicadorQuantoE.segundoValor_corrente + "- " + comunicadorQuantoE.segundo_valor);
 				comunicadorQuantoE.segundoValor_corrente--;
 			}
+			
 			estavaDentro = false;	
 			
 		}else{
@@ -75,8 +81,13 @@ public class ObjetoFruta extends Objeto {
 	}
 	
 	function OnTriggerEnter2D(colisor: Collider2D) {
-	
-		if(colisor.gameObject.tag == "PrimeiroPrato"){
+		//Retornando sem colidir com os pratos.
+		if(drag == false){
+			valida = false;
+		//ignorar colisao entre frutas.	
+		}else if(colisor.tag == "Fruta"){
+			Debug.Log("Identificar colisao!");
+		}else if(colisor.gameObject.tag == "PrimeiroPrato"){
 			valida = true;
 			idPrato = 0;
 		}else if(colisor.gameObject.tag == "SegundoPrato"){

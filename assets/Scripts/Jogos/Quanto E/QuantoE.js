@@ -43,8 +43,6 @@ function Start () {
 
 	DefinirConta();
 	
-	CriandoObjetos();
-	
 	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
 	
 
@@ -82,17 +80,6 @@ function DefinirConta () {
 	Debug.Log(segundo_valor);
 	Debug.Log(valor_total);
 	
-}
-
-function CriandoObjetos (){
-	var objects = {};
-	var posiX = -5.5f;
-	
-	for(var cont = 0; cont < qtUnidades - 1; cont++){
-	
-		objects[cont] = Instantiate(unidade,  Vector2(posiX, -3.7f), Quaternion.identity);
-		posiX+= 1.7;
-	}
 }
 
 
