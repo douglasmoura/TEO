@@ -35,7 +35,7 @@ function Start () {
 	jogos[MENINA] = new Jogo("Menina", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \nda menina.", 4);
 	jogos[PEIXE] = new Jogo("Peixe", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \ndo peixe.", 4);
 	jogos[TARTARUGA] = new Jogo("Tartaruga", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \nda tartaruga.", 4);
-	jogos[MEMORIA] = new Jogo("Memória", "Estimular a memória xD", 1);
+	jogos[MEMORIA] = new Jogo("Memória", "Estimular a memória xD", 3);
 	jogos[ONDE_ESTA_ROSTO] = new Jogo("Onde Está?", "Identificar e localizar partes \npresentes no rosto." , 2);
 	
 	jogos[QUANTO_E].setCena("Quanto E");

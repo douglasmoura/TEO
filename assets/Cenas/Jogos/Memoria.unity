@@ -206,6 +206,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 172eb75702bdecf40b818a03eda3c324, type: 2}
   - {fileID: 100000, guid: 6fd891504ff900749b369eb27f45db1a, type: 2}
   - {fileID: 100000, guid: fcea0c243a0e58b40895b55a3989ad65, type: 2}
+  nivel: {fileID: 0}
 --- !u!1 &673780152
 GameObject:
   m_ObjectHideFlags: 0
