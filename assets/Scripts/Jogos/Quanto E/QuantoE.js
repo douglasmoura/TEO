@@ -88,7 +88,7 @@ function CriandoObjetos (){
 	var objects = {};
 	var posiX = -5.5f;
 	
-	for(var cont = 0; cont < qtUnidades; cont++){
+	for(var cont = 0; cont < qtUnidades - 1; cont++){
 	
 		objects[cont] = Instantiate(unidade,  Vector2(posiX, -3.7f), Quaternion.identity);
 		posiX+= 1.7;
