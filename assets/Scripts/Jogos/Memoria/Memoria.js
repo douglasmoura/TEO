@@ -4,10 +4,38 @@
 public var array: GameObject[];
 public var nivel: Nivel;
 public var texturas: Object[];
+public var fundo: Sprite;
 
 function Start () {
 	nivel = FindObjectOfType(typeof(Nivel)) as Nivel;
 	Embaralhar();
+	
+	var quantidade = nivel.nivel * 2 + 2;
+	
+	/**
+	for (var i : int = 0; i < quantidade; i++) {
+		Debug.Log("Entrou!!!!!");
+        var primeiro : int = Random.Range(i, i + 1);
+        var segundo = array[i];
+        
+        array[i] = array[primeiro];
+        
+        Instantiate(array[i], array[i].transform.position, Quaternion.identity);
+        array[primeiro] = segundo;
+    }
+    **/
+    Debug.Log("Debugando Gambi...");
+    for (var i : int = 0; i < quantidade; i++) {
+        var primeiro : int = Random.Range(i, array.Length);
+        Debug.Log(primeiro);
+        var segundo = array[i].transform.position;
+        
+        array[i].transform.position = array[primeiro].transform.position;
+        //array[i].GetComponent(SpriteRenderer).sprite = texturas[i];
+        Instantiate(array[i], array[i].transform.position, Quaternion.identity);
+        array[primeiro].transform.position = segundo;
+        
+    }
 }
 
 function Update () {
@@ -19,10 +47,8 @@ function Embaralhar() {
 	var quantidade = nivel.nivel * 2 + 2;
 	
 	var pasta = nivel.jogo + "/" + nivel.nivel;
-	Debug.Log("Pasta " + pasta);
-	texturas = Resources.LoadAll(pasta, typeof(Sprite));
-	Debug.Log("Array " + texturas);
-	var x = -0.4f * (quantidade * 2);
+	
+	var x = 2.5f - (quantidade);
 	var y = 1.7f;
  
     for (var i : int = 0; i < array.Length; i++) {
@@ -30,15 +56,15 @@ function Embaralhar() {
     	x += 3.5f;
     	if (i + 1 == quantidade / 2.0) {
     		y -= 3.6f;
-    		x = (-5.5f * 2) / (quantidade/2);
+    		x = 2.5f - (quantidade);
     	}
     	
-        //var primeiro : int = Random.Range(i, array.Length);
+        //var primeiro : int = Random.Range(i, quantidade);
         //var segundo = array[i].transform.position;
         
         //array[i].transform.position = array[primeiro].transform.position;
-        //array[i].GetComponent(SpriteRenderer).sprite = texturas[i];
-        Instantiate(array[i], array[i].transform.position, Quaternion.identity);
+        
+        //Instantiate(array[i], array[i].transform.position, Quaternion.identity);
         //array[primeiro].transform.position = segundo;
         
         if (i + 1 == quantidade) {

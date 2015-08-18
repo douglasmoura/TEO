@@ -3,9 +3,10 @@
 public var botaoHome: GUISkin;
 public var botaoJogos: GUISkin;
 //public var logo: Texture2D;
+private var nivel: Nivel;
 
 function Start () {
-
+	nivel = FindObjectOfType(typeof(Nivel)) as Nivel;
 }
 
 function Update () {
@@ -39,6 +40,7 @@ function OnGUI() {
 	
 	if (jogos) {
 		Application.LoadLevel("SuiteJogos");
+		nivel.Destruir();
 	}
 	
 }
