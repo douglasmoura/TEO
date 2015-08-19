@@ -8,40 +8,27 @@ public var fundo: Sprite;
 
 function Start () {
 	nivel = FindObjectOfType(typeof(Nivel)) as Nivel;
+	
 	Embaralhar();
-	
-	var quantidade = nivel.nivel * 2 + 2;
-	
-	/**
-	for (var i : int = 0; i < quantidade; i++) {
-		Debug.Log("Entrou!!!!!");
-        var primeiro : int = Random.Range(i, i + 1);
-        var segundo = array[i];
-        
-        array[i] = array[primeiro];
-        
-        Instantiate(array[i], array[i].transform.position, Quaternion.identity);
-        array[primeiro] = segundo;
-    }
-    **/
-    Debug.Log("Debugando Gambi...");
-    for (var i : int = 0; i < quantidade; i++) {
-        var primeiro : int = Random.Range(i, array.Length);
-        Debug.Log(primeiro);
-        var segundo = array[i].transform.position;
-        
-        array[i].transform.position = array[primeiro].transform.position;
-        //array[i].GetComponent(SpriteRenderer).sprite = texturas[i];
-        Instantiate(array[i], array[i].transform.position, Quaternion.identity);
-        array[primeiro].transform.position = segundo;
-        
-    }
+	Instanciar();
 }
 
 function Update () {
 
 }
 
+function Instanciar() {
+	var quantidade = nivel.nivel * 2 + 2;
+   
+    for (var i : int = 0; i < quantidade; i++) {
+        var primeiro : int = Random.Range(i, quantidade);
+        var segundo = array[i].transform.position;
+        
+        array[i].transform.position = array[primeiro].transform.position;
+        Instantiate(array[i], array[i].transform.position, Quaternion.identity);
+        array[primeiro].transform.position = segundo;
+    }
+}
 
 function Embaralhar() {
 	var quantidade = nivel.nivel * 2 + 2;
@@ -51,24 +38,12 @@ function Embaralhar() {
 	var x = 2.5f - (quantidade);
 	var y = 1.7f;
  
-    for (var i : int = 0; i < array.Length; i++) {
+    for (var i : int = 0; i < quantidade; i++) {
     	array[i].transform.position = Vector2(x, y);
     	x += 3.5f;
     	if (i + 1 == quantidade / 2.0) {
     		y -= 3.6f;
     		x = 2.5f - (quantidade);
     	}
-    	
-        //var primeiro : int = Random.Range(i, quantidade);
-        //var segundo = array[i].transform.position;
-        
-        //array[i].transform.position = array[primeiro].transform.position;
-        
-        //Instantiate(array[i], array[i].transform.position, Quaternion.identity);
-        //array[primeiro].transform.position = segundo;
-        
-        if (i + 1 == quantidade) {
-        	break;
-        }
     }
 }
