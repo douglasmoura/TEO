@@ -3,8 +3,8 @@
 
 public var array: GameObject[];
 public var nivel: Nivel;
-public var texturas: Object[];
-public var fundo: Sprite;
+public var a: PecaMemoria;
+public var b: PecaMemoria;
 
 function Start () {
 	nivel = FindObjectOfType(typeof(Nivel)) as Nivel;
