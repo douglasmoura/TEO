@@ -5,9 +5,27 @@ public var textura: Sprite;
 
 public class ObjetoFruta extends Objeto {
 
+	/*
+	* Necessario para acessar diretamente os valores correntes dos pratos.
+	*/
+
 	private var comunicadorQuantoE : QuantoE;
+	
+	/*
+	* Variavel responsavel por manter a ordem caso a fruta entre e saia e assim diminuir a quantidade
+	* do somatorio do prato.
+	*/
 	public var estavaDentro: boolean;
+	
+	/*
+	* Variavel que armazena o ID do prato,(0) para o primeiro prato e (1) para o segundo prato, para adicionar
+	* a fruta (unidade) a sua soma.
+	*/
 	private var idPrato: int;
+	
+	/*
+	* Variavel que salva o ID do prato para que seja possivel subtrair quando a fruta sair do prato.
+	*/
 	private var idPrato_Diminuindo: int;
 
 	public function Criar() {
@@ -15,6 +33,9 @@ public class ObjetoFruta extends Objeto {
 		comunicadorQuantoE = FindObjectOfType(typeof(QuantoE)) as QuantoE;
 		
 		estavaDentro = false;
+		
+		//Inicializando com -1 para indicar neutralidade.
+		idPrato_Diminuindo = -1;
 
 		//Definindo a texutra dos objetos.
 		var sprite: SpriteRenderer;
@@ -43,9 +64,11 @@ public class ObjetoFruta extends Objeto {
 				*
 				*/
 				if(comunicadorQuantoE.primeiroValor_corrente <= comunicadorQuantoE.primeiro_valor -1){
-					Debug.Log("Corre Prato 1: " + comunicadorQuantoE.primeiroValor_corrente + "- " + comunicadorQuantoE.primeiro_valor);
 					comunicadorQuantoE.primeiroValor_corrente++;
 					estavaDentro = true;	
+					
+					Debug.Log("Corre Prato 1: " + comunicadorQuantoE.primeiroValor_corrente + "- " + comunicadorQuantoE.primeiro_valor);
+					
 				}else{
 					comunicadorQuantoE.AddErro();
 					Debug.Log("ERRO");
@@ -54,9 +77,11 @@ public class ObjetoFruta extends Objeto {
 
 			}else if(idPrato == 1){
 				if(comunicadorQuantoE.segundoValor_corrente <= comunicadorQuantoE.segundo_valor -1){
-					Debug.Log("Corre Prato 2: " + comunicadorQuantoE.segundoValor_corrente + "- " + comunicadorQuantoE.segundo_valor);
 					comunicadorQuantoE.segundoValor_corrente++;
-					estavaDentro = true;	
+					estavaDentro = true;
+					
+					Debug.Log("Corre Prato 2: " + comunicadorQuantoE.segundoValor_corrente + "- " + comunicadorQuantoE.segundo_valor);	
+					
 				}else{
 					comunicadorQuantoE.AddErro();
 					Debug.Log("ERRO");
@@ -64,20 +89,21 @@ public class ObjetoFruta extends Objeto {
 				}
 			}
 			
-		}else if(!valida && estavaDentro){
+		}else if(estavaDentro && !valida){
 			if(idPrato_Diminuindo == 0){
-				Debug.Log("Corre Prato 1: " + comunicadorQuantoE.primeiroValor_corrente + "- " + comunicadorQuantoE.primeiro_valor);
 				comunicadorQuantoE.primeiroValor_corrente--;
+				Debug.Log("Corre Prato 1: " + comunicadorQuantoE.primeiroValor_corrente + "- " + comunicadorQuantoE.primeiro_valor);
 			}else if(idPrato_Diminuindo == 1){
-				Debug.Log("Corre Prato 2: " + comunicadorQuantoE.segundoValor_corrente + "- " + comunicadorQuantoE.segundo_valor);
 				comunicadorQuantoE.segundoValor_corrente--;
+				Debug.Log("Corre Prato 2: " + comunicadorQuantoE.segundoValor_corrente + "- " + comunicadorQuantoE.segundo_valor);
 			}
-			
 			estavaDentro = false;	
 			
 		}else{
 			comunicadorQuantoE.AddDragDrop();
 		}
+		
+		idPrato_Diminuindo = -1; // Flag de escape.
 	}
 	
 	function OnTriggerEnter2D(colisor: Collider2D) {
@@ -87,10 +113,15 @@ public class ObjetoFruta extends Objeto {
 		//ignorar colisao entre frutas.	
 		}else if(colisor.tag == "Fruta"){
 			Debug.Log("Identificar colisao!");
-		}else if(colisor.gameObject.tag == "PrimeiroPrato"){
+		/*
+		* ATENÇAO! O "ELSE IF" abaixo pode ser de dificil interpretaçao, porem sua funcao e validar as frutas assim que entrarem no colider dos pratos
+		* e nao deixar que uma fruta se desloque para outro prato e fique "quicando", bagunçando assim o valor corrente dos pratos.
+		*/	
+			
+		}else if(colisor.gameObject.tag == "PrimeiroPrato" && idPrato_Diminuindo != 1){
 			valida = true;
 			idPrato = 0;
-		}else if(colisor.gameObject.tag == "SegundoPrato"){
+		}else if(colisor.gameObject.tag == "SegundoPrato" && idPrato_Diminuindo != 0){
 			valida = true;
 			idPrato = 1;
 		}

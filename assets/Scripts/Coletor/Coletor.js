@@ -35,7 +35,8 @@ public class Coletor{
 		}	
 		
 		public function ConfereDados(){
-			Debug.Log(acertos + " - " + erros + " - " + GetTentativasTotais() + " - " + dragDrop + " - " + tempoTotal + " - " + delay + " - " + step);
+			Debug.Log("Acertos: " + acertos + " - Erros: " + erros + " - Tentativas Totais: " + GetTentativasTotais() +
+				" - Drag and Drop: " + dragDrop + " - Tempo Total: " + tempoTotal + " - Delay: " + delay + " - Passo: " + step);
 		}
 		
 		public function SetAcerto () {

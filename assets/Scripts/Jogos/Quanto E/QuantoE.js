@@ -17,11 +17,11 @@ public var segundo_valor: int;
 private var valor_total: int;
 
 //Futuramente gerar gets e sets.
-public var primeiroValor_corrente = 0;
-public var segundoValor_corrente = 0;
+public var primeiroValor_corrente: int;
+public var segundoValor_corrente: int;
 
 //Guarda o valor do primeiro e segundo circulo consecutivamente.
-private var primeiroCirculo : int;
+private var primeiroCirculo :int;
 private var segundoCirculo: int;
 
 //Janela popup.
@@ -43,6 +43,9 @@ function Start () {
 
 	DefinirConta();
 	
+	primeiroValor_corrente = 0;
+	segundoValor_corrente = 0;
+	
 	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
 	
 
@@ -52,7 +55,7 @@ function Update () {
 
 
 	if((primeiro_valor == primeiroValor_corrente) && (segundo_valor == segundoValor_corrente)){
-		coletorGame.SetAcerto(2);
+		coletorGame.SetAcerto(2); //Dois pratos, logo dois acertos.
 		PlayerCompletaGame();
 	}else{
 		//Verificando o tempo para informar ao termino.
