@@ -197,6 +197,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 680bd29508fe67f4d80e949b64ec7177, type: 2}
   - {fileID: 100000, guid: 4fb14421ebbecf045b443c7a7a152d3f, type: 2}
   - {fileID: 100000, guid: 5bfc4dea0233bf8409ee03bbcfe8e185, type: 2}
+  nivel: {fileID: 0}
 --- !u!4 &1112863942
 Transform:
   m_ObjectHideFlags: 0
@@ -355,6 +356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   habilitar: 0
   skin: {fileID: 11400000, guid: 95d364e5fe3dc4c4aaa51d9d393ead65, type: 2}
+  skinBotao_sim: {fileID: 11400000, guid: 8ff5cee3f61c5d248a7a21e61b048caf, type: 2}
+  skinBotao_nao: {fileID: 11400000, guid: c4ef533dc283d5e43b6d7e6e7bfccf5e, type: 2}
 --- !u!114 &1479425163
 MonoBehaviour:
   m_ObjectHideFlags: 0

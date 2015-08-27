@@ -22,8 +22,6 @@ public var skin: GUISkin;
 public var skinBotao_sim : GUISkin;
 public var skinBotao_nao: GUISkin;
 
-public var fontePopUp : Font;
-
 function Start () {
 	janela = Rect(Screen.width/2 - largura/2, Screen.height/2 - altura/2, largura, altura);
 }
@@ -63,7 +61,6 @@ function DoMyWindow (windowID : int) {
 	//GUI.Box (Rect (55, 100, largura - 110, 90),"Tempo : " + tempoJogo(popUpDados[4]) + "\n" + "Erros: " +  + "\n" + "Tentativas Totais: " + popUpDados[2] + "\n" + "Maior Atraso: " + tempoJogo(popUpDados[5]));
 	
 	GUI.contentColor = new Color(0.55f, 0.35f, 0.6f, 0.8f);
-	GUI.skin.font = fontePopUp;
 	
 	//Acertos
 	GUI.Label (Rect (35, 70, largura - 20, 150), "<size=30>" + popUpDados[0] + "</size>");

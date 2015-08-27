@@ -1210,6 +1210,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   habilitar: 0
   skin: {fileID: 11400000, guid: 95d364e5fe3dc4c4aaa51d9d393ead65, type: 2}
+  skinBotao_sim: {fileID: 11400000, guid: 8ff5cee3f61c5d248a7a21e61b048caf, type: 2}
+  skinBotao_nao: {fileID: 11400000, guid: c4ef533dc283d5e43b6d7e6e7bfccf5e, type: 2}
+  fontePopUp: {fileID: 0}
 --- !u!1 &1845638839
 GameObject:
   m_ObjectHideFlags: 0

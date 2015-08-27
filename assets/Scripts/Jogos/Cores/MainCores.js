@@ -32,6 +32,8 @@ private var popupScript: Popup;
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
 private var csScript : CsColetor;
 
+public var areaDeli: GameObject;
+
 function Awake() {
 	
 	csScript = this.GetComponent("CsColetor");
@@ -45,6 +47,9 @@ function Start() {
 	
 	index = Random.Range(0.0, tamanho);
 	cubo = Instantiate(cores[index],  Vector2(x, y), Quaternion.identity);
+	
+	//Definindo area em que a peça delimitadora branca ira ficar.
+	areaDeli.transform.position = Vector3(5.85, -2.5f,0);
 }
 
 function Update() {
@@ -87,6 +92,7 @@ function MudarCor() {
 }
 
 function OnGUI() {
+	
 	if (erros >= 3) { 
 		GUI.skin = botao;
 		var largura = 164.0f;

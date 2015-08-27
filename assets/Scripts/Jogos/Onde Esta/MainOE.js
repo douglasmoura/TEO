@@ -55,7 +55,6 @@ function Awake() {
 		var qualRostoEscolher = Random.Range(1,6);
 		GetComponent(SpriteRenderer).sprite = textura[qualRostoEscolher];
 	}
-	//nivelScript.Destruir();
 }
 
 function Start () {
@@ -65,6 +64,7 @@ function Start () {
 	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
 	
 	contador = partesCorpo.Length;
+	
 	ProcurandoLocal();
 }
 

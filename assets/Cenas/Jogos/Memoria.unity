@@ -207,7 +207,8 @@ MonoBehaviour:
   - {fileID: 100000, guid: fcea0c243a0e58b40895b55a3989ad65, type: 2}
   - {fileID: 100000, guid: 462dc62b39a4e62499138290b3a0fdd6, type: 2}
   nivel: {fileID: 0}
-  fundo: {fileID: 21300000, guid: 606237be376b7b441b896febe5599d7c, type: 3}
+  a: {fileID: 0}
+  b: {fileID: 0}
 --- !u!1 &673780152
 GameObject:
   m_ObjectHideFlags: 0
