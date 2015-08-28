@@ -23,3 +23,5 @@ EditorBuildSettings:
     path: assets/Cenas/Jogos/QuebraCabeca.unity
   - enabled: 1
     path: assets/Cenas/Jogos/Memoria.unity
+  - enabled: 1
+    path: assets/Cenas/Parabens.unity
