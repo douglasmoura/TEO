@@ -5,6 +5,7 @@ public var array: GameObject[];
 public var nivel: Nivel;
 public var a: PecaMemoria;
 public var b: PecaMemoria;
+public var parabens: GameObject;
 
 function Start () {
 	nivel = FindObjectOfType(typeof(Nivel)) as Nivel;
@@ -14,7 +15,9 @@ function Start () {
 }
 
 function Update () {
-
+	
+	GUI.enabled = false;
+    GUI.color.a = .1;
 }
 
 function Instanciar() {
@@ -28,6 +31,7 @@ function Instanciar() {
         Instantiate(array[i], array[i].transform.position, Quaternion.identity);
         array[primeiro].transform.position = segundo;
     }
+    Instantiate(parabens, Vector3(0, 0, -2), Quaternion.identity);
 }
 
 function Embaralhar() {

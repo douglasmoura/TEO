@@ -34,6 +34,9 @@ public function setDadosPopUp (dadosPopUp) {
 
 
 function OnGUI () {
+	GUI.depth = 1;
+	GUI.Box (Rect (-10, -20, 2000, 2000),"");
+
 	if (habilitar) {
 		GUI.skin = skin;
 		janela = GUI.Window (0, janela, DoMyWindow, "");
