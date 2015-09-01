@@ -49,6 +49,7 @@ function Avaliar(a: PecaMemoria, b: PecaMemoria) {
 	if (memoria.a.tag == memoria.b.tag) {
 		a.bloquear = true;
 		b.bloquear = true;
+		memoria.pontos += 1;
 		
 	} else {
 		a.bloquear = false;

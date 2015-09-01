@@ -13,10 +13,6 @@ function Start () {
 	script = FindObjectOfType(typeof(PopupParabens)) as PopupParabens;
 }
 
-function Update () {
-	
-}
-
 function Criar() {
 	for (var i = 0; i < quantidade; i++) {
 		Instantiate(fogos1, Vector3(Random.Range(-6.0, 6.0), Random.Range(2.0, 4.0), 2), Quaternion.identity);

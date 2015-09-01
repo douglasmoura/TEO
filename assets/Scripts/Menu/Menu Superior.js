@@ -9,11 +9,9 @@ function Start () {
 	nivel = FindObjectOfType(typeof(Nivel)) as Nivel;
 }
 
-function Update () {
-
-}
-
 function OnGUI() {
+    
+	GUI.depth = -3;
 	//Define skin do menu
 	GUI.skin = botaoHome; 
 	
