@@ -34,6 +34,9 @@ private var csScript : CsColetor;
 
 public var areaDeli: GameObject;
 
+
+public var parabens: GameObject;
+
 function Awake() {
 	
 	csScript = this.GetComponent("CsColetor");
@@ -120,14 +123,19 @@ function temporizador () {
 //Funcao que escreve os dados e apresenta ao final da partida.
 function PlayerCompletaGame(){
 
-	popupScript.habilitar = true;
+	 Instantiate(parabens, Vector3(0, 0, -2), Quaternion.identity);	
+
 	
 	var dadosPopUp = coletorGame.RetornaDados();//Gera um array contendo os dados da partida.
 	
 	csScript.SaveToFile(coletorGame.RetornaString()); //Escreve os dados da partida no arquivo.csv
 	
 	//Apos definir no PopUp passase dadosPopUp como parametro na funcao abaixo.
+	var popupScript = FindObjectOfType(typeof(PopupParabens)) as PopupParabens;
+	
 	popupScript.setDadosPopUp(dadosPopUp);
+	
+	//popupScript.Habilita();
 	
 	coletorGame.ConfereDados();
 	//Entrada para o banco de dados.

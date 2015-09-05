@@ -7,10 +7,13 @@ public var x: float[];
 public var y: float[];
 public var quantidade: int;
 private var script: PopupParabens;
+private var script2: MenuSuperior;
 
 function Start () {
 	Criar();
 	script = FindObjectOfType(typeof(PopupParabens)) as PopupParabens;
+	script2 = FindObjectOfType(typeof(MenuSuperior)) as MenuSuperior;
+	script2.Desabilitar();
 }
 
 function Criar() {

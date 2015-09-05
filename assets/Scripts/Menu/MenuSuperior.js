@@ -4,14 +4,18 @@ public var botaoHome: GUISkin;
 public var botaoJogos: GUISkin;
 //public var logo: Texture2D;
 private var nivel: Nivel;
+private var habilita = true;
 
 function Start () {
 	nivel = FindObjectOfType(typeof(Nivel)) as Nivel;
 }
 
 function OnGUI() {
-    
-	GUI.depth = -3;
+	if (!habilita) {
+		GUI.enabled = false;
+		GUI.color.a = 0.5f;
+	}
+	
 	//Define skin do menu
 	GUI.skin = botaoHome; 
 	
@@ -19,12 +23,6 @@ function OnGUI() {
 	var x = Screen.width/2;
 	//Metade da altura da tela
 	var y = Screen.height/2;
-	
-	/**
-	 * Textura contendo a logo.
-	 * new Rect recebe posicao x, posicao y, largura e altura.
-	**/
-	//GUI.DrawTexture(new Rect(Screen.width/2 + 480, 20, logo.width/8, logo.height/8), logo);
 	
 	//Botao home
 	var home = GUI.Button(new Rect(-40 , -15, 791/3.2, 440/2.8), "");
@@ -40,5 +38,8 @@ function OnGUI() {
 		Application.LoadLevel("SuiteJogos");
 		nivel.Destruir();
 	}
-	
+}
+
+public function Desabilitar() {
+	habilita = false;
 }

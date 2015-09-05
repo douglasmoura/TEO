@@ -7,6 +7,14 @@ public var a: PecaMemoria;
 public var b: PecaMemoria;
 public var parabens: GameObject;
 public var pontos = 0;
+//Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
+private var csScript : CsColetor;
+
+
+function Awake() {
+	
+	csScript = this.GetComponent("CsColetor");
+}
 
 function Start () {
 	nivel = FindObjectOfType(typeof(Nivel)) as Nivel;
@@ -17,9 +25,8 @@ function Start () {
 
 function Update () {
 	
-	//GUI.enabled = false;
-    //GUI.color.a = .1;
     if (pontos == 2) {
+    	
     	Instantiate(parabens, Vector3(0, 0, -2), Quaternion.identity);	
     	pontos = -1;
     }

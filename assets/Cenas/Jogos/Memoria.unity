@@ -167,6 +167,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 418618404}
   - 114: {fileID: 418618405}
+  - 114: {fileID: 418618406}
   m_Layer: 0
   m_Name: Gerenciador
   m_TagString: Untagged
@@ -211,6 +212,17 @@ MonoBehaviour:
   b: {fileID: 0}
   parabens: {fileID: 100000, guid: 393228b3b170c554d97a3dae4a7b3583, type: 2}
   pontos: 0
+--- !u!114 &418618406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418618403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc16b4abf9c87f47ac3069e056bbe3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &673780152
 GameObject:
   m_ObjectHideFlags: 0

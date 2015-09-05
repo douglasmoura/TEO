@@ -34,10 +34,6 @@ public function setDadosPopUp (dadosPopUp) {
 
 
 function OnGUI () {
-	GUI.depth = -8;
-	GUI.Box (Rect (-10, -20, 2000, 2000),"");
-
-	
 	if (habilitar) {
 		GUI.depth = 10;
 		GUI.skin = skin;
@@ -67,7 +63,7 @@ function DoMyWindow (windowID : int) {
 	
 	GUI.contentColor = new Color(0.55f, 0.35f, 0.6f, 0.8f);
 	
-	/**
+	
 	//Acertos
 	GUI.Label (Rect (35, 70, largura - 20, 150), "<size=30>" + popUpDados[0] + "</size>");
 	
@@ -85,7 +81,6 @@ function DoMyWindow (windowID : int) {
 	
 	//Ajuda/Step
 	GUI.Label (Rect (-5, 275, largura - 20, 200), "<size=30>" + popUpDados[6] + "</size>");
-	**/
 	
 	GUI.skin = skinBotao_sim;
 	if (GUI.Button (Rect (0,290,165,150), "")) {
