@@ -30,6 +30,8 @@ TagManager:
   - PrimeiroPrato
   - SegundoPrato
   - 
+  - Maca
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -70,6 +72,10 @@ TagManager:
   - name: Background
     userID: 1
     uniqueID: 3119829171
+    locked: 0
+  - name: Fundo Parabens
+    userID: 5
+    uniqueID: 1165384655
     locked: 0
   - name: Render
     userID: 2

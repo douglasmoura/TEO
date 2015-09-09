@@ -31,13 +31,8 @@ private var popupScript: Popup;
 public var coletorGame: Coletor;
 
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
-private var csScript : CsColetor;
-
-function Awake () {
-
-	csScript = this.GetComponent("CsColetor");
-	
-}
+public var csScript : CsColetor;
+public var parabens: GameObject;
 
 function Start () {
 
@@ -45,10 +40,6 @@ function Start () {
 	
 	primeiroValor_corrente = 0;
 	segundoValor_corrente = 0;
-	
-	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
-	
-
 }
 
 function Update () {
@@ -57,6 +48,7 @@ function Update () {
 	if((primeiro_valor == primeiroValor_corrente) && (segundo_valor == segundoValor_corrente)){
 		coletorGame.SetAcerto(2); //Dois pratos, logo dois acertos.
 		PlayerCompletaGame();
+		primeiro_valor *= -1; //evitar que fique chamando a tela de parabens varias vezes
 	}else{
 		//Verificando o tempo para informar ao termino.
 		coletorGame.SetTempoTotal(Time.timeSinceLevelLoad);
@@ -85,23 +77,22 @@ function DefinirConta () {
 	
 }
 
-
 //Funçao para que possa ser apresentado e futuramente armazenado os dados coletados.
 function PlayerCompletaGame(){
-
-	popupScript.habilitar = true;
+	Instantiate(parabens, Vector3(0, 0, -2), Quaternion.identity);	
 	
 	var dadosPopUp = coletorGame.RetornaDados();//Gera um array contendo os dados da partida.
-	
-	//Apos definir no PopUp passase dadosPopUp como parametro na funcao abaixo.
-	popupScript.setDadosPopUp(dadosPopUp);
 	
 	//Passando os dados para o arquivo.
 	csScript.SaveToFile(coletorGame.RetornaString());
 	
+	//Apos definir no PopUp passase dadosPopUp como parametro na funcao abaixo.
+	var popupScript = FindObjectOfType(typeof(PopupParabens)) as PopupParabens;
+	
+	popupScript.setDadosPopUp(dadosPopUp);
+
 	//A nivel de debug.
 	coletorGame.ConfereDados();
-
 }
 
 //Usados na comunicacao entre maca -> Principal -> Coletor.

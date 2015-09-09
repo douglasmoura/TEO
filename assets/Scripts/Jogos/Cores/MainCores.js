@@ -1,10 +1,19 @@
 ﻿#pragma strict
 
 /*
-*	Script que organiza o jogo e faz uso de dois outros scripts, Cores (tabela) e cubo (deck).
-*
+ * Script que organiza o jogo e faz uso de dois outros scripts, Cores (tabela) e cubo (deck).
+ *
+ * Author: Diogenes e Douglas
+ * Date: 08/09/15
 **/
 import System.Collections.Generic;
+//--- scripts ---//
+//Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
+public var csScript : CsColetor;
+//Responsavel pela coleta. Vide Script Coletor.js;
+public var coletorGame: Coletor;
+//Janela popup.
+private var popupScript: Popup;
 
 public static final var x = 6;
 public static final var y = -4.5;
@@ -13,7 +22,7 @@ public static final var z = 0;
 public var cores: List.<GameObject>;
 private var tamanho: int;
 private var cubo: GameObject;
-private var coresScript:Cores;
+public var coresScript:Cores;
 private var index: int;
 
 //Duas variaveis pois em algum momento erros sera setado como 0.
@@ -22,28 +31,14 @@ public var errosTotais = 0;
 
 public var botao: GUISkin;
 
-//Responsavel pela coleta. Vide Script Coletor.js;
-public var coletorGame: Coletor;
 public var jogou: boolean;
-
-//Janela popup.
-private var popupScript: Popup;
-
-//Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
-private var csScript : CsColetor;
 
 public var areaDeli: GameObject;
 
 
 public var parabens: GameObject;
 
-function Awake() {
-	
-	csScript = this.GetComponent("CsColetor");
-}
-
 function Start() {
-	coresScript = FindObjectOfType(typeof(Cores)) as Cores;
 	tamanho = coresScript.tamanho;
 	
 	popupScript = FindObjectOfType(typeof(Popup)) as Popup;

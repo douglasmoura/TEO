@@ -5,6 +5,7 @@
 * Variaveis de coleta de dados 25-29. Todas recebem valores durante o jogo.
 * Todas as funçoes estao implementadas.
 * Codigo ja refatorado.
+ *
 * @author Douglas Moura e Diogenes Laertius.
 * @date 16.09.2014
 */
