@@ -26,17 +26,9 @@ private var popupScript: Popup;
 public var coletorGame: Coletor;
 
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
-private var csScript : CsColetor;
-
-function Awake(){
-	csScript = this.GetComponent("CsColetor");
-}
-
-function Start () {
-
-	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
-	
-}
+public var csScript : CsColetor;
+public var parabens: GameObject;
+private var finalizado = false;
 
 function Update () {
 	if (habilita) {
@@ -137,7 +129,7 @@ function Sortear(x:float, limite:int, parar:int) {
 }
 
 function OnGUI() {
-	if (controle == -1) {
+	if (controle == -1 && !finalizado) {
 		var XBOTAO = Screen.width - 220;
 		var YBOTAO = Screen.height - 190;
 		GUI.skin = skinConferir;
@@ -155,26 +147,28 @@ function Verificar() {
 	if (temp == valor) {
 		coletorGame.SetAcerto();
 		PlayerCompletaGame();
+		finalizado = true;
 	} else {
 		coletorGame.SetErro();
 	}
 }
 
-//Funcao que escreve os dados e apresenta ao final da partida.
+//Funçao para que possa ser apresentado e futuramente armazenado os dados coletados.
 function PlayerCompletaGame(){
-
-	popupScript.habilitar = true;
+	Instantiate(parabens, Vector3(0, 0, -2), Quaternion.identity);	
 	
 	var dadosPopUp = coletorGame.RetornaDados();//Gera um array contendo os dados da partida.
 	
-	//Escreve os dados no arquivo.csv
+	//Passando os dados para o arquivo.
 	csScript.SaveToFile(coletorGame.RetornaString());
 	
 	//Apos definir no PopUp passase dadosPopUp como parametro na funcao abaixo.
-	popupScript.setDadosPopUp(dadosPopUp);
-	//Entrada para o banco de dados.
-	coletorGame.ConfereDados();
+	var popupScript = FindObjectOfType(typeof(PopupParabens)) as PopupParabens;
 	
+	popupScript.setDadosPopUp(dadosPopUp);
+
+	//A nivel de debug.
+	coletorGame.ConfereDados();
 }
 
 public function AddDragDrop () {

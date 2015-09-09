@@ -57,8 +57,6 @@ function Update () {
 
 }
 
-function OnGUI (){}
-
 //Definindo os valores que serao apresentados e armazenados para serem conferidps.
 function DefinirConta () {
 	
@@ -93,6 +91,9 @@ function PlayerCompletaGame(){
 
 	//A nivel de debug.
 	coletorGame.ConfereDados();
+	primeiroValor.color.a = 0.2;
+	segundoValor.color.a = 0.2;
+	valorTotal.color.a = 0.2;
 }
 
 //Usados na comunicacao entre maca -> Principal -> Coletor.

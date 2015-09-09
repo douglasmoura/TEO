@@ -35,22 +35,16 @@ private var nivelScript: Nivel;
 //Responsavel por Coletar os dados.
 public var coletorGame: Coletor;
 
-//Janela popup.
-private var popupScript: Popup;
-
-//Janela popup.
-private var paraScript: Parabens;
-
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
-private var csScript : CsColetor;
+public var csScript : CsColetor;
 
 //Ainda nao funciona.
 private var faderScript : Fader;
 
+public var parabens: GameObject;
+
 function Awake() {
 
-	csScript = this.GetComponent("CsColetor");
-	
 	nivelScript = FindObjectOfType(typeof(Nivel)) as Nivel;
 	if (nivelScript.nivel == 2) {
 		var qualRostoEscolher = Random.Range(1,6);
@@ -59,11 +53,7 @@ function Awake() {
 }
 
 function Start () {
-	
-	paraScript = FindObjectOfType(typeof(Parabens)) as Parabens;
-
-	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
-	
+		
 	contador = partesCorpo.Length;
 	
 	ProcurandoLocal();
@@ -140,22 +130,19 @@ function AcertoMUSICA() {
 //------------------------------------------
 //Funcao que escreve os dados e apresenta ao final da partida.
 function PlayerCompletaGame(){
-	
-	//Caracter de teste, enquanto nao ha o audio.
-	ondeEstaStr.text = "";
-	paraScript.Habilita();
-	yield WaitForSeconds(5);
-	paraScript.Desabilita();
-	popupScript.Habilita();
-	
-	csScript.SaveToFile(coletorGame.RetornaString());
-	//csScript.ReadFromFile();
-	coletorGame.ConfereDados();
-	//Entrada para o banco de dados.
+	Instantiate(parabens, Vector3(0, 0, -2), Quaternion.identity);	
 	
 	var dadosPopUp = coletorGame.RetornaDados();//Gera um array contendo os dados da partida.
-	//Apos definir no PopUp passase dadosPopUp como parametro na funcao abaixo.
-	popupScript.setDadosPopUp(dadosPopUp);
 	
+	//Passando os dados para o arquivo.
+	csScript.SaveToFile(coletorGame.RetornaString());
+	
+	//Apos definir no PopUp passase dadosPopUp como parametro na funcao abaixo.
+	var popupScript = FindObjectOfType(typeof(PopupParabens)) as PopupParabens;
+	
+	popupScript.setDadosPopUp(dadosPopUp);
 
+	//A nivel de debug.
+	coletorGame.ConfereDados();
+	ondeEstaStr.text = "";
 }

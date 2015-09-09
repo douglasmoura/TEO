@@ -11,10 +11,6 @@ function Start () {
 	CarregarSprite();
 }
 
-function Update () {
-
-}
-
 function CarregarSprite() {
 	var sprite = memoria.nivel.jogo + "/" + gameObject.tag;
 	frente = Resources.Load(sprite, typeof(Sprite));

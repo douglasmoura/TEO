@@ -32,6 +32,11 @@ TagManager:
   - 
   - Maca
   - 
+  - Boca
+  - Orelha
+  - Nariz
+  - Olho
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -73,10 +78,6 @@ TagManager:
     userID: 1
     uniqueID: 3119829171
     locked: 0
-  - name: Fundo Parabens
-    userID: 5
-    uniqueID: 1165384655
-    locked: 0
   - name: Render
     userID: 2
     uniqueID: 3798733635
@@ -85,7 +86,19 @@ TagManager:
     userID: 3
     uniqueID: 1102283321
     locked: 0
-  - name: New Layer 4
+  - name: Fundo Parabens
+    userID: 5
+    uniqueID: 1165384655
+    locked: 0
+  - name: Teo parabens
     userID: 4
     uniqueID: 1190062725
+    locked: 0
+  - name: teo animacao parabens
+    userID: 6
+    uniqueID: 4094339587
+    locked: 0
+  - name: fogos parabens
+    userID: 7
+    uniqueID: 958167957
     locked: 0
