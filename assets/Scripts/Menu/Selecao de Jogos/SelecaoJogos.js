@@ -147,11 +147,12 @@ public function Selecionar(categoria : String) {
 			lista.Listar(3, 7);
 			break;
 		case MEMORIA:
-			lista.Listar(7, 8);
+			lista.Listar(7, 9);
 			break;
 		case AVD:
+			lista.Listar(9, 10);
 			break;
 		default:
-			lista.Listar(8, 9);
+			lista.Listar(10, 11);
 	}
 }

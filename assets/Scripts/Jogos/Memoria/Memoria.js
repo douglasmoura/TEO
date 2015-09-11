@@ -9,18 +9,22 @@ public var parabens: GameObject;
 public var pontos = 0;
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
 public var csScript : CsColetor;
+private var quantidade: int;
 
-
-function Start () {
+function Awake() {
 	nivel = FindObjectOfType(typeof(Nivel)) as Nivel;
-	
+	quantidade = nivel.nivel * 2 + 2;
+
+}
+
+function Start () {	
 	Embaralhar();
 	Instanciar();
 }
 
 function Update () {
 	
-    if (pontos == 2) {
+    if (pontos == quantidade/2) {
     	
     	Instantiate(parabens, Vector3(0, 0, -2), Quaternion.identity);	
     	pontos = -1;
@@ -28,8 +32,7 @@ function Update () {
 }
 
 function Instanciar() {
-	var quantidade = nivel.nivel * 2 + 2;
-   
+	
     for (var i : int = 0; i < quantidade; i++) {
         var primeiro : int = Random.Range(i, quantidade);
         var segundo = array[i].transform.position;
@@ -40,9 +43,7 @@ function Instanciar() {
     }
 }
 
-function Embaralhar() {
-	var quantidade = nivel.nivel * 2 + 2;
-	
+function Embaralhar() {	
 	var pasta = nivel.jogo + "/" + nivel.nivel;
 	
 	var x = 2.5f - (quantidade);
