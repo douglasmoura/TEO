@@ -4,18 +4,17 @@ public var jogo: Jogo;
 private var selecaoJogos : SelecaoJogos;
 
 //Constantes
-public static final var JOGOS = 10;
+public static final var JOGOS = 9;
 
 public static final var COR = 0;
 public static final var QUANTO_E = 1;
 public static final var SIMBO_NUMERO = 2;
-public static final var CACHORRO_1 = 3;
-public static final var CACHORRO_2 = 4;
-public static final var MENINA = 5;
-public static final var PEIXE = 6;
-public static final var TARTARUGA = 7;
-public static final var MEMORIA = 8;
-public static final var ONDE_ESTA_ROSTO = 9;
+public static final var CACHORRO = 3;
+public static final var MENINA = 4;
+public static final var PEIXE = 5;
+public static final var TARTARUGA = 6;
+public static final var MEMORIA = 7;
+public static final var ONDE_ESTA_ROSTO = 8;
 
 public var info = "";
 
@@ -30,8 +29,7 @@ function Start () {
 	jogos[COR] = new Jogo("Cores", "Associar círculos coloridos\nà seus equivalentes.", 2);
 	jogos[QUANTO_E] = new Jogo("Quanto é?", "Associar o sentido de \nquantidade com unidades \ne dezenas realizando uma \nsoma." , 1);
 	jogos[SIMBO_NUMERO] = new Jogo("SimboNúmero", "Associar o sentido de \nquantidade com unidades \ne dezenas.", 1);
-	jogos[CACHORRO_1] = new Jogo("Cachorro 1", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \ndo cachorro.", 4);
-	jogos[CACHORRO_2] = new Jogo("Cachorro 2", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \ndo cachorro.", 4);
+	jogos[CACHORRO] = new Jogo("Cachorro", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \ndo cachorro.", 4);
 	jogos[MENINA] = new Jogo("Menina", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \nda menina.", 4);
 	jogos[PEIXE] = new Jogo("Peixe", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \ndo peixe.", 4);
 	jogos[TARTARUGA] = new Jogo("Tartaruga", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \nda tartaruga.", 4);
@@ -40,8 +38,7 @@ function Start () {
 	
 	jogos[QUANTO_E].setCena("Quanto E");
 	jogos[TARTARUGA].setCena("QuebraCabeca");
-	jogos[CACHORRO_1].setCena("QuebraCabeca");
-	jogos[CACHORRO_2].setCena("QuebraCabeca");
+	jogos[CACHORRO].setCena("QuebraCabeca");
 	jogos[MEMORIA].setCena("Memoria");
 	jogos[ONDE_ESTA_ROSTO].setCena("Onde Esta");
 	
