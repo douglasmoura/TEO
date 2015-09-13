@@ -43,6 +43,7 @@ function Start () {
 	jogos[QUANTO_E].setCena("Quanto E");
 	jogos[TARTARUGA].setCena("QuebraCabeca");
 	jogos[CACHORRO].setCena("QuebraCabeca");
+	jogos[PEIXE].setCena("QuebraCabeca");
 	jogos[COZINHA].setCena("Memoria");
 	jogos[ESCOLA].setCena("Memoria");
 	jogos[ONDE_ESTA_ROSTO].setCena("Onde Esta");
