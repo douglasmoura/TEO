@@ -27,6 +27,7 @@ public var coletorGame: Coletor;
 
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
 public var csScript : CsColetor;
+
 public var parabens: GameObject;
 private var finalizado = false;
 
@@ -43,7 +44,6 @@ function Update () {
 	//Restringir para que comece a contar apenas quando acabar de girar.
 	if(comecaContagem){
 		coletorGame.SetTempoTotal(Time.timeSinceLevelLoad - TEMPO_ROLETA);
-		coletorGame.VerificaMaiorDelay();
 	}
 }
 

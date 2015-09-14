@@ -27,9 +27,11 @@ function Start () {
 function Update () {
 	
     if (pontos == quantidade/2) {
-    	
+    	coletorGame.SetAcerto(this.pontos); //?
     	PlayerCompletaGame();	
-    	pontos = -1;
+    	pontos = -1; //flag ruim?
+    }else{
+        coletorGame.SetTempoTotal(Time.timeSinceLevelLoad);
     }
 }
 

@@ -37,6 +37,9 @@ function OnMouseDown() {
 			memoria.a = this;
 		}
 	}
+	
+	memoria.coletorGame.VerificaMaiorDelay();
+	
 }
 
 function Avaliar(a: PecaMemoria, b: PecaMemoria) {
@@ -53,6 +56,8 @@ function Avaliar(a: PecaMemoria, b: PecaMemoria) {
 		
 		a.Virar();
 		b.Virar();
+		
+		memoria.coletorGame.SetErro(); //Vale a pena encapsular?
 	}
 	memoria.a = null;
 	memoria.b = null;

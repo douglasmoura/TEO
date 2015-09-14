@@ -47,6 +47,8 @@ public class ObjetoSimbo extends Objeto {
 	    	}
 			tavaDentro = true;
 		}
+		
+		simboNumero.coletorGame.VerificaMaiorDelay();
 	}
 	
 	//Detecta quando o cubo encontra outro objeto.
