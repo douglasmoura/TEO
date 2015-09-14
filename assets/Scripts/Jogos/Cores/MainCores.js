@@ -51,12 +51,6 @@ function Start() {
 }
 
 function Update() {
-
-	/*if(jogou){
-		coletorGame.VerificaMaiorDelay();
-		jogou = false;
-	}*/
-    
 	if (cubo == null && tamanho > 0) {
 		cores.RemoveAt(index);
 		tamanho--;
@@ -70,7 +64,6 @@ function Update() {
 		}
 	temporizador();
 	}
-	
 }
 
 function MudarCor() {
@@ -129,8 +122,6 @@ function PlayerCompletaGame(){
 	var popupScript = FindObjectOfType(typeof(PopupParabens)) as PopupParabens;
 	
 	popupScript.setDadosPopUp(dadosPopUp);
-	
-	//popupScript.Habilita();
 	
 	coletorGame.ConfereDados();
 	//Entrada para o banco de dados.

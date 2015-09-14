@@ -43,6 +43,7 @@ public class ObjetoPeca extends Objeto {
 			var novoSprite = gameObject.GetComponent(SpriteRenderer).sprite;
 			destino.GetComponent(SpriteRenderer).sprite = novoSprite;
 			Destroy(gameObject);
+			pecasDrag.pontos++;
 		//Ira coletar os erros de peça errada.	
 		} else if(colidiuOutraPeca){
 			pecasDrag.erros++;

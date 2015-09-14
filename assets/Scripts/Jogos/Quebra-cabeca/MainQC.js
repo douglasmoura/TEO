@@ -8,28 +8,16 @@ public var coletorGame: Coletor;
 public var erros = 0;
 public var jogou: boolean;
 
-//Variavel auxiliar para sair da funcao update.
-public var completou = false;
-
-//Script do popup de informacao dos dados no final da partida.
-private var popupScript: Popup;
-
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
-private var csScript : CsColetor;
+public var csScript : CsColetor;
+public var parabens: GameObject;
 
 private var elementos: Elementos;
 public var texturas: Object[];
+public var pontos = 0;
 
-function Awake() {
-
-	
-}
 
 function Start () {
-	csScript = this.GetComponent("CsColetor");
-	
-	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
-	
 	elementos = FindObjectOfType(typeof(Elementos)) as Elementos;
 	
 	embaralhar();
@@ -40,10 +28,10 @@ function Update () {
 		coletorGame.VerificaMaiorDelay();
 		jogou = false;
 	}
-	if (GetTamanho() == 0 && !completou) { // So completou quando passar por essa funcao. Porem e a mesma coisa de ja ter completado, apenas para parar o update.
+	if (pontos == 4) { // So completou quando passar por essa funcao. Porem e a mesma coisa de ja ter completado, apenas para parar o update.
 		coletorGame.SetErro(erros);
 		PlayerCompletaGame();
-		completou = true; // Apenas para sair do update.
+		pontos = -1;
 	}else{
 	
 		coletorGame.SetTempoTotal(Time.timeSinceLevelLoad);
@@ -52,9 +40,7 @@ function Update () {
 
 function embaralhar() {
 	var pasta = elementos.nivel.jogo + "/Pecas";
-	Debug.Log("Pasta " + pasta);
 	texturas = Resources.LoadAll(pasta, typeof(Sprite));
-	Debug.Log("Array " + texturas);
  
     for (var i : int = 0; i < pecas.Length; i++) {
         var primeiro : int = Random.Range(i, pecas.Length);
@@ -62,41 +48,31 @@ function embaralhar() {
         
         pecas[i].transform.position = pecas[primeiro].transform.position;
         pecas[i].GetComponent(SpriteRenderer).sprite = texturas[i];
+        var script = pecas[i].GetComponent(ObjetoPeca);
         Instantiate(pecas[i], pecas[i].transform.position, Quaternion.identity);
+        script.x = pecas[primeiro].transform.position.x;
+        script.y = pecas[primeiro].transform.position.y;
         pecas[primeiro].transform.position = segundo;
-        
     }
 }
 
-function GetTamanho() {
-	var tamanhoAtual = 0;
-	
-	for (var i in pecas) {
-		if (i != null) {
-			tamanhoAtual++;
-		}	
-	}
-	
-	return tamanhoAtual;
-}
-
-//Funçao para que possa ser apresentado e futuramente armazenado os dados coletados.
+//Funcao que escreve os dados e apresenta ao final da partida.
 function PlayerCompletaGame(){
 
-	popupScript.habilitar = true;
+	 Instantiate(parabens, Vector3(0, 0, -2), Quaternion.identity);	
 	
 	var dadosPopUp = coletorGame.RetornaDados();//Gera um array contendo os dados da partida.
 	
-	csScript.SaveToFile(coletorGame.RetornaString());
+	csScript.SaveToFile(coletorGame.RetornaString()); //Escreve os dados da partida no arquivo.csv
 	
 	//Apos definir no PopUp passase dadosPopUp como parametro na funcao abaixo.
+	var popupScript = FindObjectOfType(typeof(PopupParabens)) as PopupParabens;
+	
 	popupScript.setDadosPopUp(dadosPopUp);
 	
-	//A nivel de debug.
 	coletorGame.ConfereDados();
-	
+	//Entrada para o banco de dados.
 }
-
 
 //Usados para coleta.
 public function AddAcerto () {

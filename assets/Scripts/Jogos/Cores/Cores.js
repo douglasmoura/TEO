@@ -24,10 +24,6 @@ function Start () {
 	criarCubos();
 }
 
-function Update () {
-
-}
-
 function criarCubos() {
 	var x = transform.position.x;
 	var y = transform.position.y;
