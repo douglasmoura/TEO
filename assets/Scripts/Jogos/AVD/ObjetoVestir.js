@@ -11,17 +11,16 @@ public class ObjetoVestir extends Objeto {
 	private var pecasDrag: MainQC;
 	//Coletar o DragAndDrop;
 	private var colidiuOutraPeca: boolean;
+	public var ok = false;
+	
+	public static final var MEIA = "Tres";
+	public static final var TENIS = "Quatro";
 	
 	
 	
 	/*******************************************************************
 	 Implementacao dos metodos da classe Objeto
 	********************************************************************/
-	
-	//Implementacao para o metodo start
-	public function Criar() {
-		super.Criar();
-	}
 
 
 
@@ -34,8 +33,14 @@ public class ObjetoVestir extends Objeto {
 		drag = false;
 		
 		if (valida) {
-			gameObject.transform.position = destino.transform.position;
-			drag = true;
+			
+			if (Validar()) {
+				gameObject.transform.position = destino.transform.position;
+				drag = true;
+				Debug.Log("Validar: OK2");
+			} else {
+				valida = false;
+			}
 		//Ira coletar os erros de peça errada.	
 		}
 		
@@ -64,5 +69,26 @@ public class ObjetoVestir extends Objeto {
 		if (colisor.gameObject.tag == gameObject.tag && drag) {
 	    	valida = false;
 	    }
+	}
+	
+	function Validar() {
+		if (gameObject.tag == TENIS) {
+			 var meia = GameObject.FindGameObjectsWithTag(MEIA) as GameObject[];
+			 
+			 var meiaScript: ObjetoVestir = null;
+			 var cont = 0;
+			 while (meiaScript == null) {
+			 	meiaScript = meia[cont++].GetComponent(ObjetoVestir);	 	
+			 }
+			 
+			 if (meiaScript.ok) {
+			 	ok = true;
+			 	return true;	
+			 } else {
+			 	return false;
+			 }
+		}
+		ok = true;
+		return true;
 	}
 }

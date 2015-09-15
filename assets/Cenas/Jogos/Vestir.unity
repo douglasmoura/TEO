@@ -302,6 +302,7 @@ MonoBehaviour:
   drag: 0
   valida: 0
   destino: {fileID: 0}
+  ok: 0
 --- !u!61 &225770444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -385,6 +386,7 @@ MonoBehaviour:
   drag: 0
   valida: 0
   destino: {fileID: 0}
+  ok: 0
 --- !u!61 &226568956
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -468,6 +470,7 @@ MonoBehaviour:
   drag: 0
   valida: 0
   destino: {fileID: 0}
+  ok: 0
 --- !u!61 &303394005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -852,6 +855,7 @@ MonoBehaviour:
   drag: 0
   valida: 0
   destino: {fileID: 0}
+  ok: 0
 --- !u!61 &557143359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1302,6 +1306,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2106955969}
   - 212: {fileID: 2106955968}
+  - 114: {fileID: 2106955970}
   m_Layer: 0
   m_Name: teo-de-cueca
   m_TagString: Untagged
@@ -1347,3 +1352,19 @@ Transform:
   - {fileID: 30141147}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &2106955970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2106955967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e97d717560b4164bb251841dc39b368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roupas:
+  - {fileID: 557143355}
+  - {fileID: 225770440}
+  - {fileID: 226568952}
+  - {fileID: 303394001}
