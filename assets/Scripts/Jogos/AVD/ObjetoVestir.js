@@ -8,11 +8,10 @@
 **/ 
 public class ObjetoVestir extends Objeto {
 
-	private var pecasDrag: MainQC;
+	private var vestir: Vestir;
 	//Coletar o DragAndDrop;
 	private var colidiuOutraPeca: boolean;
-	public var ok = false;
-	
+		
 	public static final var MEIA = "Tres";
 	public static final var TENIS = "Quatro";
 	
@@ -21,7 +20,14 @@ public class ObjetoVestir extends Objeto {
 	/*******************************************************************
 	 Implementacao dos metodos da classe Objeto
 	********************************************************************/
-
+	
+	
+	//Implementacao para o metodo start
+	public function Criar() {
+		super.Criar();
+		
+		vestir = FindObjectOfType(typeof(Vestir)) as Vestir;
+	}
 
 
 	/*******************************************************************
@@ -37,7 +43,7 @@ public class ObjetoVestir extends Objeto {
 			if (Validar()) {
 				gameObject.transform.position = destino.transform.position;
 				drag = true;
-				Debug.Log("Validar: OK2");
+				vestir.pontos += 1;
 			} else {
 				valida = false;
 			}

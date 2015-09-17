@@ -164,8 +164,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 2, y: .800000012}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 1.5, y: .800000012}
+  m_Center: {x: .200000003, y: -.600000024}
 --- !u!50 &30141149
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -302,7 +302,6 @@ MonoBehaviour:
   drag: 0
   valida: 0
   destino: {fileID: 0}
-  ok: 0
 --- !u!61 &225770444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -386,7 +385,6 @@ MonoBehaviour:
   drag: 0
   valida: 0
   destino: {fileID: 0}
-  ok: 0
 --- !u!61 &226568956
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -397,8 +395,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .800000012, y: 1}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1.20000005}
+  m_Center: {x: 0, y: -.200000003}
 --- !u!1 &303394001
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +468,6 @@ MonoBehaviour:
   drag: 0
   valida: 0
   destino: {fileID: 0}
-  ok: 0
 --- !u!61 &303394005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -481,7 +478,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2, y: .800000012}
+  m_Size: {x: 2.5, y: 1}
   m_Center: {x: 0, y: -.200000003}
 --- !u!1 &348739275
 GameObject:
@@ -779,6 +776,14 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1102283321
       objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: cfc0ad6b148fec54ea5df64c1f19ccb3, type: 2}
+      propertyPath: m_Size.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: cfc0ad6b148fec54ea5df64c1f19ccb3, type: 2}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfc0ad6b148fec54ea5df64c1f19ccb3, type: 2}
   m_RootGameObject: {fileID: 303394001}
@@ -855,7 +860,6 @@ MonoBehaviour:
   drag: 0
   valida: 0
   destino: {fileID: 0}
-  ok: 0
 --- !u!61 &557143359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -995,6 +999,18 @@ Prefab:
     - target: {fileID: 21200000, guid: bc43719e72097194b85026c56586ef64, type: 2}
       propertyPath: m_SortingLayerID
       value: 3798733635
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: bc43719e72097194b85026c56586ef64, type: 2}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: bc43719e72097194b85026c56586ef64, type: 2}
+      propertyPath: m_Size.y
+      value: 1.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: bc43719e72097194b85026c56586ef64, type: 2}
+      propertyPath: m_Center.y
+      value: -.200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc43719e72097194b85026c56586ef64, type: 2}
@@ -1363,8 +1379,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e97d717560b4164bb251841dc39b368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  csScript: {fileID: 580533953}
   roupas:
   - {fileID: 557143355}
   - {fileID: 225770440}
   - {fileID: 226568952}
   - {fileID: 303394001}
+  parabens: {fileID: 100000, guid: 393228b3b170c554d97a3dae4a7b3583, type: 2}
+  pontos: 0

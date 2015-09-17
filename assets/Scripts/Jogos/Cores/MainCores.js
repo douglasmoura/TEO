@@ -12,8 +12,6 @@ import System.Collections.Generic;
 public var csScript : CsColetor;
 //Responsavel pela coleta. Vide Script Coletor.js;
 public var coletorGame: Coletor;
-//Janela popup.
-private var popupScript: Popup;
 
 public static final var x = 6;
 public static final var y = -4.5;
@@ -40,8 +38,6 @@ public var parabens: GameObject;
 
 function Start() {
 	tamanho = coresScript.tamanho;
-	
-	popupScript = FindObjectOfType(typeof(Popup)) as Popup;
 	
 	index = Random.Range(0.0, tamanho);
 	cubo = Instantiate(cores[index],  Vector2(x, y), Quaternion.identity);

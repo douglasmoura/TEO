@@ -24,7 +24,8 @@ public class Objeto extends MonoBehaviour {
 	public var destino: GameObject;
 	//Deslocamento ao clicar no objeto
 	protected var offset: Vector2;
-	
+	//Se ok for false entao o objeto ainda podera ser deslocado
+	protected var ok: boolean;
 	
 	
 	/*******************************************************************
@@ -46,6 +47,7 @@ public class Objeto extends MonoBehaviour {
 	function Start () {
 		this.valida = false;
 		this.drag = false;
+		this.ok = false;
 		
 		//Metodo chamado com implementacao vazia.
 		Criar();
@@ -102,10 +104,12 @@ public class Objeto extends MonoBehaviour {
 	
 	//Trata do evento de arrastar o objeto. 
 	function OnMouseDrag(){
-		drag = true;
-		//Posicao do mouse
-	    var curScreenSpace = Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
-	    //Atualiza posicao do objeto  
-	    transform.position = Camera.main.ScreenToWorldPoint(curScreenSpace) + offset;
+		if (!ok) {
+			drag = true;
+			//Posicao do mouse
+		    var curScreenSpace = Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
+		    //Atualiza posicao do objeto  
+		    transform.position = Camera.main.ScreenToWorldPoint(curScreenSpace) + offset;
+		}
 	}
 }
