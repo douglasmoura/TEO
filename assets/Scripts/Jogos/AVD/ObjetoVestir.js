@@ -40,11 +40,20 @@ public class ObjetoVestir extends Objeto {
 		
 		if (valida) {
 			
-			if (Validar()) {
+			if (!ok && Validar()) {
 				gameObject.transform.position = destino.transform.position;
 				drag = true;
-				vestir.pontos += 1;
-			} else {
+				vestir.pontos += 1;				
+				
+				//Audio
+				if (vestir.pontos < 4) {
+					Debug.Log("Audio!");
+					var audio: AudioSource = GetComponent.<AudioSource>();
+					audio.Play();
+				}
+				
+				
+			} else if (!Validar()){
 				valida = false;
 			}
 		//Ira coletar os erros de peça errada.	
