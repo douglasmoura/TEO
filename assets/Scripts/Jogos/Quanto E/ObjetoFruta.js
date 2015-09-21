@@ -104,6 +104,8 @@ public class ObjetoFruta extends Objeto {
 		}
 		
 		idPrato_Diminuindo = -1; // Flag de escape.
+		
+		comunicadorQuantoE.coletorGame.VerificaMaiorDelay();
 	}
 	
 	function OnTriggerEnter2D(colisor: Collider2D) {

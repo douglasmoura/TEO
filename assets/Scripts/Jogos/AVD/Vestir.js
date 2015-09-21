@@ -16,8 +16,12 @@ function Start () {
 
 function Update () {
 	if (pontos == 4) {
+		coletorGame.SetAcerto(this.pontos);
 		PlayerCompletaGame();
 		pontos = -1;
+	}else {
+		//Verificando o tempo para informar ao termino.
+		coletorGame.SetTempoTotal(Time.timeSinceLevelLoad);
 	}
 }
 

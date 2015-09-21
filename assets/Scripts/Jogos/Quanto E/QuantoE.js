@@ -52,7 +52,6 @@ function Update () {
 	}else{
 		//Verificando o tempo para informar ao termino.
 		coletorGame.SetTempoTotal(Time.timeSinceLevelLoad);
-		coletorGame.VerificaMaiorDelay();
 	}
 
 }

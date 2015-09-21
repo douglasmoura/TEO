@@ -46,6 +46,8 @@ public class ObjetoSimbo extends Objeto {
 	    		simboNumero.valor += dezena;
 	    	}
 			tavaDentro = true;
+		}else if (!valida && !tavaDentro){
+			simboNumero.coletorGame.SetDragDrop();
 		}
 		
 		simboNumero.coletorGame.VerificaMaiorDelay();

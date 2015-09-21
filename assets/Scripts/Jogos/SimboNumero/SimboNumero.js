@@ -170,11 +170,3 @@ function PlayerCompletaGame(){
 	//A nivel de debug.
 	coletorGame.ConfereDados();
 }
-
-public function AddDragDrop () {
-	coletorGame.SetDragDrop();
-}
-//Criar um botao que ira ter a opçao de passar de conta.
-public function AddStep () {
-	coletorGame.SetStep();
-}

@@ -55,10 +55,15 @@ public class ObjetoVestir extends Objeto {
 				
 			} else if (!Validar()){
 				valida = false;
+				vestir.coletorGame.SetErro();
+				
 			}
 		//Ira coletar os erros de peça errada.	
+		}else{
+			vestir.coletorGame.SetDragDrop(); //Avaliar se esta correto aqui.
 		}
 		
+		vestir.coletorGame.VerificaMaiorDelay();
 	}
 	
 	//Detecta quando uma peca encontra outra peca.
