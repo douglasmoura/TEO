@@ -83,7 +83,7 @@ function DoMyWindow (windowID : int) {
 
 	//Label responsavel pelo info do jogo.
 	GUI.skin = infoSkin;
-	GUI.Label(Rect (360, 280, 345, 290), lista.info);
+	GUI.Label(Rect (360, 170, 345, 290), lista.info);
 
 	GUI.skin = skinTitulo;
 	GUI.Label (Rect (210, 45, 370, 70), jogo);
@@ -124,9 +124,9 @@ function DoMyWindow (windowID : int) {
 		Debug.Log("Nivel " + nivelGUI.nivel.nivel);
 		Debug.Log("Lista " + lista.jogo.getCena());
 		if (lista.jogo.getCena() == null) {
-			lista.info = "Selecione um jogo";
+			lista.info = "\n\n\nSelecione um Jogo!";
 		} else if (nivelGUI.nivel.nivel == 0) {
-			lista.info = "Selecione um nível";
+			lista.info = "\n\n\nSelecione um Nível!";
 		} else {
 			var jogo = lista.jogo.getCena();
 			nivelGUI.nivel.jogo = lista.jogo.GetNome();

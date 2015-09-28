@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 12001, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Info
   m_EditorClassIdentifier: 
-  m_Font: {fileID: 12800000, guid: a5fd8d2321fda62428bd67f4fa4295e4, type: 3}
+  m_Font: {fileID: 12800000, guid: ac5ef2c3315bf6741981e43339b7a178, type: 3}
   m_box:
     m_Name: box
     m_Normal:
@@ -235,8 +235,8 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: fb8e82292f1d9254481dac292b411262, type: 3}
-    m_FontSize: 35
+    m_Font: {fileID: 12800000, guid: ac5ef2c3315bf6741981e43339b7a178, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_Alignment: 0
     m_WordWrap: 0

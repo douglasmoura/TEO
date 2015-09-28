@@ -28,17 +28,17 @@ public var skinLista2: GUISkin;
 
 function Start () {
 	
-	jogos[COR] = new Jogo("Cores", "Associar círculos coloridos\nà seus equivalentes.", 2);
-	jogos[QUANTO_E] = new Jogo("Quanto é?", "Associar o sentido de \nquantidade com unidades \ne dezenas realizando uma \nsoma." , 1);
-	jogos[SIMBO_NUMERO] = new Jogo("SimboNúmero", "Associar o sentido de \nquantidade com unidades \ne dezenas.", 1);
-	jogos[CACHORRO] = new Jogo("Cachorro", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \ndo cachorro.", 4);
-	jogos[MENINA] = new Jogo("Menina", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \nda menina.", 4);
-	jogos[PEIXE] = new Jogo("Peixe", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \ndo peixe.", 4);
-	jogos[TARTARUGA] = new Jogo("Tartaruga", "Estimular o raciocínio lógico \nresolvendo o quebra-cabeça \nda tartaruga.", 4);
-	jogos[COZINHA] = new Jogo("Cozinha", "Estimular a memória xD", 3);
-	jogos[ESCOLA] = new Jogo("Escola", "Estimular a memória xD", 3);
-	jogos[VESTIR] = new Jogo("Vestir", "18+", 1);
-	jogos[ONDE_ESTA_ROSTO] = new Jogo("Onde Está?", "Identificar e localizar partes \npresentes no rosto." , 2);
+	jogos[COR] = new Jogo("Cores", "Teo gosta de brincar com \nas cores, ajude-o a associá\n-las corretamente!\n\nArraste o círculo destacado \npara sua cor igual.", 2);
+	jogos[QUANTO_E] = new Jogo("Quanto é?", "Teo gosta de brincar com \nos números, ajude-o a \nresolver a soma certa!\n\nArraste as frutas para os \npratos para resolver a \nsoma." , 1);
+	jogos[SIMBO_NUMERO] = new Jogo("SimboNúmero", "Teo gosta de brincar com \nquantidades, ajude-o a \nencontrar o valor certo!\n\nArraste os materiais para a \nmesa e confirme o valor.", 1);
+	jogos[CACHORRO] = new Jogo("Cachorro", "Teo gosta de brincar com \nquebra-cabeças, ajude-o \na completa-lós!\n\nArraste as peças do cachor-\nro para suas posições \ncorretas.", 4);
+	jogos[MENINA] = new Jogo("Menina", "Teo gosta de brincar com \nquebra-cabeças, ajude-o \na completa-lós!\n\nArraste as peças da menina \npara suas posições corretas.", 4);
+	jogos[PEIXE] = new Jogo("Peixe", "Teo gosta de brincar com \nquebra-cabeças, ajude-o \na completa-lós!\n\nArraste as peças do peixe \npara suas posições corretas.", 4);
+	jogos[TARTARUGA] = new Jogo("Tartaruga", "Teo gosta de brincar com \nquebra-cabeças, ajude-o \na completa-lós!\n\nArraste as peças da tartaru\n-ga para suas posições \ncorretas.", 4);
+	jogos[COZINHA] = new Jogo("Cozinha", "Teo gosta de brincar com\njogos da memória, ajude\n-o a terminar!\n\nSelecione as cartas para \ncombinar objetos da \ncozinha iguais.", 3);
+	jogos[ESCOLA] = new Jogo("Escola", "Teo gosta de brincar com\njogos da memória, ajude\n-o a terminar!\n\nSelecione as cartas para \ncombinar objetos da \nescola iguais.", 3);
+	jogos[VESTIR] = new Jogo("Vestir", "Teo gosta de brincar com as \natividades diárias, ajude-o \na se vestir!\n\nArraste as roupas para \najudar o Teo a se vestir.", 1);
+	jogos[ONDE_ESTA_ROSTO] = new Jogo("Onde Está?", "Teo gosta de brincar com\nas partes do corpo, ajude-o \na identificar!\n\nLocalize e selecione as \npartes do rosto pedidas." , 2);
 	
 	jogos[QUANTO_E].setCena("Quanto E");
 	jogos[TARTARUGA].setCena("QuebraCabeca");
@@ -92,6 +92,6 @@ public function Validar(jogo: int) {
 	}
 	
 	if (!valida) {
-		info = "Selecione um jogo e seu\nnível para começar.";
+		info = "\n\n\nSelecione um jogo e seu\nnível para começar.";
 	}
 }
