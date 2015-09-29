@@ -11,6 +11,8 @@ public var parabens: GameObject;
 public var pontos = 0;
 
 function Start () {
+	coletorGame.SetNomeJogo("AVD");
+	coletorGame.SetNivelJogo(1); //Como só tem um nível por enquanto.
 	Embaralhar();
 }
 

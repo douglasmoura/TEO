@@ -5,7 +5,7 @@ public static final var deslocamento = 3.8f;
 public var tamanho: int;
 public var cores: GameObject[];
 
-private var nivelScript: Nivel;
+public var nivelScript: Nivel;
 
 function Awake() {
 	nivelScript = FindObjectOfType(typeof(Nivel)) as Nivel;

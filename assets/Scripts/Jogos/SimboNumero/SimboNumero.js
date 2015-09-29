@@ -31,6 +31,14 @@ public var csScript : CsColetor;
 public var parabens: GameObject;
 private var finalizado = false;
 
+
+function Start() 
+{
+	coletorGame.SetNomeJogo("SimboNúmero");
+	coletorGame.SetNivelJogo(1);
+
+}
+
 function Update () {
 	if (habilita) {
 		girarRoleta();

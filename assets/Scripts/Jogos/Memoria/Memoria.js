@@ -20,6 +20,9 @@ function Awake() {
 }
 
 function Start () {	
+
+	coletorGame.SetNomeJogo("Memória");
+	coletorGame.SetNivelJogo(nivel.nivel); //Como só tem um nível por enquanto.
 	Embaralhar();
 	Instanciar();
 }

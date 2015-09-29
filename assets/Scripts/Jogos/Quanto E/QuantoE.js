@@ -36,6 +36,9 @@ public var parabens: GameObject;
 
 function Start () {
 
+	coletorGame.SetNomeJogo("Quanto É?");
+	coletorGame.SetNivelJogo(1); //Como só tem um nível por enquanto.
+
 	DefinirConta();
 	
 	primeiroValor_corrente = 0;

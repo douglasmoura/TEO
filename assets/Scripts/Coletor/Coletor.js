@@ -23,6 +23,9 @@ public class Coletor{
 		
 		private var step: int; //Em alguns jogos nao sera usada.
 		
+		private var nomeJogo: String;
+		private var nivelJogo: int;
+		
 		public function Coletor(){
 			acertos = 0;
 			erros = 0;
@@ -88,7 +91,7 @@ public class Coletor{
 		
 		//Tempo.
 		public function RetornaString () {
-			return (acertos + "," + erros+","+GetTentativasTotais()+","+dragDrop+","+tempoTotal+","+delay+","+step);
+			return (this.nomeJogo + "," + this.nivelJogo + "," + this.acertos + "," + this.erros+","+ GetTentativasTotais()+","+this.dragDrop+","+this.tempoTotal+","+this.delay+","+this.step);
 		}
 		
 		public function VerificaMaiorDelay () {
@@ -98,4 +101,12 @@ public class Coletor{
 			}
 			tempoAnterior = tempoTotal;
 		}
+		
+		public function GetNomeJogo () {return this.nomeJogo;}
+		
+		public function SetNomeJogo (nome: String) {this.nomeJogo = nome;}
+		
+		public function GetNivelJogo () {return this.nivelJogo; }
+		
+		public function SetNivelJogo (nivel: int) { this.nivelJogo = nivel; }
 }

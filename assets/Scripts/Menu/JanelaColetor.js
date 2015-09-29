@@ -12,6 +12,7 @@ private var altura = 370;
 public var skin: GUISkin;
 
 public var scrollPosition : Vector2 = Vector2.zero;
+public var scrollHorizontalPosition: float;
 
 //Script em C# responsavel por ler o arquivo csv e colocar os dados dentro da janela.
 private var csScript : CsColetor;
@@ -47,12 +48,16 @@ function WindowFunction (windowID : int) {
 		print("Saiu!");
 	}
 	
-	scrollPosition = GUI.BeginScrollView (Rect (20, 100, largura - 40, altura - 120),scrollPosition, Rect (20, 100, 155, 3000));
+	//scrollHorizontalPosition = GUI.HorizontalScrollbar(Rect(30, 335,largura-90, altura - 120), scrollHorizontalPosition, 1.0f, 0.0f,10.0f);
 	
-	GUI.Box (Rect (20, 100, largura - 40, altura + 3000),"<size=16> Acertos | Erros | Tenativas | Arrasta | Tempo (s) | Atraso | Passo </size> \n"
+	scrollPosition = GUI.BeginScrollView (Rect (20, 100, largura - 40, altura - 120),scrollPosition, Rect (20, 100, largura + 250, altura + 3000));
+	
+	GUI.Box (Rect (20, 100, largura + 250, altura + 3000),"<size=16> Jogo\t|  Nível\t|  Acertos|  Erros\t|  Tenativas|  Arrasta\t|  Tempo (s)\t|  Atraso|  Passo | </size> \n"
 	+ ModelarTabela(dados));
 	
 	GUI.EndScrollView ();
+	
+	
 }
 
 function ModelarTabela (dados:String) {

@@ -53,6 +53,9 @@ function Awake() {
 }
 
 function Start () {
+	
+	coletorGame.SetNomeJogo("Onde Está?");
+	coletorGame.SetNivelJogo(nivelScript.nivel);
 		
 	contador = partesCorpo.Length;
 	

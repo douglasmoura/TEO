@@ -1025,6 +1025,7 @@ MonoBehaviour:
   habilitar: 0
   skin: {fileID: 11400000, guid: 4cd569b2c0785ec4fb5150a2170717a6, type: 2}
   scrollPosition: {x: 0, y: 0}
+  scrollHorizontalPosition: 0
 --- !u!114 &1841138043
 MonoBehaviour:
   m_ObjectHideFlags: 0

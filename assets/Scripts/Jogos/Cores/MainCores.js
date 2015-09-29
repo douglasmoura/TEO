@@ -37,6 +37,10 @@ public var areaDeli: GameObject;
 public var parabens: GameObject;
 
 function Start() {
+
+	coletorGame.SetNomeJogo("A. Cores");
+	coletorGame.SetNivelJogo(coresScript.nivelScript.nivel);
+
 	tamanho = coresScript.tamanho;
 	
 	index = Random.Range(0.0, tamanho);

@@ -16,6 +16,9 @@ public class CsColetor : MonoBehaviour {
 	}
 	
 	public void SaveToFile(string dados){
+
+		Debug.Log(caminhoArquivo);
+
 		//Se o arquivo ja existir.
 		if(File.Exists (caminhoArquivo)) {
 			using (StreamWriter sw = new StreamWriter(caminhoArquivo,true)){
@@ -28,7 +31,7 @@ public class CsColetor : MonoBehaviour {
 			using(FileStream fs = File.Create(caminhoArquivo)){
 				using (StreamWriter sw = new StreamWriter(fs)){
 					sw.WriteLine ("sep=,");
-					sw.WriteLine ("Acertos" + "," + "Erros"+","+"TentativasTotais" +","+ "DragDrop"+","+"TempoTotal"+","+"Delay"+","+"Step");
+					sw.WriteLine ("Jogo,Nivel,Acertos,Erros,TentativasTotais,DragDrop,TempoTotal,Delay,Step");
 					sw.WriteLine (dados);
 					sw.Close ();
 				}
@@ -48,7 +51,7 @@ public class CsColetor : MonoBehaviour {
 				using (StreamReader sr = new StreamReader(caminhoArquivo)){
 					string linha;
 					while((linha = sr.ReadLine())!= null){
-						if(linha.Equals("sep=,") || linha.Equals("Acertos" + "," + "Erros"+","+"TentativasTotais" +","+ "DragDrop"+","+"TempoTotal"+","+"Delay"+","+"Step")){
+						if(linha.Equals("sep=,") || linha.Equals("Jogo,Nivel,Acertos,Erros,TentativasTotais,DragDrop,TempoTotal,Delay,Step")){
 							continue;
 						}else{
 							//Gatilho para finalizr a insercao de itens na pilha.

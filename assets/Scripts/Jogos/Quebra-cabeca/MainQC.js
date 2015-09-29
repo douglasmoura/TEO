@@ -18,6 +18,10 @@ public var pontos = 0;
 
 
 function Start () {
+
+	coletorGame.SetNomeJogo("Quebra-Cabeça");
+	coletorGame.SetNivelJogo(elementos.nivel.nivel);
+	
 	elementos = FindObjectOfType(typeof(Elementos)) as Elementos;
 	
 	embaralhar();
