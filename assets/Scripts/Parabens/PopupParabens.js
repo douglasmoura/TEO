@@ -53,7 +53,7 @@ function tempoJogo (tempo : int) {
 		minutos = "0" + minutos;
 	}
 	
-	return "0" + horas + ":" + minutos + ":" + segundos;	
+	return minutos + ":" + segundos;	
 }
 
 // Make the contents of the window
@@ -68,16 +68,16 @@ function DoMyWindow (windowID : int) {
 	GUI.Label (Rect (35, 70, largura - 20, 150), "<size=30>" + popUpDados[0] + "</size>");
 	
 	//Tentativas
-	GUI.Label (Rect (35, 92, largura - 20, 200), "<size=30>" + popUpDados[2] + "</size>");
+	GUI.Label (Rect (70, 92, largura - 20, 200), "<size=30>" + popUpDados[1] + "</size>");
 	
 	//Erros
-	GUI.Label (Rect (-5, 140, largura - 20, 200), "<size=30>" + popUpDados[1] + "</size>");
+	GUI.Label (Rect (-5, 140, largura - 20, 200), "<size=30>" + popUpDados[2] + "</size>");
 	
 	//Atraso
-	GUI.Label (Rect (50, 185, largura - 20, 200), "<size=30>"+ tempoJogo(popUpDados[5]) + "</size>");
+	GUI.Label (Rect (35, 185, largura - 20, 200), "<size=30>"+ tempoJogo(popUpDados[5]) + "</size>");
 	
 	//Tempo
-	GUI.Label (Rect (75, 230, largura - 20, 200), "<size=30>"+ tempoJogo(popUpDados[4]) + "</size>");
+	GUI.Label (Rect (60, 230, largura - 20, 200), "<size=30>"+ tempoJogo(popUpDados[4]) + "</size>");
 	
 	//Ajuda/Step
 	GUI.Label (Rect (-5, 275, largura - 20, 200), "<size=30>" + popUpDados[6] + "</size>");

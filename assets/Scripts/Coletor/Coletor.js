@@ -85,7 +85,7 @@ public class Coletor{
 		}
 		
 		public function RetornaDados () {
-			var array = new Array(acertos,erros,GetTentativasTotais(),dragDrop,tempoTotal,delay,step);
+			var array = new Array(acertos,dragDrop,erros,dragDrop,tempoTotal,delay,step);
 			return array;
 		}
 		
