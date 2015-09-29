@@ -43,14 +43,19 @@ function OnMouseDown() {
 }
 
 function Avaliar(a: PecaMemoria, b: PecaMemoria) {
-	yield WaitForSeconds(1);
 
 	if (memoria.a.tag == memoria.b.tag) {
+		if (memoria.pontos < (memoria.quantidade/2) - 1) {
+			Debug.Log("Audio!");
+			var audio: AudioSource = GetComponent.<AudioSource>();
+			audio.Play();
+		}
 		a.bloquear = true;
 		b.bloquear = true;
 		memoria.pontos += 1;
 		
 	} else {
+		yield WaitForSeconds(1);
 		a.bloquear = false;
 		b.bloquear = false;
 		

@@ -126,61 +126,6 @@ Prefab:
   m_RootGameObject: {fileID: 225770440}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &30141146
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 30141147}
-  - 61: {fileID: 30141148}
-  - 50: {fileID: 30141149}
-  m_Layer: 0
-  m_Name: coli-tenis
-  m_TagString: Quatro
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &30141147
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 30141146}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0700000003, y: -3.45000005, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2106955969}
-  m_RootOrder: 3
---- !u!61 &30141148
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 30141146}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: .400000006, y: .400000006}
-  m_Center: {x: -.100000001, y: -.200000003}
---- !u!50 &30141149
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 30141146}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
 --- !u!1 &201601263
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,8 +544,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: -.200000003, y: -.200000003}
+  m_Size: {x: 2.5, y: 1.20000005}
+  m_Center: {x: 0, y: -.200000003}
 --- !u!82 &303394006
 AudioSource:
   m_ObjectHideFlags: 0
@@ -684,7 +629,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 348739275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .709999979, y: -3.45000005, z: 0}
+  m_LocalPosition: {x: .0649999976, y: -3.45000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2106955969}
@@ -698,8 +643,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .200000003, y: .200000003}
-  m_Center: {x: .100000001, y: -.280000001}
+  m_Size: {x: 2.5, y: 1.5}
+  m_Center: {x: 0, y: -.25}
 --- !u!50 &348739278
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -958,15 +903,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: cfc0ad6b148fec54ea5df64c1f19ccb3, type: 2}
       propertyPath: m_Size.x
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: cfc0ad6b148fec54ea5df64c1f19ccb3, type: 2}
       propertyPath: m_Size.y
-      value: 1
+      value: 1.20000005
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: cfc0ad6b148fec54ea5df64c1f19ccb3, type: 2}
       propertyPath: m_Center.x
-      value: -.200000003
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfc0ad6b148fec54ea5df64c1f19ccb3, type: 2}
@@ -1617,7 +1562,6 @@ Transform:
   - {fileID: 1036341959}
   - {fileID: 1138719354}
   - {fileID: 348739276}
-  - {fileID: 30141147}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!114 &2106955970
@@ -1639,3 +1583,4 @@ MonoBehaviour:
   - {fileID: 303394001}
   parabens: {fileID: 100000, guid: 393228b3b170c554d97a3dae4a7b3583, type: 2}
   pontos: 0
+  tenis: 0

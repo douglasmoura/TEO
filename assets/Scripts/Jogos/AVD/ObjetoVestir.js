@@ -71,7 +71,17 @@ public class ObjetoVestir extends Objeto {
 		//Se colidir com qualquer outra peca ira ser validar.
 		colidiuOutraPeca = true; 
 		//peca que colidiu
-		var colidiu = colisor.gameObject.tag == gameObject.tag;
+		var colidiu;
+		if (gameObject.tag != "Tres") {
+			colidiu = colisor.gameObject.tag == gameObject.tag;
+		} else {
+			if (!vestir.tenis) {
+				colidiu = colisor.gameObject.tag == gameObject.tag;
+				vestir.tenis = true;
+			} else if (colisor.gameObject.tag == "Tres") {
+				colidiu = true;
+			}
+		}
 		
 		if (colidiu && drag) {
 			//Destino guarda a peca que foi associada
@@ -87,7 +97,7 @@ public class ObjetoVestir extends Objeto {
 		colidiuOutraPeca = false;
 		
 		if (colisor.gameObject.tag == gameObject.tag && drag) {
-	    	valida = false;
+	    	//valida = false;
 	    }
 	}
 	

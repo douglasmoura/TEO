@@ -42,6 +42,14 @@ public class ObjetoCor extends Objeto {
 			Destroy(gameObject);
 			Destroy(destino);
 			instanciador.erros = 0;
+			
+			//Audio
+				//if (vestir.pontos < 4) {
+					Debug.Log("Audio!");
+					var audio: AudioSource = GetComponent.<AudioSource>();
+					audio.Play();
+				//}
+			
 		//Ira coletar os erros de peça errada.	
 		} else if(colidiuOutraPeca){
 			instanciador.erros++;

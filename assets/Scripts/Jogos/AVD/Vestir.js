@@ -9,6 +9,7 @@ public var coletorGame: Coletor;
 public var roupas: GameObject[];
 public var parabens: GameObject;
 public var pontos = 0;
+public var tenis = false;
 
 function Start () {
 	coletorGame.SetNomeJogo("AVD");

@@ -432,6 +432,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 60e9b4799af9d5e4bba10fd8c890a761, type: 2}
   - {fileID: 100000, guid: 7b60d99d033cfb04c913a9f78740d1e7, type: 2}
   - {fileID: 100000, guid: 7ab167d6af7d0ac41afd3fd42cd41223, type: 2}
+  nivelScript: {fileID: 0}
 --- !u!4 &1362857151
 Transform:
   m_ObjectHideFlags: 0

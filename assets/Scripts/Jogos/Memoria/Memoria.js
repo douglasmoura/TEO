@@ -11,7 +11,7 @@ public var pontos = 0;
 public var csScript : CsColetor;
 //Responsavel pela coleta. Vide Script Coletor.js;
 public var coletorGame: Coletor;
-private var quantidade: int;
+public var quantidade: int;
 
 function Awake() {
 	nivel = FindObjectOfType(typeof(Nivel)) as Nivel;
