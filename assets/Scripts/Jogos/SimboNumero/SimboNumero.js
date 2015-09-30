@@ -31,9 +31,14 @@ public var csScript : CsColetor;
 public var parabens: GameObject;
 private var finalizado = false;
 
+private var menuSuperior: MenuSuperior;
+
 
 function Start() 
 {
+
+	menuSuperior = FindObjectOfType(typeof(MenuSuperior)) as MenuSuperior;
+
 	coletorGame.SetNomeJogo("S.Número");
 	coletorGame.SetNivelJogo(1);
 
@@ -137,7 +142,9 @@ function Sortear(x:float, limite:int, parar:int) {
 }
 
 function OnGUI() {
-	if (controle == -1 && !finalizado) {
+	if (controle == -1 && !finalizado && !(menuSuperior.showJanelaPre)) { 
+	/* showJanelaPre - serve para so aparecer o botao caso nao esteja com a janela presvencao ativada
+		deu problema pois ele ficava sobre ela.*/
 		var XBOTAO = Screen.width - 220;
 		var YBOTAO = Screen.height - 190;
 		GUI.skin = skinConferir;
