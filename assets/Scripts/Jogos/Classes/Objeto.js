@@ -26,6 +26,8 @@ public class Objeto extends MonoBehaviour {
 	protected var offset: Vector2;
 	//Se ok for false entao o objeto ainda podera ser deslocado
 	protected var ok: boolean;
+	public var acertou: AudioSource;
+	public var errou: AudioSource; 
 	
 	
 	/*******************************************************************

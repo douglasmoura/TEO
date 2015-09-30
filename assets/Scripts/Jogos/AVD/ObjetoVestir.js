@@ -43,24 +43,27 @@ public class ObjetoVestir extends Objeto {
 			if (!ok && Validar()) {
 				gameObject.transform.position = destino.transform.position;
 				drag = true;
-				vestir.pontos += 1;				
+				vestir.pontos += 1;
+				if (gameObject.tag == MEIA) {
+					vestir.tenis = true;
+					gameObject.transform.position.x += 0.65;
+					gameObject.transform.position.y -= 0.01;		
+				}
 				
 				//Audio
 				if (vestir.pontos < 4) {
-					Debug.Log("Audio!");
-					var audio: AudioSource = GetComponent.<AudioSource>();
-					audio.Play();
+					acertou.Play();
 				}
-				
 				
 			} else if (!Validar()){
 				valida = false;
 				vestir.coletorGame.SetErro();
-				
+				errou.Play();
 			}
 		//Ira coletar os erros de peça errada.	
 		}else{
 			vestir.coletorGame.SetDragDrop(); //Avaliar se esta correto aqui.
+			errou.Play();
 		}
 		
 		vestir.coletorGame.VerificaMaiorDelay();
@@ -72,14 +75,16 @@ public class ObjetoVestir extends Objeto {
 		colidiuOutraPeca = true; 
 		//peca que colidiu
 		var colidiu;
-		if (gameObject.tag != "Tres") {
+		if (gameObject.tag != MEIA) {
 			colidiu = colisor.gameObject.tag == gameObject.tag;
+			
+			if (gameObject.tag == TENIS && colisor.gameObject.tag == MEIA) {
+				colidiu = true;
+			}
 		} else {
+			
 			if (!vestir.tenis) {
 				colidiu = colisor.gameObject.tag == gameObject.tag;
-				vestir.tenis = true;
-			} else if (colisor.gameObject.tag == "Tres") {
-				colidiu = true;
 			}
 		}
 		
@@ -97,7 +102,7 @@ public class ObjetoVestir extends Objeto {
 		colidiuOutraPeca = false;
 		
 		if (colisor.gameObject.tag == gameObject.tag && drag) {
-	    	//valida = false;
+	    	valida = false;
 	    }
 	}
 	
