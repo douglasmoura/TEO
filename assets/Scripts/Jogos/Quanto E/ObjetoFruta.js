@@ -29,6 +29,8 @@ public class ObjetoFruta extends Objeto {
 	private var idPrato_Diminuindo: int;
 
 	public function Criar() {
+		acertou = GameObject.FindWithTag("acertou").GetComponent(AudioSource);
+		errou = GameObject.FindWithTag("errou").GetComponent(AudioSource);
 	
 		comunicadorQuantoE = FindObjectOfType(typeof(QuantoE)) as QuantoE;
 		
@@ -43,12 +45,7 @@ public class ObjetoFruta extends Objeto {
 		sprite.sprite = textura;
 	
 	}
-	
-	function Atualizar() {
-		
-		//Debug.Log(comunicadorQuantoE.primeiroValor_corrente + " :1 - 2: " + comunicadorQuantoE.segundoValor_corrente);
-		
-	}
+
 	
 	public function OnMouseUp (){
 	
@@ -66,26 +63,28 @@ public class ObjetoFruta extends Objeto {
 				if(comunicadorQuantoE.primeiroValor_corrente <= comunicadorQuantoE.primeiro_valor -1){
 					comunicadorQuantoE.primeiroValor_corrente++;
 					estavaDentro = true;	
-					
+					acertou.Play();
 					Debug.Log("Corre Prato 1: " + comunicadorQuantoE.primeiroValor_corrente + "- " + comunicadorQuantoE.primeiro_valor);
 					
 				}else{
 					comunicadorQuantoE.AddErro();
 					Debug.Log("ERRO");
 					valida = false;
+					errou.Play();
 				}
 
 			}else if(idPrato == 1){
 				if(comunicadorQuantoE.segundoValor_corrente <= comunicadorQuantoE.segundo_valor -1){
 					comunicadorQuantoE.segundoValor_corrente++;
 					estavaDentro = true;
-					
+					acertou.Play();
 					Debug.Log("Corre Prato 2: " + comunicadorQuantoE.segundoValor_corrente + "- " + comunicadorQuantoE.segundo_valor);	
 					
 				}else{
 					comunicadorQuantoE.AddErro();
 					Debug.Log("ERRO");
 					valida = false;
+					errou.Play();
 				}
 			}
 			
@@ -93,14 +92,17 @@ public class ObjetoFruta extends Objeto {
 			if(idPrato_Diminuindo == 0){
 				comunicadorQuantoE.primeiroValor_corrente--;
 				Debug.Log("Corre Prato 1: " + comunicadorQuantoE.primeiroValor_corrente + "- " + comunicadorQuantoE.primeiro_valor);
+				//errou.Play();
 			}else if(idPrato_Diminuindo == 1){
 				comunicadorQuantoE.segundoValor_corrente--;
 				Debug.Log("Corre Prato 2: " + comunicadorQuantoE.segundoValor_corrente + "- " + comunicadorQuantoE.segundo_valor);
+				//errou.Play();
 			}
 			estavaDentro = false;	
 			
 		}else{
 			comunicadorQuantoE.AddDragDrop();
+			errou.Play();
 		}
 		
 		idPrato_Diminuindo = -1; // Flag de escape.

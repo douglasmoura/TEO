@@ -18,7 +18,7 @@ public static final var y = -4.5;
 public static final var z = 0;
 
 public var cores: List.<GameObject>;
-private var tamanho: int;
+public var tamanho: int;
 private var cubo: GameObject;
 public var coresScript:Cores;
 private var index: int;

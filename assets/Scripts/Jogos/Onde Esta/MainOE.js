@@ -17,7 +17,6 @@ public var ondeEstaStr:GUIText;
 //Resultado do jogo
 //public var resultado:GUIText;
 //Array com as partes do rosto
-public var musica:AudioClip;
 //Array contendo as partes do corpo sorteadas.
 private var partesCorpo = ["Orelha", "Olho", "Nariz", "Boca"];
 //Parte sorteada
@@ -43,6 +42,9 @@ private var faderScript : Fader;
 
 public var parabens: GameObject;
 
+public var acertou: AudioSource;
+public var errou: AudioSource;
+
 function Awake() {
 
 	nivelScript = FindObjectOfType(typeof(Nivel)) as Nivel;
@@ -53,7 +55,9 @@ function Awake() {
 }
 
 function Start () {
-	
+	acertou = GameObject.FindWithTag("acertou").GetComponent(AudioSource);
+	errou = GameObject.FindWithTag("errou").GetComponent(AudioSource);
+		
 	coletorGame.SetNomeJogo("Onde Está?");
 	coletorGame.SetNivelJogo(nivelScript.nivel);
 		
@@ -98,17 +102,21 @@ function verificaClick(){
 	        if(hit.collider != null) {
 	        	if (hit.collider.tag == parte) {
 	        		coletorGame.SetAcerto();
-					AcertoMUSICA();
+	        		if (contador > 1) {
+						acertou.Play();
+					}
 	        		contador--;
 	        		if(contador!= 0){ //Caso contador se torne 0 ele nao ira repetir essa funcao porem ira sortear novamente outro local.
 	        			ProcurandoLocal();
 	        		}	
 	            	} else {
 	        		coletorGame.SetErro();
+	        		errou.Play();
 	        		yield WaitForSeconds(1);		
 	        	}
 	        } else {
 				coletorGame.SetErro();
+				errou.Play();
 	        	yield WaitForSeconds(1);
 	        }
 	   	coletorGame.SetTempoTotal(Time.timeSinceLevelLoad);
@@ -121,14 +129,6 @@ function verificaClick(){
 	}
 }
 
-//------------------------------------------
-//Reproduzir efeitos musicais.
-function AcertoMUSICA() {
-	audio.clip = musica;
-	audio.Play();
-	yield WaitForSeconds(1); // Problema que o jogador pode clicar duas vezes no mesmo local.
-	audio.Stop();//Para a musica parar e nao vir outra posicao e ainda estiver na comemoracao.
-}
 
 //------------------------------------------
 //Funcao que escreve os dados e apresenta ao final da partida.

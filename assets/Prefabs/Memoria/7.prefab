@@ -11,7 +11,6 @@ GameObject:
   - 212: {fileID: 21200000}
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
-  - 82: {fileID: 8200000}
   m_Layer: 0
   m_Name: 7
   m_TagString: Tres
@@ -115,6 +114,8 @@ MonoBehaviour:
   bloquear: 0
   frente: {fileID: 0}
   costas: {fileID: 21300000, guid: 606237be376b7b441b896febe5599d7c, type: 3}
+  acertou: {fileID: 0}
+  errou: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

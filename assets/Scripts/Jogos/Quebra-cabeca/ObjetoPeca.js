@@ -22,6 +22,8 @@ public class ObjetoPeca extends Objeto {
 	public function Criar() {
 		super.Criar();
 		
+		acertou = GameObject.FindWithTag("acertou").GetComponent(AudioSource);
+		errou = GameObject.FindWithTag("errou").GetComponent(AudioSource);
 		pecasDrag = FindObjectOfType(typeof(MainQC)) as MainQC;
 	}
 
@@ -39,6 +41,9 @@ public class ObjetoPeca extends Objeto {
 		
 		//se Associacao e valida, entao destroi as duas pecas associadas
 		if (valida) {
+			if (pecasDrag.pontos < 3) {
+				acertou.Play();
+			}
 			pecasDrag.AddAcerto();
 			var novoSprite = gameObject.GetComponent(SpriteRenderer).sprite;
 			destino.GetComponent(SpriteRenderer).sprite = novoSprite;
@@ -48,9 +53,11 @@ public class ObjetoPeca extends Objeto {
 		} else if(colidiuOutraPeca){
 			pecasDrag.erros++;
 			colidiuOutraPeca = false;
+			errou.Play();
 		//Ira coletar o drag and drop em uma area que nao seja pecas.	
 		}else{
 			pecasDrag.AddDragDrop();
+			errou.Play();
 		}
 	}
 	

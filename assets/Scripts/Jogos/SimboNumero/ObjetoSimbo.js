@@ -24,6 +24,9 @@ public class ObjetoSimbo extends Objeto {
 	//Implementacao para o metodo start
 	function Awake () {
 		simboNumero = FindObjectOfType(typeof(SimboNumero)) as SimboNumero;
+		
+		acertou = GameObject.FindWithTag("acertou").GetComponent(AudioSource);
+		errou = GameObject.FindWithTag("errou").GetComponent(AudioSource);
 	}
 	
 	
@@ -46,8 +49,10 @@ public class ObjetoSimbo extends Objeto {
 	    		simboNumero.valor += dezena;
 	    	}
 			tavaDentro = true;
+			acertou.Play();
 		}else if (!valida && !tavaDentro){
 			simboNumero.coletorGame.SetDragDrop();
+			errou.Play();
 		}
 		
 		simboNumero.coletorGame.VerificaMaiorDelay();

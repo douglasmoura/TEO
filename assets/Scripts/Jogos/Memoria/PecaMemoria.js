@@ -5,10 +5,16 @@ public var bloquear = false;
 public var frente: Sprite;
 public var costas: Sprite;
 private var memoria: Memoria;
+public var acertou: AudioSource;
+public var errou: AudioSource;
+
 
 function Start () {
 	memoria = FindObjectOfType(typeof(Memoria)) as Memoria;
 	CarregarSprite();
+	
+	acertou = GameObject.FindWithTag("acertou").GetComponent(AudioSource);
+	errou = GameObject.FindWithTag("errou").GetComponent(AudioSource);
 }
 
 function CarregarSprite() {
@@ -46,15 +52,14 @@ function Avaliar(a: PecaMemoria, b: PecaMemoria) {
 
 	if (memoria.a.tag == memoria.b.tag) {
 		if (memoria.pontos < (memoria.quantidade/2) - 1) {
-			Debug.Log("Audio!");
-			var audio: AudioSource = GetComponent.<AudioSource>();
-			audio.Play();
+			acertou.Play();		
 		}
 		a.bloquear = true;
 		b.bloquear = true;
 		memoria.pontos += 1;
 		
 	} else {
+		errou.Play();
 		yield WaitForSeconds(1);
 		a.bloquear = false;
 		b.bloquear = false;

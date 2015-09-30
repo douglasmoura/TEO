@@ -22,6 +22,8 @@ public class ObjetoCor extends Objeto {
 	public function Criar() {
 		super.Criar();
 		
+		acertou = GameObject.FindWithTag("acertou").GetComponent(AudioSource);
+		errou = GameObject.FindWithTag("errou").GetComponent(AudioSource);
 		instanciador = FindObjectOfType(typeof(MainCores)) as MainCores;
 	}
 	
@@ -38,26 +40,27 @@ public class ObjetoCor extends Objeto {
 		instanciador.jogou = true;
 		//se Associacao e valida, entao destroi os dois cubos associados
 		if (valida) {
+			if (instanciador.tamanho > 1) {
+				acertou.Play();
+			}
+			
 			instanciador.AddAcerto();
 			Destroy(gameObject);
 			Destroy(destino);
 			instanciador.erros = 0;
-			
-			//Audio
-				//if (vestir.pontos < 4) {
-					Debug.Log("Audio!");
-					var audio: AudioSource = GetComponent.<AudioSource>();
-					audio.Play();
-				//}
 			
 		//Ira coletar os erros de peça errada.	
 		} else if(colidiuOutraPeca){
 			instanciador.erros++;
 			instanciador.errosTotais++;
 			colidiuOutraPeca = false;
+			
+			errou.Play();
+		
 		//Ira coletar o drag and drop em uma area que nao seja pecas.	
 		}else{
 			instanciador.AddDragDrop();
+			errou.Play();
 		}
 		
 		instanciador.coletorGame.VerificaMaiorDelay();
