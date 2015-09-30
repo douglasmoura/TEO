@@ -22,6 +22,7 @@ public var skin: GUISkin;
 public var skinBotao_sim : GUISkin;
 public var skinBotao_nao: GUISkin;
 
+
 function Start () {
 	janela = Rect(Screen.width/2 - largura/2, Screen.height/2 - altura/2, largura, altura);
 }
@@ -52,7 +53,7 @@ function tempoJogo (tempo : int) {
 		minutos = "0" + minutos;
 	}
 	
-	return "0" + horas + ":" + minutos + ":" + segundos;	
+	return minutos + ":" + segundos;	
 }
 
 // Make the contents of the window

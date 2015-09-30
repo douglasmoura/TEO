@@ -41,7 +41,9 @@ public class CsColetor : MonoBehaviour {
 	
 	//Para ler os dados dos jogos no box da coleta(Menu)
 	public string ReadFromFile(){
-		
+
+		//Debug.Log(caminhoArquivo);
+
 		//Os dados deverao ser concatenados junto a essa string.
 		string coleta = "";
 		
@@ -57,7 +59,7 @@ public class CsColetor : MonoBehaviour {
 							//Gatilho para finalizr a insercao de itens na pilha.
 							//Problema: StreamReader nao parava de adicionar elementos ja lidos, ficando assim em looping.
 							if(!pilha.Contains(linha)){
-								pilha.Push(linha);
+								pilha.Push(linha + "!");
 							}
 						}
 					}
@@ -71,7 +73,8 @@ public class CsColetor : MonoBehaviour {
 		
 		//Desempilhando e formatando para assim apresentar.
 		for(int i = pilha.Count; i != 0; i--){
-			coleta += formata(pilha.Pop());
+			coleta += pilha.Pop();
+			//coleta += formata(pilha.Pop());
 		}
 
 		//Retornando string que contem todos os resultados que serao impressos na tela.
@@ -88,6 +91,13 @@ public class CsColetor : MonoBehaviour {
 				linha_atual += linha[i];
 			}
 		}
-		return (linha_atual + "\n");
+		return (linha_atual + "\t\t\n");
 	}
 }
+
+
+
+
+
+
+

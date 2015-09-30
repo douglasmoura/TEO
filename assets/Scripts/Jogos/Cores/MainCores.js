@@ -105,7 +105,6 @@ function OnGUI() {
 //Apenas para saber quanto tempo de jogo e fazer o calculo do delay.
 function temporizador () {
 	coletorGame.SetTempoTotal(Time.timeSinceLevelLoad);
-	coletorGame.VerificaMaiorDelay();
 }
 
 //Funcao que escreve os dados e apresenta ao final da partida.

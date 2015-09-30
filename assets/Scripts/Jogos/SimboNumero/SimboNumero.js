@@ -34,7 +34,7 @@ private var finalizado = false;
 
 function Start() 
 {
-	coletorGame.SetNomeJogo("SimboNúmero");
+	coletorGame.SetNomeJogo("S.Número");
 	coletorGame.SetNivelJogo(1);
 
 }

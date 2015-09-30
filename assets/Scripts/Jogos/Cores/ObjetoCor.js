@@ -59,6 +59,8 @@ public class ObjetoCor extends Objeto {
 		}else{
 			instanciador.AddDragDrop();
 		}
+		
+		instanciador.coletorGame.VerificaMaiorDelay();
 	}
 	
 	//Detecta quando o cubo encontra outro objeto.
