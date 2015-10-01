@@ -67,30 +67,28 @@ function WindowFunction (windowID : int) {
 	
 	GUI.skin = skinDados;
 	
+/*	GUI.Label(new Rect(20, 150, 140, 50),"  A.Cores");
+	GUI.Label(new Rect(160, 150, 140, 50),"  1");
+	GUI.Label(new Rect(300, 150, 140, 50),"  2");
+	GUI.Label(new Rect(440, 150, 140, 50),"  3");
+	GUI.Label(new Rect(580, 150, 140, 50), "  10");
+	GUI.Label(new Rect(720, 150, 140, 50),"  4");
+	GUI.Label(new Rect(860, 150, 140, 50),"  123");
+	GUI.Label(new Rect(1000, 150, 140, 50),"  32");	
+	
+	*/
 	//GUI.Button(new Rect(20, 150, 140, 50), "SimboNumero");
 	
-	if(gatilho) ModelarTabela(dados);
+	//if(gatilho) ModelarTabela(dados);
 	
+	//ModelarTabela(dados);
+		
 	//Debug.Log(dados);
 	
 	GUI.EndScrollView ();
 	
 	
 }
-
-/*function ModelarTabela (dados:String) {
-	var tabela = "";
-	for(var i = 0; i < dados.Length ; i++){
-		if(dados[i].Equals('|')){
-			tabela += "\n";
-		}else if (dados[i].Equals(',')){
-			tabela += "\t";
-		}else {
-			tabela += dados[i];
-		}
-	}
-	return tabela;
-}*/
 
 function ModelarTabela (dados: String)
 {
@@ -114,7 +112,7 @@ function ModelarTabela (dados: String)
 		
 			Debug.Log("Criando: " + v2[y]);
 			
-			GUI.Box(new Rect(posiX, posiY, 140, 50),v2[y] + "");
+			GUI.Label(Rect(posiX, posiY, 140, 50),v2[y] + "");
 			
 			posiX += 140;
 		}
