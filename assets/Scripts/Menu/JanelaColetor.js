@@ -18,18 +18,18 @@ public var gatilho: boolean = true;
 
 //Script em C# responsavel por ler o arquivo csv e colocar os dados dentro da janela.
 private var csScript : CsColetor;
+public var linhas: String[];
 
-function Awake (){
-	csScript = this.GetComponent("CsColetor");
-}
 
 function Start () {
+	csScript = this.GetComponent("CsColetor");
+	
+	var dados = csScript.ReadFromFile();
+	
+	linhas = dados.Split("!"[0]);
 
 	janela = Rect(larguraTela/2 - largura/2, alturaTela/2 - altura/2, largura, altura);
-
 }
-
-function Update () {}
 
 function OnGUI () {
 	
@@ -41,89 +41,47 @@ function OnGUI () {
 
 function WindowFunction (windowID : int) {
 	
-	var dados = csScript.ReadFromFile();
-	
 	var fechar = GUI.Button (Rect (380,20,120,50), "Sair");
 
 	if(fechar){
 		habilitar = false;
 		print("Saiu!");
 	}
-		
-	scrollPosition = GUI.BeginScrollView (Rect (20, 100, largura - 40, altura - 120),scrollPosition, Rect (20, 100, largura + 640, altura + 3000));
 	
-	GUI.Box (Rect (20, 100, largura + 640, altura + 3000),"");
-	//<size=20>    Jogo     |  Nível | Acertos | Erros | Tenativas | Arrasta | Tempo (s) | Atraso | Passo | \n"  + "</size>
+	//GUI.skin = skinDados;
 	
-	GUI.Button(new Rect(20, 100, 140, 50), "Jogo");
-	GUI.Button(new Rect(160, 100, 140, 50), "Nível");
-	GUI.Button(new Rect(300, 100, 140, 50), "Acertos");
-	GUI.Button(new Rect(440, 100, 140, 50), "Erros");
-	GUI.Button(new Rect(580, 100, 140, 50), "Arrasta");
-	GUI.Button(new Rect(720, 100, 140, 50), "Passo");
-	GUI.Button(new Rect(860, 100, 140, 50), "Atraso");
-	GUI.Button(new Rect(1000,100, 190, 50), "Tempo (s)");
-	
-	
-	GUI.skin = skinDados;
-	
-/*	GUI.Label(new Rect(20, 150, 140, 50),"  A.Cores");
-	GUI.Label(new Rect(160, 150, 140, 50),"  1");
-	GUI.Label(new Rect(300, 150, 140, 50),"  2");
-	GUI.Label(new Rect(440, 150, 140, 50),"  3");
-	GUI.Label(new Rect(580, 150, 140, 50), "  10");
-	GUI.Label(new Rect(720, 150, 140, 50),"  4");
-	GUI.Label(new Rect(860, 150, 140, 50),"  123");
-	GUI.Label(new Rect(1000, 150, 140, 50),"  32");	
-	
-	*/
-	//GUI.Button(new Rect(20, 150, 140, 50), "SimboNumero");
-	
-	//if(gatilho) ModelarTabela(dados);
-	
-	//ModelarTabela(dados);
-		
-	//Debug.Log(dados);
-	
-	GUI.EndScrollView ();
-	
-	
+	scrollPosition = GUI.BeginScrollView (Rect (20, 100, largura - 40, altura - 120),scrollPosition, Rect (20, 100, largura + 690, altura + 3000));
+	GUILayout.BeginArea(new Rect(20, 100, largura + 690, altura + 3000));
+ 	//Title row
+ 	GUILayout.BeginHorizontal("box");
+ 	//Display the titles
+ 	GUILayout.Label("Jogo", "button", GUILayout.Width(200));
+ 	GUILayout.Label("Nível", "button", GUILayout.Width(130));
+ 	GUILayout.Label("Acertos", "button", GUILayout.Width(130));
+ 	GUILayout.Label("Erros", "button", GUILayout.Width(130));
+ 	GUILayout.Label("Arrasta", "button", GUILayout.Width(130));
+ 	GUILayout.Label("Passo", "button", GUILayout.Width(130));
+ 	GUILayout.Label("Atraso", "button", GUILayout.Width(130));
+ 	GUILayout.Label("Tempo (s)", "button", GUILayout.Width(200));
+ 	GUILayout.EndHorizontal();
+ 	
+ 	//Draw the elements
+ 	var largura;
+ 	for (var i : int = 0; i < linhas.Length - 1; i++) {
+		var colunas = linhas[i].Split(","[0]);
+ 		GUILayout.BeginHorizontal();
+ 		
+ 		for (var o : int = 0; o < colunas.Length - 1; o++) {
+ 			if (o == 0 || o == 7) {
+ 				largura = 200;
+ 			} else {
+ 				largura = 130;
+ 			}
+ 			GUILayout.Label(colunas[o], GUILayout.Width(largura));
+ 		}
+	GUILayout.EndHorizontal();
+  	}
+  	
+ 	GUILayout.EndArea();
+ 	GUI.EndScrollView ();
 }
-
-function ModelarTabela (dados: String)
-{
-	var posiX = 20;
-	var posiY = 150;
-	
-	var valor = "";
-	
-	for(var i = 0; i < dados.Length ; i++)
-	{
-		valor += dados[i];
-	}
-	
-	var v1 = valor.Split('!'[0]);
-	
-	for (var x = 0 ; x < v1.Length; x++) {
-	
-		var v2= v1[x].Split(','[0]);
-		
-		for(var y = 0; y < v2.Length; y++){
-		
-			Debug.Log("Criando: " + v2[y]);
-			
-			GUI.Label(Rect(posiX, posiY, 140, 50),v2[y] + "");
-			
-			posiX += 140;
-		}
-		
-		posiX += 50;
-		
-	}
-	
-	this.gatilho = false;
-}
-
-
-
-

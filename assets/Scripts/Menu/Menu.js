@@ -9,8 +9,8 @@ public var botaoFerramentas: GUISkin;
 
 private var habilitaSobre : boolean = false;
 private var janela : Rect;
-private var largura = 900;
-private var altura = 700;
+private var largura = 800;
+private var altura = 720;
 
 public var imagemFundo : SpriteRenderer;
 public var fecharSobre: GUISkin;
@@ -44,7 +44,7 @@ function Start () {
 	
 	login = FindObjectOfType(typeof(Login)) as Login;
 	
-	janela = Rect(Screen.width/2 - 445,Screen.height/2 - 320, largura, altura);
+	janela = Rect(Screen.width/2 - 410,Screen.height/2 - 350, largura, altura);
 }
 
 function Update () {
@@ -163,16 +163,16 @@ function OnGUI() {
 function DoMyWindow (windowID : int) {
 
 	GUI.skin = fecharSobre;
-	var fechar = GUI.Button (new Rect (750,580,130,120), "");
+	var fechar = GUI.Button (new Rect (660,600,130,120), "");
 	
 	GUI.skin = sobreInsta;
-	var insta = GUI.Button (new Rect (740,10,90,90), "");
+	var insta = GUI.Button (new Rect (660,12,90,90), "");
 	
 	GUI.skin = sobreFace;
-	var face = GUI.Button (new Rect (660,10,90,90), "");
+	var face = GUI.Button (new Rect (580,12,90,90), "");
 	
 	GUI.skin = sobreSite;
-	var site = GUI.Button (new Rect (580,10,90,90), "");
+	var site = GUI.Button (new Rect (500,10,90,90), "");
 	
 	if(fechar){
 		habilitaSobre = false;
