@@ -34,10 +34,10 @@ public function GetInstance() {
 public function PauseOrPlay () {
 	if(estado){
 		estado = false;
-		audio.mute = true;
+		audio.Pause();
 	}else{
 		estado = true;
-		audio.mute = false;
+		audio.Play();
 	}
 }
 

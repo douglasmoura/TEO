@@ -63,7 +63,7 @@ function OnGUI() {
 	
 	}
 	
-	if(!habilitaSobre){
+	if(!habilitaSobre && !janelaColetor.habilitar){
 		//Metade da largura da tela
 		var x = Screen.width/2;
 		//Metade da altura da tela
@@ -95,12 +95,14 @@ function OnGUI() {
 			GUI.skin = botaoMusica[1];
 		}
 		
+		var musica = GUI.Button(new Rect(Screen.width - 260, Screen.height - 700, 90, 80), "");
+		
 		//Gatilho para o click do botao ferramentas.
 		/*
 		* Botao Ferramentas. Prospota suspensa.
 		*
 		if(clickFerramentas!= false){
-			var musica = GUI.Button(new Rect(Screen.width - 260, Screen.height - 700, 90, 80), "");
+			
 		}
 		
 		GUI.skin = botaoFerramentas;
@@ -143,9 +145,7 @@ function OnGUI() {
 		}
 		*/
 		
-		/*
-		* Proposta incluido junto do botao ferramentas. Suspensa.
-		*	
+
 		else if(musica){
 			if(scriptMusica.GetEstado()){
 				scriptMusica.PauseOrPlay();
@@ -155,7 +155,6 @@ function OnGUI() {
 				print("Musica On!");
 			}
 		}
-		*/
 	}
 }
 

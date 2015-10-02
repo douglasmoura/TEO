@@ -1128,10 +1128,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   habilitar: 0
+  imagemFundo: {fileID: 58463323}
   skin: {fileID: 11400000, guid: 4cd569b2c0785ec4fb5150a2170717a6, type: 2}
   skinDados: {fileID: 11400000, guid: a6fe77e2bb4346c448f8ffeae0745413, type: 2}
   scrollPosition: {x: 0, y: 0}
   gatilho: 1
+  linhas: []
 --- !u!114 &1841138043
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public static final var alturaTela = Screen.height;
 private var janela : Rect;
 public var habilitar = false;
 
+public var imagemFundo : SpriteRenderer;
+
 private var largura = 530;
 private var altura = 370;
 
@@ -35,6 +37,10 @@ function OnGUI () {
 	
 	if(habilitar){
 		GUI.skin = skin; //Limpar fica muito grande
+		
+		imagemFundo.sortingLayerName = "GUI";
+		imagemFundo.sortingOrder = 1;
+		
 		janela = GUI.Window(0,janela,WindowFunction, "Coletor");
 	}
 }
@@ -45,6 +51,10 @@ function WindowFunction (windowID : int) {
 
 	if(fechar){
 		habilitar = false;
+		
+		imagemFundo.sortingLayerName = "Default";
+		imagemFundo.sortingOrder = -1;
+		
 		print("Saiu!");
 	}
 	

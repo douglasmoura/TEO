@@ -59,6 +59,9 @@ public class ObjetoVestir extends Objeto {
 				valida = false;
 				vestir.coletorGame.SetErro();
 				errou.Play();
+			} else {
+				vestir.coletorGame.SetErro();
+				errou.Play();
 			}
 		//Ira coletar os erros de peça errada.	
 		}else{
