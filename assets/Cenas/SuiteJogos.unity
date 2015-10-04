@@ -505,7 +505,7 @@ MonoBehaviour:
   - "Matem\xE1tica"
   - "Quebra-cabe\xE7a"
   - "Mem\xF3ria"
-  - AVD
+  - "Atividade Di\xE1ria"
   - "Onde Est\xE1?"
   skinPopUp: {fileID: 11400000, guid: 9d6f0e73d7fabca4bb4d1fbd068b5264, type: 2}
   skinTitulo: {fileID: 11400000, guid: 6436f9a90cad14c48ad8aadbe26c8278, type: 2}

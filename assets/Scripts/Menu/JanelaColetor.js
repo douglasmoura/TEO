@@ -89,7 +89,10 @@ function WindowFunction (windowID : int) {
  			}
  			GUILayout.Label(colunas[o], GUILayout.Width(largura));
  		}
-	GUILayout.EndHorizontal();
+		GUILayout.EndHorizontal();
+		if (i >= 65) {
+			break;	
+		}
   	}
   	
  	GUILayout.EndArea();

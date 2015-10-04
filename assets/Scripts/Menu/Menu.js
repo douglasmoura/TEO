@@ -95,7 +95,7 @@ function OnGUI() {
 			GUI.skin = botaoMusica[1];
 		}
 		
-		var musica = GUI.Button(new Rect(Screen.width - 260, Screen.height - 700, 90, 80), "");
+		var musica = GUI.Button(new Rect(Screen.width - 120, Screen.height - 710, 90, 80), "");
 		
 		//Gatilho para o click do botao ferramentas.
 		/*
@@ -192,14 +192,3 @@ function DoMyWindow (windowID : int) {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-

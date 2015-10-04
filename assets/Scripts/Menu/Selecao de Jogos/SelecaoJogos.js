@@ -27,7 +27,7 @@ public static final var MATEMATICA = "Matemática";
 public static final var PUZZLE = "Quebra-cabeça";
 public static final var MEMORIA = "Memória";
 public static final var ONDE_ESTA = "Onde Está?";
-public static final var AVD = "AVD";
+public static final var AVD = "Atividade Diária";
 
 private var lista: Lista; //Script que gerencia a lista de jogos
 private var nivelGUI: NivelGUI; //Script que gerencia a visualizacao do nivel

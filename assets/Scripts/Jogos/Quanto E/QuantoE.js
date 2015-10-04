@@ -24,9 +24,6 @@ public var segundoValor_corrente: int;
 private var primeiroCirculo :int;
 private var segundoCirculo: int;
 
-//Janela popup.
-private var popupScript: Popup;
-
 //Responsavel pela coleta. Vide Script Coletor.js;
 public var coletorGame: Coletor;
 

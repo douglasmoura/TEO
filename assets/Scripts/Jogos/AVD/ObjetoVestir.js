@@ -10,11 +10,10 @@ public class ObjetoVestir extends Objeto {
 
 	private var vestir: Vestir;
 	//Coletar o DragAndDrop;
-	private var colidiuOutraPeca: boolean;
+	public var colidiuOutraPeca: boolean;
 		
 	public static final var MEIA = "Tres";
 	public static final var TENIS = "Quatro";
-	
 	
 	
 	/*******************************************************************
@@ -59,13 +58,15 @@ public class ObjetoVestir extends Objeto {
 				valida = false;
 				vestir.coletorGame.SetErro();
 				errou.Play();
-			} else {
-				vestir.coletorGame.SetErro();
-				errou.Play();
 			}
 		//Ira coletar os erros de peça errada.	
 		}else{
-			vestir.coletorGame.SetDragDrop(); //Avaliar se esta correto aqui.
+			if (colidiuOutraPeca) {
+				valida = false;
+				vestir.coletorGame.SetErro();
+			} else {
+				vestir.coletorGame.SetDragDrop(); //Avaliar se esta correto aqui.
+			}
 			errou.Play();
 		}
 		
@@ -74,8 +75,8 @@ public class ObjetoVestir extends Objeto {
 	
 	//Detecta quando uma peca encontra outra peca.
 	function OnTriggerEnter2D(colisor: Collider2D) {
-		//Se colidir com qualquer outra peca ira ser validar.
-		colidiuOutraPeca = true; 
+		colidiuOutraPeca = true;
+		
 		//peca que colidiu
 		var colidiu;
 		if (gameObject.tag != MEIA) {
@@ -109,6 +110,10 @@ public class ObjetoVestir extends Objeto {
 	    }
 	}
 	
+	/**
+	 * Metodo para validar a meia e o tenis.
+	 *
+	**/
 	function Validar() {
 		if (gameObject.tag == TENIS) {
 			 var meia = GameObject.FindGameObjectsWithTag(MEIA) as GameObject[];

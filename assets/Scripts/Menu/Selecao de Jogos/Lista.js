@@ -38,7 +38,7 @@ function Start () {
 	jogos[COZINHA] = new Jogo("Cozinha", "Teo gosta de brincar com\njogos da memória, ajude\n-o a terminar!\n\nSelecione as cartas para \ncombinar objetos da \ncozinha iguais.", 3);
 	jogos[ESCOLA] = new Jogo("Escola", "Teo gosta de brincar com\njogos da memória, ajude\n-o a terminar!\n\nSelecione as cartas para \ncombinar objetos da \nescola iguais.", 3);
 	jogos[VESTIR] = new Jogo("Vestir", "Teo gosta de brincar com as \natividades diárias, ajude-o \na se vestir!\n\nArraste as roupas para \najudar o Teo a se vestir.", 1);
-	jogos[ONDE_ESTA_ROSTO] = new Jogo("Onde Está?", "Teo gosta de brincar com\nas partes do corpo, ajude-o \na identificar!\n\nLocalize e selecione as \npartes do rosto pedidas." , 2);
+	jogos[ONDE_ESTA_ROSTO] = new Jogo("Onde Está?", "Teo gosta de brincar com\nas partes do corpo, ajude-o \na identificar!\n\nLocalize e selecione as \npartes do rosto pedidas." , 1);
 	
 	jogos[QUANTO_E].setCena("Quanto E");
 	jogos[TARTARUGA].setCena("QuebraCabeca");

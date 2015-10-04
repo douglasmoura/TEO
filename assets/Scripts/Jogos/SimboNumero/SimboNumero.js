@@ -19,8 +19,6 @@ public var resultado = "";
 public var controle = 0;
 
 public var skinConferir: GUISkin;
-//Janela popup.
-private var popupScript: Popup;
 
 //Responsavel pela coleta. Vide Script Coletor.js;
 public var coletorGame: Coletor;

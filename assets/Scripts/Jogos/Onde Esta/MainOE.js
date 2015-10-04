@@ -13,12 +13,12 @@
 //Camera do jogo
 public var cam:Camera;
 //String indicando a parte sorteada
-public var ondeEstaStr:GUIText;
+public var ondeEsta:GameObject;
 //Resultado do jogo
 //public var resultado:GUIText;
 //Array com as partes do rosto
 //Array contendo as partes do corpo sorteadas.
-private var partesCorpo = ["Orelha", "Olho", "Nariz", "Boca"];
+private var partesCorpo = ["Olho", "Nariz", "Boca"];
 //Parte sorteada
 private var parte:String;
 //Contador para sortear apenas 4 partes. Iniciado na funçao start();
@@ -37,13 +37,17 @@ public var coletorGame: Coletor;
 //Script em C# responsavel por gerar o arquivo csv e colocar os dados dentro do mesmo.
 public var csScript : CsColetor;
 
-//Ainda nao funciona.
-private var faderScript : Fader;
-
 public var parabens: GameObject;
 
 public var acertou: AudioSource;
 public var errou: AudioSource;
+
+public var sprite: Sprite[];
+
+public static final var BOCA = 0;
+public static final var NARIZ = 1;
+public static final var OLHO = 2;
+
 
 function Awake() {
 
@@ -90,7 +94,13 @@ function ProcurandoLocal(){
 		}
 	}
 	//Caracter de teste, enquanto nao ha o audio.
-	ondeEstaStr.text = "Onde esta: " + parte + " ?";
+	if (parte == "Olho") {
+		ondeEsta.GetComponent(SpriteRenderer).sprite = sprite[OLHO];
+	} else if (parte == "Nariz") {
+		ondeEsta.GetComponent(SpriteRenderer).sprite = sprite[NARIZ];
+	} else {
+		ondeEsta.GetComponent(SpriteRenderer).sprite = sprite[BOCA];
+	}
 }
 
 //------------------------------------------
@@ -147,5 +157,5 @@ function PlayerCompletaGame(){
 
 	//A nivel de debug.
 	coletorGame.ConfereDados();
-	ondeEstaStr.text = "";
+	Destroy(ondeEsta);
 }
