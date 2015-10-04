@@ -83,17 +83,15 @@ function DoMyWindow (windowID : int) {
 	GUI.Label (Rect (-5, 275, largura - 20, 200), "<size=30>" + popUpDados[6] + "</size>");
 	
 	GUI.skin = skinBotao_sim;
-	var sim = GUI.Button (Rect (360,270,180,180), "");
 	
-	if (sim) {
+	if (GUI.Button (Rect (330,295,170,170), "")) {
 		print ("Sim");
 		Application.LoadLevel(Application.loadedLevelName);
 	}
 	
 	GUI.skin = skinBotao_nao;
-	var nao = GUI.Button (Rect (40,280,150,140), "");
 	
-	if (nao) {
+	if (GUI.Button (Rect (10,300,135,130), "")) {
 		print ("Não");
 		Application.LoadLevel("SuiteJogos");
 	}
