@@ -84,14 +84,14 @@ function DoMyWindow (windowID : int) {
 	
 	GUI.skin = skinBotao_sim;
 	
-	if (GUI.Button (Rect (330,295,170,170), "")) {
+	if (GUI.Button (Rect (10,300,140,140), "")) {
 		print ("Sim");
 		Application.LoadLevel(Application.loadedLevelName);
 	}
 	
 	GUI.skin = skinBotao_nao;
 	
-	if (GUI.Button (Rect (10,300,135,130), "")) {
+	if (GUI.Button (Rect (350,330,135,130), "")) {
 		print ("Não");
 		Application.LoadLevel("SuiteJogos");
 	}
