@@ -266,6 +266,7 @@ MonoBehaviour:
   destino: {fileID: 0}
   acertou: {fileID: 663826346}
   errou: {fileID: 954403340}
+  colidiuOutraPeca: 0
 --- !u!61 &225770444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -315,7 +316,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 3798733635
+  m_SortingLayerID: 3483959037
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c877db9f54930e04cbc4553730953eeb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -351,6 +352,7 @@ MonoBehaviour:
   destino: {fileID: 0}
   acertou: {fileID: 663826346}
   errou: {fileID: 954403340}
+  colidiuOutraPeca: 0
 --- !u!61 &226568956
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -400,7 +402,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1102283321
+  m_SortingLayerID: 1698293237
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9f290b60a4dddb14eb62fc033cdf3227, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -436,6 +438,7 @@ MonoBehaviour:
   destino: {fileID: 0}
   acertou: {fileID: 663826346}
   errou: {fileID: 954403340}
+  colidiuOutraPeca: 0
 --- !u!61 &303394005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -742,7 +745,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: cfc0ad6b148fec54ea5df64c1f19ccb3, type: 2}
       propertyPath: m_SortingLayerID
-      value: 1102283321
+      value: 1698293237
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: cfc0ad6b148fec54ea5df64c1f19ccb3, type: 2}
       propertyPath: m_Size.x
@@ -843,6 +846,7 @@ MonoBehaviour:
   destino: {fileID: 0}
   acertou: {fileID: 663826346}
   errou: {fileID: 954403340}
+  colidiuOutraPeca: 0
 --- !u!61 &557143359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1013,6 +1017,7 @@ MonoBehaviour:
   botaoSim: {fileID: 11400000, guid: d3a026c7617eb6a41ae56bdc1de76219, type: 2}
   botaoNao: {fileID: 11400000, guid: 7bb3fa5c2e0bb724dab21d7881f70da5, type: 2}
   janelaSkin: {fileID: 11400000, guid: 5aa8198d6137f9044b5148fb43d97924, type: 2}
+  showJanelaPre: 0
   imagemFundo: {fileID: 1967068341}
 --- !u!4 &696719657
 Transform:
@@ -1071,7 +1076,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: bc43719e72097194b85026c56586ef64, type: 2}
       propertyPath: m_SortingLayerID
-      value: 3798733635
+      value: 3483959037
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: bc43719e72097194b85026c56586ef64, type: 2}
       propertyPath: m_Size.x

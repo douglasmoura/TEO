@@ -4,7 +4,7 @@ public var jogo: Jogo;
 private var selecaoJogos : SelecaoJogos;
 
 //Constantes
-public static final var JOGOS = 11;
+public static final var JOGOS = 13;
 
 public static final var COR = 0;
 public static final var QUANTO_E = 1;
@@ -13,10 +13,12 @@ public static final var CACHORRO = 3;
 public static final var MENINA = 4;
 public static final var PEIXE = 5;
 public static final var TARTARUGA = 6;
-public static final var COZINHA = 7;
-public static final var ESCOLA = 8;
-public static final var VESTIR = 9;
-public static final var ONDE_ESTA_ROSTO = 10;
+public static final var ANIMAIS = 7;
+public static final var BRINQUEDOS = 8;
+public static final var COZINHA = 9;
+public static final var ESCOLA = 10;
+public static final var VESTIR = 11;
+public static final var ONDE_ESTA_ROSTO = 12;
 
 public var info = "";
 
@@ -35,6 +37,8 @@ function Start () {
 	jogos[MENINA] = new Jogo("Menina", "Teo gosta de brincar com \nquebra-cabeças, ajude-o \na completa-lós!\n\nArraste as peças da menina \npara suas posições corretas.", 4);
 	jogos[PEIXE] = new Jogo("Peixe", "Teo gosta de brincar com \nquebra-cabeças, ajude-o \na completa-lós!\n\nArraste as peças do peixe \npara suas posições corretas.", 4);
 	jogos[TARTARUGA] = new Jogo("Tartaruga", "Teo gosta de brincar com \nquebra-cabeças, ajude-o \na completa-lós!\n\nArraste as peças da tartaru\n-ga para suas posições \ncorretas.", 4);
+	jogos[ANIMAIS] = new Jogo("Animais", "Teo gosta de brincar com\njogos da memória, ajude\n-o a terminar!\n\nSelecione as cartas para \ncombinar objetos da \ncozinha iguais.", 3);
+	jogos[BRINQUEDOS] = new Jogo("Brinquedos", "Teo gosta de brincar com\njogos da memória, ajude\n-o a terminar!\n\nSelecione as cartas para \ncombinar objetos da \ncozinha iguais.", 3);
 	jogos[COZINHA] = new Jogo("Cozinha", "Teo gosta de brincar com\njogos da memória, ajude\n-o a terminar!\n\nSelecione as cartas para \ncombinar objetos da \ncozinha iguais.", 3);
 	jogos[ESCOLA] = new Jogo("Escola", "Teo gosta de brincar com\njogos da memória, ajude\n-o a terminar!\n\nSelecione as cartas para \ncombinar objetos da \nescola iguais.", 3);
 	jogos[VESTIR] = new Jogo("Vestir", "Teo gosta de brincar com as \natividades diárias, ajude-o \na se vestir!\n\nArraste as roupas para \najudar o Teo a se vestir.", 1);
@@ -45,6 +49,8 @@ function Start () {
 	jogos[CACHORRO].setCena("QuebraCabeca");
 	jogos[MENINA].setCena("QuebraCabeca");
 	jogos[PEIXE].setCena("QuebraCabeca");
+	jogos[ANIMAIS].setCena("Memoria");
+	jogos[BRINQUEDOS].setCena("Memoria");
 	jogos[COZINHA].setCena("Memoria");
 	jogos[ESCOLA].setCena("Memoria");
 	jogos[ONDE_ESTA_ROSTO].setCena("Onde Esta");
