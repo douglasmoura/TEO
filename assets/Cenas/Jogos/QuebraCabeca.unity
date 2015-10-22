@@ -240,7 +240,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c77eafe637af924d97c08f78d5f3e8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4b87db1c107ca5408d3c7bbb091df4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &790465570
 Transform:
@@ -250,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 790465568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.14999998, y: 1.12499988, z: 1}
+  m_LocalScale: {x: 1.38, y: 1.36406231, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -286,6 +286,7 @@ MonoBehaviour:
   botaoSim: {fileID: 11400000, guid: d3a026c7617eb6a41ae56bdc1de76219, type: 2}
   botaoNao: {fileID: 11400000, guid: 7bb3fa5c2e0bb724dab21d7881f70da5, type: 2}
   janelaSkin: {fileID: 11400000, guid: 5aa8198d6137f9044b5148fb43d97924, type: 2}
+  showJanelaPre: 0
   imagemFundo: {fileID: 1893483826}
 --- !u!4 &799337960
 Transform:
@@ -534,10 +535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d31b3f261bbc054082a213da9ab98ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  habilitar: 0
-  skin: {fileID: 11400000, guid: 95d364e5fe3dc4c4aaa51d9d393ead65, type: 2}
-  skinBotao_sim: {fileID: 11400000, guid: 8ff5cee3f61c5d248a7a21e61b048caf, type: 2}
-  skinBotao_nao: {fileID: 11400000, guid: c4ef533dc283d5e43b6d7e6e7bfccf5e, type: 2}
 --- !u!114 &1479425163
 MonoBehaviour:
   m_ObjectHideFlags: 0

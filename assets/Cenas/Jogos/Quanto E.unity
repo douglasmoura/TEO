@@ -1723,6 +1723,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unidade: {fileID: 100000, guid: 3334fcd37a829974682416a2a486250b, type: 2}
   qtUnidades: 8
+  frutas:
+  - {fileID: 1656039509}
+  - {fileID: 1846200456}
+  - {fileID: 1575787588}
+  - {fileID: 1363059004}
+  - {fileID: 517993880}
+  - {fileID: 1042077948}
+  - {fileID: 571516161}
+  - {fileID: 517993880}
   seNovo: 0
   primeiroValor: {fileID: 932725272}
   segundoValor: {fileID: 296966784}
@@ -2529,9 +2538,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botaoHome: {fileID: 11400000, guid: c3355504f078d6a43b0125a90db76789, type: 2}
   botaoJogos: {fileID: 11400000, guid: acfce5084d78a55438aba545d8080cab, type: 2}
+  botaoJogarNovamente: {fileID: 0}
   botaoSim: {fileID: 11400000, guid: d3a026c7617eb6a41ae56bdc1de76219, type: 2}
   botaoNao: {fileID: 11400000, guid: 7bb3fa5c2e0bb724dab21d7881f70da5, type: 2}
   janelaSkin: {fileID: 11400000, guid: 5aa8198d6137f9044b5148fb43d97924, type: 2}
+  showJanelaPre: 0
   imagemFundo: {fileID: 1418416937}
 --- !u!4 &1846377911
 Transform:

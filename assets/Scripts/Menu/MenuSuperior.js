@@ -2,6 +2,7 @@
 
 public var botaoHome: GUISkin;
 public var botaoJogos: GUISkin;
+public var botaoJogarNovamente: GUISkin;
 
 public var botaoSim: GUISkin;
 public var botaoNao: GUISkin;
@@ -43,8 +44,16 @@ function OnGUI() {
 	}
 
 	if (!habilita) {
-		GUI.enabled = false;
-		GUI.color.a = 0.5f;
+	
+		GUI.skin = botaoJogarNovamente;
+		
+		var jogarNovamente = GUI.Button(new Rect(Screen.width - 200, Screen.height - 145, 220, 180), "JogarNovamente");
+		
+		if (jogarNovamente) {
+			Application.LoadLevel(Application.loadedLevelName);
+		}
+		//GUI.enabled = false;
+		//GUI.color.a = 0.5f;
 	}
 	
 	if(!showJanelaPre){

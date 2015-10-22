@@ -142,5 +142,4 @@ public class ObjetoFruta extends Objeto {
 			idPrato_Diminuindo = 1;
 		}
 	}
-
 }
