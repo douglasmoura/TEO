@@ -62,10 +62,10 @@ function Update () {
 **/
 function DefinirConta () {
 	
-	this.primeiro_valor = Random.Range(1, 5);
+	this.primeiro_valor = Random.Range(1, 4);
 	this.primeiroValor.text = primeiro_valor.ToString();
 	
-	this.segundo_valor = Random.Range(1,5);
+	this.segundo_valor = Random.Range(1,4);
 	this.segundoValor.text = segundo_valor.ToString();
 	
 	this.valor_total = primeiro_valor + segundo_valor;

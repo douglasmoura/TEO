@@ -47,7 +47,7 @@ function OnGUI() {
 	
 		GUI.skin = botaoJogarNovamente;
 		
-		var jogarNovamente = GUI.Button(new Rect(Screen.width - 200, Screen.height - 145, 220, 180), "JogarNovamente");
+		var jogarNovamente = GUI.Button(new Rect(Screen.width - 175, Screen.height - 155, 200, 180), "");
 		
 		if (jogarNovamente) {
 			Application.LoadLevel(Application.loadedLevelName);

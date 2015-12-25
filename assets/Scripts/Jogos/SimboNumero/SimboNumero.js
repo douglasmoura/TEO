@@ -143,10 +143,10 @@ function OnGUI() {
 	if (controle == -1 && !finalizado && !(menuSuperior.showJanelaPre)) { 
 	/* showJanelaPre - serve para so aparecer o botao caso nao esteja com a janela presvencao ativada
 		deu problema pois ele ficava sobre ela.*/
-		var XBOTAO = Screen.width - 220;
-		var YBOTAO = Screen.height - 190;
+		var XBOTAO = Screen.width - 226;
+		var YBOTAO = Screen.height - 438;
 		GUI.skin = skinConferir;
-		var confirmar = GUI.Button(Rect(XBOTAO, YBOTAO,230,190),"");
+		var confirmar = GUI.Button(Rect(XBOTAO, YBOTAO,190,140),"");
 		comecaContagem = true;
 		if (confirmar) {
 			Verificar();
