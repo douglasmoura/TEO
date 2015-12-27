@@ -92,7 +92,7 @@ GameObject:
   - 212: {fileID: 21203276}
   m_Layer: 0
   m_Name: Fundo
-  m_TagString: Untagged
+  m_TagString: FundoParabens
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

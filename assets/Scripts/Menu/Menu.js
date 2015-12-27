@@ -164,14 +164,14 @@ function DoMyWindow (windowID : int) {
 	GUI.skin = fecharSobre;
 	var fechar = GUI.Button (new Rect (660,600,130,120), "");
 	
-	GUI.skin = sobreInsta;
-	var insta = GUI.Button (new Rect (660,12,90,90), "");
+	/*GUI.skin = sobreInsta;
+	var insta = GUI.Button (new Rect (660,12,90,90), "");*/
 	
 	GUI.skin = sobreFace;
-	var face = GUI.Button (new Rect (580,12,90,90), "");
+	var face = GUI.Button (new Rect (540,12,90,90), "");
 	
 	GUI.skin = sobreSite;
-	var site = GUI.Button (new Rect (500,10,90,90), "");
+	var site = GUI.Button (new Rect (620,12,90,90), "");
 	
 	if(fechar){
 		habilitaSobre = false;
@@ -179,9 +179,9 @@ function DoMyWindow (windowID : int) {
 		imagemFundo.sortingOrder = -1;
 	}
 	
-	if(insta) {
+	/*if(insta) {
 		Debug.Log("Instgran .. ");
-	}
+	}*/
 	
 	if(face) {
 		Debug.Log("Facebook..");

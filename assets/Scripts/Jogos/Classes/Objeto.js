@@ -31,6 +31,16 @@ public class Objeto extends MonoBehaviour {
 	
 	
 	/*******************************************************************
+	 Métodos de Get e Set de atributos acima.
+	********************************************************************/
+		
+	function SetOk (valor: boolean) {
+		ok = valor; 
+	}
+	
+	
+	
+	/*******************************************************************
 	 Para os metodos abaixo, basta sobrescreve-los na classe filha.
 	********************************************************************/
 	

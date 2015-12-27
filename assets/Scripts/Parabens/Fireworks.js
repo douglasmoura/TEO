@@ -28,5 +28,12 @@ function Criar() {
 		Destroy(animacao[o]);
 	}
 	
-	script.Habilita();
+	Destroy (GameObject.FindGameObjectWithTag("FundoParabens"));
+	
+	/**
+	* Comentando pois nao ira ser criado o pop up por enquanto (22.10.2015) , caso queira ativar so descomentar.
+	**/
+	//script.Habilita();
+	
+	
 }

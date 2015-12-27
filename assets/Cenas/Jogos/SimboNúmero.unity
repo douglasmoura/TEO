@@ -288,8 +288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85ee40449f2b124a9241eb6a64e8bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 5.88999987
-  y: -2.19000006
+  x: .200000003
+  y: 3.04999995
   velocidade: 30
   drag: 0
   valida: 0
@@ -339,7 +339,7 @@ Transform:
   m_PrefabInternal: {fileID: 1528498756}
   m_GameObject: {fileID: 74190315}
   m_LocalRotation: {x: 0, y: 0, z: -.0968595073, w: .995298088}
-  m_LocalPosition: {x: 5.88999987, y: -2.19000006, z: 0}
+  m_LocalPosition: {x: .200000003, y: 3.04999995, z: 0}
   m_LocalScale: {x: .0700000003, y: .0700000003, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1066,8 +1066,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1435426656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .171000004, y: -.126000002, z: 0}
-  m_LocalScale: {x: .365625024, y: .297250003, z: 1}
+  m_LocalPosition: {x: .197999999, y: -.126000002, z: 0}
+  m_LocalScale: {x: .370195299, y: .297250003, z: 1}
   m_Children: []
   m_Father: {fileID: 2062769929}
   m_RootOrder: 0
@@ -1091,7 +1091,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1102283321
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8963093ddc0659646980d0ae8746b692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37f892cc5ca5c5942a89d4ddb1c8f8de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1528498756
 Prefab:
@@ -1102,11 +1102,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.88999987
+      value: .200000003
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.19000006
+      value: 3.04999995
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1134,11 +1134,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: x
-      value: 5.88999987
+      value: .200000003
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: y
-      value: -2.19000006
+      value: 3.04999995
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: velocidade
@@ -1258,11 +1258,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.57999992
+      value: 5.82999992
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.779999971
+      value: -2.00999999
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1290,11 +1290,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: x
-      value: 5.57999992
+      value: 5.82999992
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: y
-      value: -.779999971
+      value: -2.00999999
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: adf5628e23c11ff418513d9eb646a4e4, type: 2}
       propertyPath: velocidade
@@ -1521,6 +1521,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botaoHome: {fileID: 11400000, guid: c3355504f078d6a43b0125a90db76789, type: 2}
   botaoJogos: {fileID: 11400000, guid: acfce5084d78a55438aba545d8080cab, type: 2}
+  botaoJogarNovamente: {fileID: 11400000, guid: a587ccdba0e0fdd4e98c5fd160d7af5a,
+    type: 2}
   botaoSim: {fileID: 11400000, guid: d3a026c7617eb6a41ae56bdc1de76219, type: 2}
   botaoNao: {fileID: 11400000, guid: 7bb3fa5c2e0bb724dab21d7881f70da5, type: 2}
   janelaSkin: {fileID: 11400000, guid: 5aa8198d6137f9044b5148fb43d97924, type: 2}
@@ -1585,8 +1587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85ee40449f2b124a9241eb6a64e8bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 5.57999992
-  y: -.779999971
+  x: 5.82999992
+  y: -2.00999999
   velocidade: 30
   drag: 0
   valida: 0
@@ -1636,7 +1638,7 @@ Transform:
   m_PrefabInternal: {fileID: 1719819995}
   m_GameObject: {fileID: 1886183867}
   m_LocalRotation: {x: 0, y: 0, z: .990720153, w: -.135917857}
-  m_LocalPosition: {x: 5.57999992, y: -.779999971, z: 0}
+  m_LocalPosition: {x: 5.82999992, y: -2.00999999, z: 0}
   m_LocalScale: {x: .0700000003, y: .0700000003, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

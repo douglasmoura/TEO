@@ -592,9 +592,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botaoHome: {fileID: 11400000, guid: c3355504f078d6a43b0125a90db76789, type: 2}
   botaoJogos: {fileID: 11400000, guid: acfce5084d78a55438aba545d8080cab, type: 2}
+  botaoJogarNovamente: {fileID: 11400000, guid: a587ccdba0e0fdd4e98c5fd160d7af5a,
+    type: 2}
   botaoSim: {fileID: 11400000, guid: d3a026c7617eb6a41ae56bdc1de76219, type: 2}
   botaoNao: {fileID: 11400000, guid: 7bb3fa5c2e0bb724dab21d7881f70da5, type: 2}
   janelaSkin: {fileID: 11400000, guid: 5aa8198d6137f9044b5148fb43d97924, type: 2}
+  showJanelaPre: 0
   imagemFundo: {fileID: 2030849104}
 --- !u!4 &1821967638
 Transform:
