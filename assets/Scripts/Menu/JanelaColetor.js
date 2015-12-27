@@ -8,8 +8,8 @@ public var habilitar = false;
 
 public var imagemFundo : SpriteRenderer;
 
-private var largura = 530;
-private var altura = 370;
+private var largura = 705;
+private var altura = 705;
 
 public var skin: GUISkin;
 public var skinDados: GUISkin;
@@ -41,7 +41,7 @@ function OnGUI () {
 		imagemFundo.sortingLayerName = "GUI";
 		imagemFundo.sortingOrder = 1;
 		
-		janela = GUI.Window(0,janela,WindowFunction, "Coletor");
+		janela = GUI.Window(0,janela,WindowFunction, "");
 	}
 }
 
@@ -60,34 +60,42 @@ function WindowFunction (windowID : int) {
 	
 	//GUI.skin = skinDados;
 	
-	scrollPosition = GUI.BeginScrollView (Rect (20, 100, largura - 40, altura - 120),scrollPosition, Rect (20, 100, largura + 690, altura + 3000));
-	GUILayout.BeginArea(new Rect(20, 100, largura + 690, altura + 3000));
+	scrollPosition = GUI.BeginScrollView (Rect (68, 82, largura - 40, altura - 120),scrollPosition, Rect (20, 100, largura + 690, altura + 3000));
+	GUILayout.BeginArea(new Rect(68, 82, largura + 690, altura + 3000));
  	//Title row
- 	GUILayout.BeginHorizontal("box");
+ 	//GUILayout.BeginHorizontal("box");
  	//Display the titles
- 	GUILayout.Label("Jogo", "button", GUILayout.Width(200));
- 	GUILayout.Label("Nível", "button", GUILayout.Width(130));
- 	GUILayout.Label("Acertos", "button", GUILayout.Width(130));
- 	GUILayout.Label("Erros", "button", GUILayout.Width(130));
- 	GUILayout.Label("Arrasta", "button", GUILayout.Width(130));
- 	GUILayout.Label("Passo", "button", GUILayout.Width(130));
- 	GUILayout.Label("Atraso", "button", GUILayout.Width(130));
- 	GUILayout.Label("Tempo (s)", "button", GUILayout.Width(200));
- 	GUILayout.EndHorizontal();
+ 	//GUILayout.Label("Jogo", "button", GUILayout.Width(200));
+ 	//GUILayout.Label("Nível", "button", GUILayout.Width(130));
+ 	//GUILayout.Label("Acertos", "button", GUILayout.Width(130));
+ 	//GUILayout.Label("Erros", "button", GUILayout.Width(130));
+ 	//GUILayout.Label("Arrasta", "button", GUILayout.Width(130));
+ 	//GUILayout.Label("Passo", "button", GUILayout.Width(130));
+ 	//GUILayout.Label("Atraso", "button", GUILayout.Width(130));
+ 	//GUILayout.Label("Tempo (s)", "button", GUILayout.Width(200));
+ 	//GUILayout.EndHorizontal();
  	
  	//Draw the elements
  	var largura;
+ 	var altura;
  	for (var i : int = 0; i < linhas.Length - 1; i++) {
 		var colunas = linhas[i].Split(","[0]);
  		GUILayout.BeginHorizontal();
  		
- 		for (var o : int = 0; o < colunas.Length - 1; o++) {
+ 		for (var o : int = 1; o < colunas.Length - 2; o++) {
+ 			/**
  			if (o == 0 || o == 7) {
  				largura = 200;
  			} else {
  				largura = 130;
  			}
- 			GUILayout.Label(colunas[o], GUILayout.Width(largura));
+ 			**/
+ 			largura = 76;
+ 			altura = 90.5;
+ 			if (o == 4) {
+ 				largura = 81;
+ 			}
+ 			GUILayout.Label(colunas[o], GUILayout.Width(largura), GUILayout.Height(altura));
  		}
 		GUILayout.EndHorizontal();
 		if (i >= 65) {
