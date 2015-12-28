@@ -1127,14 +1127,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98326632d0d37747bad3a3c719f35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escuro: {fileID: 2800000, guid: 49ef2ab9054700540b4302615cf9e8bc, type: 3}
+  texturas:
+  - {fileID: 2800000, guid: 49ef2ab9054700540b4302615cf9e8bc, type: 3}
+  - {fileID: 2800000, guid: 65e0e74c9b72e4d47b4d6fa9b8419f8e, type: 3}
+  estrela: {fileID: 2800000, guid: 9bb52382bba1e5a418c44be55c45c0d2, type: 3}
   habilitar: 0
   imagemFundo: {fileID: 58463323}
-  skin: {fileID: 11400000, guid: 4cd569b2c0785ec4fb5150a2170717a6, type: 2}
   skins:
   - {fileID: 11400000, guid: 303b7777c3ad2954d845db20af096c7a, type: 2}
   - {fileID: 11400000, guid: 79387ad827eaa4245a285720a20a258b, type: 2}
   - {fileID: 11400000, guid: 2321b9ab98bb76d479bcf0cbf06f2fde, type: 2}
+  - {fileID: 11400000, guid: 4cd569b2c0785ec4fb5150a2170717a6, type: 2}
   scrollPosition: {x: 0, y: 0}
   gatilho: 1
   linhas: []

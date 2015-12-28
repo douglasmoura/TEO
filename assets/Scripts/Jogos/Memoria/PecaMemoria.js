@@ -60,7 +60,7 @@ function Avaliar(a: PecaMemoria, b: PecaMemoria) {
 		
 	} else {
 		errou.Play();
-		yield WaitForSeconds(1);
+		yield WaitForSeconds(3);
 		a.bloquear = false;
 		b.bloquear = false;
 		
