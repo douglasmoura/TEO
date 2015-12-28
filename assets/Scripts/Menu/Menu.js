@@ -24,22 +24,19 @@ public var sobreFace: GUISkin;
 
 private var scriptMusica: Musica;
 
-
-public var logo: Texture2D;
-
 //Janela coletor.
 private var janelaColetor: JanelaColetor;
 
 private var login: Login;
 
-function Awake () {
+function Awake () {	
 
 	janelaColetor = FindObjectOfType(typeof(JanelaColetor)) as JanelaColetor;
 
 }
 
 function Start () {
-	
+
 	scriptMusica = FindObjectOfType(typeof(Musica)) as Musica;
 	
 	login = FindObjectOfType(typeof(Login)) as Login;
@@ -68,9 +65,6 @@ function OnGUI() {
 		var x = Screen.width/2;
 		//Metade da altura da tela
 		var y = Screen.height/2;
-		
-		//Logo Canto da Tela.			
-		//GUI.DrawTexture(new Rect(Screen.width/2 + 495, 20, logo.width/8, logo.height/8), logo);
 		
 		//Botao jogar
 		GUI.skin = botaoJogar;

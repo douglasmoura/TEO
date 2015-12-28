@@ -1018,6 +1018,7 @@ GameObject:
   - 114: {fileID: 1841138042}
   - 114: {fileID: 1841138043}
   - 114: {fileID: 1841138044}
+  - 131: {fileID: 1841138045}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1115,7 +1116,6 @@ MonoBehaviour:
   sobreInsta: {fileID: 11400000, guid: 33b707f0ba8d94b46b81777cabf012cf, type: 2}
   sobreSite: {fileID: 11400000, guid: cd89e7c1ea522b542a0850b5418d6187, type: 2}
   sobreFace: {fileID: 11400000, guid: 91b087ee44199824bb85629f2455ec56, type: 2}
-  logo: {fileID: 2800000, guid: ed31c97edee1e834092214a999699e54, type: 3}
 --- !u!114 &1841138042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,13 +1127,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98326632d0d37747bad3a3c719f35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escuro: {fileID: 2800000, guid: 49ef2ab9054700540b4302615cf9e8bc, type: 3}
   habilitar: 0
   imagemFundo: {fileID: 58463323}
   skin: {fileID: 11400000, guid: 4cd569b2c0785ec4fb5150a2170717a6, type: 2}
-  skinDados: {fileID: 11400000, guid: a6fe77e2bb4346c448f8ffeae0745413, type: 2}
+  skins:
+  - {fileID: 11400000, guid: 303b7777c3ad2954d845db20af096c7a, type: 2}
+  - {fileID: 11400000, guid: 79387ad827eaa4245a285720a20a258b, type: 2}
+  - {fileID: 11400000, guid: 2321b9ab98bb76d479bcf0cbf06f2fde, type: 2}
   scrollPosition: {x: 0, y: 0}
   gatilho: 1
   linhas: []
+  icones:
+  - {fileID: 2800000, guid: 4289701e8983222429c533caff664461, type: 3}
+  - {fileID: 2800000, guid: 244bc80ab78dde147804d8d893b64941, type: 3}
+  - {fileID: 2800000, guid: 0f6024af3b9de6a47865e620c5dbc894, type: 3}
+  - {fileID: 2800000, guid: 19dcd7353f22e2e4597f094034e1ccbb, type: 3}
+  - {fileID: 2800000, guid: 0d9f2ba52aa689448ba36c76d0a011f9, type: 3}
+  - {fileID: 2800000, guid: 11a8151926aa88749ae4f1de2b20bbd7, type: 3}
 --- !u!114 &1841138043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,6 +1173,25 @@ MonoBehaviour:
   skinOk: {fileID: 11400000, guid: d441e31ec9917ed4dbe41c7283526e1d, type: 2}
   skinNovoRegistro: {fileID: 0}
   skinLogin: {fileID: 0}
+--- !u!131 &1841138045
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1841138035}
+  m_Enabled: 1
+  m_Texture: {fileID: 0}
+  m_Color: {r: .5, g: .5, b: .5, a: .5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!1001 &1905035501
 Prefab:
   m_ObjectHideFlags: 0
