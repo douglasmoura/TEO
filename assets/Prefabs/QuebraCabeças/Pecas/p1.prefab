@@ -60,6 +60,7 @@ MonoBehaviour:
   destino: {fileID: 0}
   acertou: {fileID: 0}
   errou: {fileID: 0}
+  posicionou: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -31,7 +31,8 @@ public class ObjetoFruta extends Objeto {
 	public function Criar() {
 		acertou = GameObject.FindWithTag("acertou").GetComponent(AudioSource);
 		errou = GameObject.FindWithTag("errou").GetComponent(AudioSource);
-	
+		posicionou = GameObject.FindWithTag("posicionou").GetComponent(AudioSource);
+		
 		comunicadorQuantoE = FindObjectOfType(typeof(QuantoE)) as QuantoE;
 		
 		estavaDentro = false;
@@ -63,7 +64,7 @@ public class ObjetoFruta extends Objeto {
 				if(comunicadorQuantoE.primeiroValor_corrente <= comunicadorQuantoE.primeiro_valor -1){
 					comunicadorQuantoE.primeiroValor_corrente++;
 					estavaDentro = true;	
-					acertou.Play();
+					posicionou.Play();
 					Debug.Log("Corre Prato 1: " + comunicadorQuantoE.primeiroValor_corrente + "- " + comunicadorQuantoE.primeiro_valor);
 					
 				}else{
@@ -77,7 +78,7 @@ public class ObjetoFruta extends Objeto {
 				if(comunicadorQuantoE.segundoValor_corrente <= comunicadorQuantoE.segundo_valor -1){
 					comunicadorQuantoE.segundoValor_corrente++;
 					estavaDentro = true;
-					acertou.Play();
+					posicionou.Play();
 					Debug.Log("Corre Prato 2: " + comunicadorQuantoE.segundoValor_corrente + "- " + comunicadorQuantoE.segundo_valor);	
 					
 				}else{

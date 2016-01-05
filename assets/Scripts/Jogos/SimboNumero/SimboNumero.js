@@ -31,9 +31,12 @@ private var finalizado = false;
 
 private var menuSuperior: MenuSuperior;
 
+private var acertou: AudioSource;
+private var errou: AudioSource;
 
 function Start() 
 {
+	errou = GameObject.FindWithTag("errou").GetComponent(AudioSource);
 
 	menuSuperior = FindObjectOfType(typeof(MenuSuperior)) as MenuSuperior;
 
@@ -164,6 +167,7 @@ function Verificar() {
 		finalizado = true;
 	} else {
 		coletorGame.SetErro();
+		errou.Play();
 	}
 }
 

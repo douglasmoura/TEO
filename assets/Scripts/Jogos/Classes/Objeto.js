@@ -27,8 +27,8 @@ public class Objeto extends MonoBehaviour {
 	//Se ok for false entao o objeto ainda podera ser deslocado
 	protected var ok: boolean;
 	public var acertou: AudioSource;
-	public var errou: AudioSource; 
-	
+	public var errou: AudioSource;
+	public var posicionou: AudioSource;
 	
 	/*******************************************************************
 	 Métodos de Get e Set de atributos acima.

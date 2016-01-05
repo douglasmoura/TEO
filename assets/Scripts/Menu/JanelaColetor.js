@@ -99,7 +99,7 @@ function OnGUI () {
  			GUI.DrawTexture (Rect (0, alturaLinha, 110, 100), logo);
  		
  			//espaço horizontal
- 			GUILayout.Label("", GUILayout.Width(larguraB + 21), GUILayout.Height(10));
+ 			GUILayout.Label("", GUILayout.Width(95), GUILayout.Height(10));
  			
 			for (var o : int = 0; o < colunas.Length - 1; o++) {
 	 			
@@ -116,15 +116,13 @@ function OnGUI () {
 	 			}
 	 			
 	 			if (o == 0) {
-	 				larguraB = 127;
+	 				larguraB = 135;
 	 			} else if (o == 3) {
-	 				larguraB = 82;
-	 			} else if (o == 4) {
-	 			 	larguraB = 85;
-	 			} else if (o == 6) {
-	 				larguraB = 80;
+	 				larguraB = 95;
+	 			} else if (o >= 4 && o <= 6) {
+	 			 	larguraB = 81;
 	 			} else {
-	 				larguraB = 74;
+	 				larguraB = 55;
 	 			}
 	 			
 	 			GUILayout.Label(colunas[o], GUILayout.Width(larguraB), GUILayout.Height(alturaB));

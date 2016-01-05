@@ -27,6 +27,7 @@ public class ObjetoSimbo extends Objeto {
 		
 		acertou = GameObject.FindWithTag("acertou").GetComponent(AudioSource);
 		errou = GameObject.FindWithTag("errou").GetComponent(AudioSource);
+		posicionou = GameObject.FindWithTag("posicionou").GetComponent(AudioSource);
 	}
 	
 	
@@ -49,10 +50,10 @@ public class ObjetoSimbo extends Objeto {
 	    		simboNumero.valor += dezena;
 	    	}
 			tavaDentro = true;
-			acertou.Play();
+			posicionou.Play();
 		}else if (!valida && !tavaDentro){
 			simboNumero.coletorGame.SetDragDrop();
-			errou.Play();
+			posicionou.Play();
 		}
 		
 		simboNumero.coletorGame.VerificaMaiorDelay();
