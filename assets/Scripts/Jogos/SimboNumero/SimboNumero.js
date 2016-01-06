@@ -34,6 +34,8 @@ private var menuSuperior: MenuSuperior;
 private var acertou: AudioSource;
 private var errou: AudioSource;
 
+public var array : GameObject[];
+
 function Start() 
 {
 	errou = GameObject.FindWithTag("errou").GetComponent(AudioSource);
@@ -162,6 +164,10 @@ function Verificar() {
 	var temp = int.Parse(resultado);
 	Debug.Log(temp + " " + valor);
 	if (temp == valor) {
+		for (var i : int = 0; i < 7; i++) {
+			var script = array[i].GetComponent("ObjetoSimbo") as ObjetoSimbo;
+			script.SetOk(true);
+		}
 		coletorGame.SetAcerto();
 		PlayerCompletaGame();
 		finalizado = true;

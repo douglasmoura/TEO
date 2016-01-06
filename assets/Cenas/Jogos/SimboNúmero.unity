@@ -1886,6 +1886,14 @@ MonoBehaviour:
   skinConferir: {fileID: 11400000, guid: 7a2efb6197382a64286fe062fb75ead8, type: 2}
   csScript: {fileID: 590234821}
   parabens: {fileID: 100000, guid: 393228b3b170c554d97a3dae4a7b3583, type: 2}
+  array:
+  - {fileID: 1845638839}
+  - {fileID: 862854547}
+  - {fileID: 119963144}
+  - {fileID: 1886183867}
+  - {fileID: 74190315}
+  - {fileID: 327585165}
+  - {fileID: 1130772645}
 --- !u!1001 &2085846767
 Prefab:
   m_ObjectHideFlags: 0
