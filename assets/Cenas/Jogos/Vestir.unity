@@ -266,6 +266,7 @@ MonoBehaviour:
   destino: {fileID: 0}
   acertou: {fileID: 663826346}
   errou: {fileID: 954403340}
+  posicionou: {fileID: 0}
   colidiuOutraPeca: 0
 --- !u!61 &225770444
 BoxCollider2D:
@@ -352,6 +353,7 @@ MonoBehaviour:
   destino: {fileID: 0}
   acertou: {fileID: 663826346}
   errou: {fileID: 954403340}
+  posicionou: {fileID: 0}
   colidiuOutraPeca: 0
 --- !u!61 &226568956
 BoxCollider2D:
@@ -438,6 +440,7 @@ MonoBehaviour:
   destino: {fileID: 0}
   acertou: {fileID: 663826346}
   errou: {fileID: 954403340}
+  posicionou: {fileID: 0}
   colidiuOutraPeca: 0
 --- !u!61 &303394005
 BoxCollider2D:
@@ -846,6 +849,7 @@ MonoBehaviour:
   destino: {fileID: 0}
   acertou: {fileID: 663826346}
   errou: {fileID: 954403340}
+  posicionou: {fileID: 0}
   colidiuOutraPeca: 0
 --- !u!61 &557143359
 BoxCollider2D:
