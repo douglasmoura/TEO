@@ -43,6 +43,9 @@ function Start () {
 	janela = Rect(Screen.width/2 - 750/2.7, Screen.height/2 - 560/2.2, 800, 600);
 	lista = FindObjectOfType(typeof(Lista)) as Lista;
 	nivelGUI = FindObjectOfType(typeof(NivelGUI)) as NivelGUI;
+	
+			Debug.Log("----Lista " + lista.jogo.GetNome());
+
 }
 
 function OnGUI () {
@@ -121,9 +124,9 @@ function DoMyWindow (windowID : int) {
 	}
 	
 	if (jogar) {
-		Debug.Log("Nivel " + nivelGUI.nivel.nivel);
-		Debug.Log("Lista " + lista.jogo.getCena());
-		if (lista.jogo.getCena() == null) {
+//		Debug.Log("Nivel " + nivelGUI.nivel.nivel);
+		Debug.Log("Lista " + lista.jogo);
+		if (lista.jogo == null) {
 			lista.info = "\n\n\nSelecione um Jogo!";
 		} else if (nivelGUI.nivel.nivel == 0) {
 			lista.info = "\n\n\nSelecione um Nível!";

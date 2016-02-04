@@ -71,8 +71,8 @@ PlayerSettings:
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 4d47de87c52abaf41828d7330447c6d5
-  iPhoneBundleVersion: 1.0
-  AndroidBundleVersionCode: 1
+  iPhoneBundleVersion: 1.0.1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 16
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -103,7 +103,7 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: C:/Users/Diogenes Laertius/Documents/GitHub/TEO/jogoTeo.keystore
+  AndroidKeystoreName: C:/Users/Diogenes/Documents/jogoTeo.keystore
   AndroidKeyaliasName: teokey
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
