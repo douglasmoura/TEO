@@ -5,7 +5,7 @@ PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 3
   AndroidProfiler: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 2
   targetDevice: 2
   targetGlesGraphics: 1
   targetResolution: 0
@@ -71,7 +71,7 @@ PlayerSettings:
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 4d47de87c52abaf41828d7330447c6d5
-  iPhoneBundleVersion: 1.0.1
+  iPhoneBundleVersion: 1.0.2
   AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 16
   AndroidPreferredInstallLocation: 0
@@ -103,7 +103,7 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: C:/Users/Diogenes/Documents/jogoTeo.keystore
+  AndroidKeystoreName: C:/Users/Diogenes Laertius/Downloads/jogoTeo.keystore
   AndroidKeyaliasName: teokey
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
@@ -250,8 +250,6 @@ PlayerSettings:
   tizenGPSPermissions: 0
   tizenMicrophonePermissions: 0
   stvDeviceAddress: 
-  wp8UnprocessedPlugins: []
-  intPropertyNames: []
   firstStreamedLevelWithResources: 0
   unityRebuildLibraryVersion: 9
   unityForwardCompatibleVersion: 39
