@@ -20,7 +20,7 @@ O software em questão foi desenvolvido para dispositivos móveis utilizando a *
  
 
 ## Sistema de Recomendação e Prospecção de Dados
-Cada jogo possui níveis de dificuldade, o aplicativo coleta dados do jogador, como taxa de acertos, erros e entre outros, e a partir da interpretação desses dados será possível recomendar jogos de acordo com as dificuldades da criança.
+Cada jogo possui níveis de dificuldade. O aplicativo coleta dados do jogador, como taxa de acertos, erros, entre outros, e a partir da interpretação desses dados, será possível recomendar jogos de acordo com as dificuldades da criança. Esta funcionalidade ainda se encontra em pesquisa e desenvolvimento.
 
 ## Screenshots
  <img src="https://lh4.googleusercontent.com/-6k5fjPVt_T0/VTUO6ot84NI/AAAAAAAAAJA/u4DaYx2pZJc/w759-h443-no/Sem%2Bt%C3%ADtulo.png" height="49%" width="49%">
@@ -35,20 +35,37 @@ A versão atual do aplicativo para android está disponível em:
 [v0.5.0](https://github.com/douglasmoura/TEO/releases/tag/v0.5.0)
 
 ## Desenvolvedores
-O projeto partiu de uma inicitiava dos alunos e professores da Universidade Federal de Alagoas - Campus Arapiraca.
-##### Orientadores
-Prof. Ms. Fabiane da Silva Queiroz (Ciência da Computação)
+O projeto partiu de uma inicitiva dos alunos e professores da Universidade Federal de Alagoas - Campus Arapiraca.
 
-Prof. Ms. Rodolfo Carneiro Cavalcante (Ciência da Computação) 
-
+##### Coordenador
 Prof. Dr. Thiago Bruno Melo de Sales (Ciência da Computação)
-##### Bolsistas
+
+##### Orientadores Colaboradores
+
+Prof. Ms. Fabiane da Silva Queiroz (Ciência da Computação) - (2014-2015)
+
+Prof. Ms. Rodolfo Carneiro Cavalcante (Ciência da Computação) - (2014-2015)
+
+##### Bolsistas Fase 3 2016-2017
+Kedley Sá (Arquitetura e Urbanismo) - Designer
+
+Anderson Silva (Ciência da Computação) - Desenvolvedor
+
+Laís Farias (Ciência da Computação) - Desenvolvedor
+
+##### Bolsistas Fase 2 2014-2015
 Anny Jessyca Garcia Silva (Arquitetura e Urbanismo) - Designer
 
 Diogenes Laertius Silva Oliveira Filho (Ciência da Computação) - Desenvolvedor
 
 Douglas Leite Leal Moura (Ciência da Computação) - Desenvolvedor
+
+##### Bolsistas Fase 1 2012-2013
+Igor Conrado (Ciência da Computação)
+
 ##### Colaboradores
-Anórbio Júnior (Ciência da Computação) - Designer
+Herica Machado - Designer
+
+
 ## Contato
 
