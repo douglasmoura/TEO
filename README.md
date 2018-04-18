@@ -30,37 +30,45 @@ Cada jogo possui níveis de dificuldade. O aplicativo coleta dados do jogador, c
  
 
 ## Download
-A versão atual do aplicativo para android está disponível em:
+A versão atual do aplicativo para Android está disponível em:
 
 [v0.5.0](https://github.com/douglasmoura/TEO/releases/tag/v0.5.0)
 
 ## Desenvolvedores
-O projeto partiu de uma inicitiva dos alunos e professores da Universidade Federal de Alagoas - Campus Arapiraca.
+O projeto partiu de uma iniciativa dos alunos e professores da Universidade Federal de Alagoas (UFAL) - Campus Arapiraca.
 
 ##### Coordenador
 Prof. Dr. Thiago Bruno Melo de Sales (Ciência da Computação)
 
 ##### Orientadores Colaboradores
 
-Prof. Ms. Fabiane da Silva Queiroz (Ciência da Computação) - (2014-2015)
+Prof. Dr. Fabiane da Silva Queiroz (Ciência da Computação) - (2014-2015)
 
-Prof. Ms. Rodolfo Carneiro Cavalcante (Ciência da Computação) - (2014-2015)
+Prof. Dr. Rodolfo Carneiro Cavalcante (Ciência da Computação) - (2014-2015)
 
-##### Bolsistas Fase 3 2016-2017
+##### Bolsistas Fase 4 - 2018-2019
+
+Gilvo Rodrigues da Silva (Ciência da Computação)
+
+Jaílson Soares de Farias (Ciência da Computação)
+
+José Karlisson Padilha de Farias (Ciência da Computação)
+
+##### Bolsistas Fase 3 - 2016-2017
 Kedley Sá (Arquitetura e Urbanismo) - Designer
 
 Anderson Silva (Ciência da Computação) - Desenvolvedor
 
 Laís Farias (Ciência da Computação) - Desenvolvedor
 
-##### Bolsistas Fase 2 2014-2015
+##### Bolsistas Fase 2 - 2014-2015
 Anny Jessyca Garcia Silva (Arquitetura e Urbanismo) - Designer
 
 Diogenes Laertius Silva Oliveira Filho (Ciência da Computação) - Desenvolvedor
 
 Douglas Leite Leal Moura (Ciência da Computação) - Desenvolvedor
 
-##### Bolsistas Fase 1 2012-2013
+##### Bolsistas Fase 1 - 2012-2013
 Igor Conrado (Ciência da Computação)
 
 ##### Colaboradores
@@ -68,4 +76,5 @@ Herica Machado - Designer
 
 
 ## Contato
+Prof. Thiago Sales - thiago.sales@arapiraca.ufal.br | thiagobrunoms@gmail.com
 
